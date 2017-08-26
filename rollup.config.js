@@ -6,6 +6,8 @@ import copy from 'rollup-plugin-copy'
 // modules
 import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
+import path from 'path'
+import alias from 'rollup-plugin-alias';
 
 // js
 import babel from 'rollup-plugin-babel'
@@ -13,7 +15,7 @@ import replace from 'rollup-plugin-replace'
 
 
 // style
-import stylusCssModules from 'rollup-plugin-stylus-css-modules';
+import stylModule from 'rollup-plugin-stylus'
 
 // other static
 import json from 'rollup-plugin-json'
@@ -25,9 +27,16 @@ export default {
     file: 'dist/bundle.js',
     format: 'iife'
   },
+  watch: {
+    include: 'src/**',
+  },
   plugins:[
     replace({
       'process.env.NODE_ENV': JSON.stringify('development')
+    }),
+    alias({
+      resolve: ['.jsx', '.js'],
+      '~components': path.resolve(__dirname, 'src/components/'),
     }),
     json(),
     copy({
@@ -51,10 +60,11 @@ export default {
       }
     }),
     babel({
+      include: ['**/*.js', '**/*.jsx'],
       exclude: 'node_modules/**'
     }),
-    stylusCssModules({
-      output: 'bundle.css'
+    stylModule({
+      output: 'dist/bundle.css'
     }),
     serve({
       contentBase: 'dist',
