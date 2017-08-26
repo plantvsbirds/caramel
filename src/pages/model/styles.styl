@@ -1,0 +1,121 @@
+/*
+
+/** Ultra Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+*/
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */ 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("//applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+.container
+  max-width 1000px
+  margin 0px auto
+  background #fff
+  font-size 17.36px
+  font-family "San Francisco"
+  a
+    color #007AFF
+    text-decoration none
+
+.meta
+  display flex
+  justify-content space-between
+  align-items center
+  @media screen and (max-width: 769px)
+    flex-direction row
+    flex-wrap wrap
+
+  @media screen and (min-width: 769px)
+    & > *
+      flex 1 0 auto
+      height 100%
+      &:nth-child(1)
+        width 60%
+      &:nth-child(2)
+        width 40%
+
+  .alignLeftHalf
+    display block
+
+.title
+  font-size 2em
+  line-height 1em
+  margin 1.2em 0 .5em 0
+
+.content
+  margin 0
+
+.infoContianer
+  display flex
+  width 100%
+  justify-content space-between
+  margin-top 1em
+  .infoTitle
+    color #8E8E93
+.showAllInfo
+  line-height 2em
+
+.btnContainer
+  margin 1em 0
+
+.sampleContainer
+  position relative
+  margin-top 1em
+  left calc((100% - 100vw) / 2)
+  width 100vw
+  background #eee
+  min-height 50vh
+
+.typeDesc
+  .typeIconContainer
+    display flex
+    justify-content center
+    & > *
+      flex-shrink 0
+    .input
+      margin-right -65px
+      z-index 3
+    .arrow
+      margin-top 40.5px
+      margin-right -35px
+      z-index 2
+    .output
+      z-index 1
+  p
+    text-align center

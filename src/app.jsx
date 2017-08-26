@@ -1,4 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
-export default (<div>hello</div>)
+import ModelDetail from './pages/model'
+
+const mockModel = {}
+
+export default <ModelDetail model={mockModel} />
