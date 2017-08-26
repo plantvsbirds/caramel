@@ -1,0 +1,37 @@
+.type
+  width 120px
+  height 120px
+  border-radius 24.31px
+  background #4A4A4A
+
+.pixelBuffer
+  background-image linear-gradient(-121deg, #3023AE 7%, #53A0FD 51%, #B4EC51 100%)
+
+.content
+  display block
+  text-align center
+  height 100%
+  line-height 120px
+  font-size 28px
+
+.int64:before
+  content "123"
+  @extend .content
+  color white
+  font-family Monaco, monospace
+
+.double:before
+  @extend .int64:before
+  content "0.02"
+
+.dictionary:before
+  @extend .int64:before
+  content "{...}"
+  font-size 20px
+
+.string:before
+  content "Abc"
+  @extend .content
+  color white
+  font-family 'Hiragino Sans', 'Lucida Grande', 'Helvetica Neue', sans-serif
+  font-weight 300
