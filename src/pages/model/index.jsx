@@ -6,6 +6,7 @@ const cx = classNamesBind.bind(styles)
 
 import Button from '~components/button'
 import TypeDesc from './typedesc'
+import Sample from './sample'
 
 class ModalDetail extends Component {
   constructor() {
@@ -77,6 +78,12 @@ class ModalDetail extends Component {
         </div>
       </div>
       <div className={cx('sampleContainer')}>
+          <Sample />
+          <Sample />
+          <Sample />
+          <Sample />
+          <Sample />
+          <Sample />
       </div>
     </div>
   }
