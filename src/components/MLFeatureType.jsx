@@ -3,15 +3,7 @@ import classNameBind from 'classnames/bind'
 import styles from './MLFeatureType.styl'
 
 const cx = classNameBind.bind(styles)
-const types = [
-  'int64',
-  'double',
-  'string',
-  'dictionary',
-  'pixelBuffer',
-  'multiArray',
-  'undefined'
-]
+import { types } from '../const'
 
 class MLFeature extends Component {
   constructor() {
