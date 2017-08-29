@@ -13,6 +13,14 @@ class ModalDetail extends Component {
     super()
   }
   render() {
+    const {
+      name,
+      description,
+      author,
+      size,
+      license,
+    } = this.props.model
+
     const renderInfoTag = ({
       title, content
     }) =>
@@ -29,34 +37,34 @@ class ModalDetail extends Component {
       <div className={cx("meta")}>
         <div style={{ overflow: 'hidden' }}>
           <h1 className={cx('title')}>
-            Car Recognition Model
+            {name}
           </h1>
           <p className={cx('content')}>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {description}
           </p>
           <div className={cx('infoContianer')}>
             {
               renderInfoTag({
                 title: 'Author',
-                content: 'Your Dad',
+                content: author,
               })
             }
             {
               renderInfoTag({
                 title: 'Model Size',
-                content: '100 MB',
+                content: size,
               })
             }
             {
               renderInfoTag({
                 title: 'Last Update',
-                content: '4 days ago',
+                content: '4 days ago (change me)',
               })
             }
             {
               renderInfoTag({
                 title: 'License',
-                content: 'MIT',
+                content: license,
               })
             }
           </div>
