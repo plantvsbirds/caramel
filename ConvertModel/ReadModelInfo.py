@@ -1,6 +1,7 @@
 import coremltools
 import os
 import json
+import sys
 
 def convert_bytes(num):
     """
@@ -34,7 +35,7 @@ def getTypeInfo(type):
 
 result = {}
 
-file_path = 'MNIST.mlmodel'
+file_path = sys.argv[1]
 model = coremltools.models.MLModel(file_path)
 
 
