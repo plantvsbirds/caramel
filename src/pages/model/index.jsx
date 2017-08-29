@@ -43,8 +43,8 @@ class ModalDetail extends Component {
             }
             {
               renderInfoTag({
-                title: 'Type',
-                content: 'Classifier',
+                title: 'Model Size',
+                content: '100 MB',
               })
             }
             {
