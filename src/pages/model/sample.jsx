@@ -6,7 +6,7 @@ import styles from './styles.styl'
 
 const cx = classNamesBind.bind(styles)
 
-const SampleValueBlock = () => (<div className={cx('sampleValue')}>
+const SampleValueBlock = () => (<div className={cx('sampleValue', 'pixelBuffer')}>
 
 </div>)
 

@@ -1,4 +1,4 @@
-/*
+@import '../../const.styl'
 
 /** Ultra Thin */
 @font-face {
@@ -153,9 +153,23 @@
     left 115px
     top 30px
 
+round-size = 13.89px
+types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
+
 .sampleValue
   width 200px
   height 150px
-  border-radius 13.89px
+  border-radius round-size
   background #fff
   box-shadow 0 1px 5px 0 rgba(0,0,0,0.20)
+
+  &:before
+    text-transform uppercase
+    padding 0px round-size
+    border-radius round-size 0 round-size 0
+    background: rgba(0, 0, 0, .25)
+    color #fff
+
+  for type in types
+    &.{type}:before
+      content ''+typenames[type]
