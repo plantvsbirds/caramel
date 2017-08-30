@@ -16,6 +16,7 @@ export default () => {
       <div className={cx('inputs')}>
         <SampleValueBlock />
         <SampleValueBlock />
+        <SampleValueBlock />
       </div>
 
 
@@ -32,7 +33,7 @@ export default () => {
                 </feMerge>
             </filter>
         </defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="model-page" transform="translate(-177.000000, -379.000000)" fill="#FFFFFF">
                 <g id="sample-one" transform="translate(34.722222, 329.741704)">
                     <g id="arrow" filter="url(#filter-1)" transform="translate(194.444444, 146.127640) rotate(90.000000) translate(-194.444444, -146.127640) translate(125.347222, 119.748303)">
@@ -45,6 +46,7 @@ export default () => {
       </svg>
 
       <div className={cx('outputs')}>
+        <SampleValueBlock />
         <SampleValueBlock />
         <SampleValueBlock />
       </div>
