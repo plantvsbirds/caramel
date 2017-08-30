@@ -5,7 +5,6 @@ import styles from './styles.styl'
 const cx = classNamesBind.bind(styles)
 
 import Button from '~components/button'
-import TypeDesc from './typedesc'
 import Sample from './sample'
 
 class ModalDetail extends Component {
