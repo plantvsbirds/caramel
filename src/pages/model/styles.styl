@@ -92,66 +92,46 @@
     color #8E8E93
 .showAllInfo
   line-height 2em
-
 .btnContainer
   margin 1em 0
 
-.typeDesc
-  .typeIconContainer
-    display flex
-    justify-content center
-    & > *
-      flex-shrink 0
-    .input
-      margin-right -65px
-      z-index 3
-    .arrow
-      margin-top 40.5px
-      margin-right -35px
-      z-index 2
-    .output
-      z-index 1
-  p
-    text-align center
-
-
 .sampleContainer
-  box-sizing content-box
   display flex
-  flex-direction column
-  flex-wrap wrap
+  box-sizing content-box
+  flex-direction row
+  flex-wrap nowrap
   position relative
   margin-top 1em
   padding 35px
-  max-height 300px
   overflow-x scroll
+  overflow-y hidden
   left calc((100% - 100vw) / 2)
   width calc(100vw - 70px)
   background #eee
-  min-height 50vh
 
 .sampleValuePair
+  height 100%
   display flex
+  flex-direction column
   flex-shrink 0
   flex-grow 0
-  position relative
-  margin-left 35px
-  padding 5px
-  height 175px
-  & > .sampleValue
-    flex-shrink 0
-    flex-grow 0
-    &:nth-child(1)
-      z-index 2
-      left 0
-    &:nth-child(2)
-      margin-left 25px
-      left 250px
-  .sampleArrow
-    position absolute
+  margin 20px
+  .inputs
+    z-index 3
+  .outputs
     z-index 1
-    left 115px
-    top 30px
+  .arrow
+    z-index 2
+    margin-top -110px
+    margin-bottom -40px
+    margin-left 50%
+    transform translateX(-50%)
+  .inputs,
+  .outputs
+    display flex
+    flex-direction row
+    & > *:not(:first-child)
+      margin-left -60px
 
 round-size = 13.89px
 types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined

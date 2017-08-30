@@ -13,32 +13,41 @@ const SampleValueBlock = () => (<div className={cx('sampleValue', 'pixelBuffer')
 export default () => {
   return (
     <div className={cx('sampleValuePair')}>
-      <SampleValueBlock />
-      <SampleValueBlock />
+      <div className={cx('inputs')}>
+        <SampleValueBlock />
+        <SampleValueBlock />
+      </div>
 
-      <svg className={cx('sampleArrow')} width="177px" height="91px" viewBox="0 0 177 91" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-              <filter x="-23.3%" y="-58.7%" width="146.9%" height="221.7%" filterUnits="objectBoundingBox" id="filter-1">
-                  <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-                  <feGaussianBlur stdDeviation="1.75" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-                  <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-                  <feMerge>
-                      <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                      <feMergeNode in="SourceGraphic"></feMergeNode>
-                  </feMerge>
-              </filter>
-          </defs>
-          <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <g id="model-page" transform="translate(-584.000000, -358.000000)" fill="#FFFFFF">
-                  <g id="sample-two" transform="translate(493.055556, 329.861111)">
-                      <g id="arrow" filter="url(#filter-1)" transform="translate(112.500000, 46.527778)">
-                          <path d="M121.408697,10.1705317 L145.316672,40.0139532 L145.316672,40.0139532 C146.036052,40.9119275 145.891272,42.2230518 144.993298,42.9424314 C144.623718,43.238507 144.164297,43.3998384 143.690746,43.3998384 L95.8747959,43.3998384 L95.8747959,43.3998384 C94.7242026,43.3998384 93.7914625,42.4670983 93.7914625,41.3165051 C93.7914625,40.8429544 93.9527939,40.3835332 94.2488696,40.0139532 L118.156845,10.1705317 L118.156845,10.1705317 C118.876224,9.27255741 120.187349,9.12777776 121.085323,9.84715731 C121.204654,9.94275547 121.313099,10.0512001 121.408697,10.1705317 Z" id="Triangle" transform="translate(119.782809, 26.394756) rotate(91.000000) translate(-119.782809, -26.394756) "></path>
-                          <rect id="Rectangle-2" x="0" y="12.5" width="120.833333" height="27.0833333"></rect>
-                      </g>
-                  </g>
-              </g>
-          </g>
+
+      <svg width="105px" height="194px" viewBox="0 0 105 194" version="1.1" xmlns="http://www.w3.org/2000/svg" className={cx('arrow')}>
+        <desc>Created with Sketch.</desc>
+        <defs>
+            <filter x="-33.3%" y="-83.4%" width="166.6%" height="274.8%" filterUnits="objectBoundingBox" id="filter-1">
+                <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                <feMerge>
+                    <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+            </filter>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="model-page" transform="translate(-177.000000, -379.000000)" fill="#FFFFFF">
+                <g id="sample-one" transform="translate(34.722222, 329.741704)">
+                    <g id="arrow" filter="url(#filter-1)" transform="translate(194.444444, 146.127640) rotate(90.000000) translate(-194.444444, -146.127640) translate(125.347222, 119.748303)">
+                        <path d="M122.817718,11.3362316 L144.785255,38.1499314 L144.785255,38.1499314 C145.835269,39.4315849 145.647489,41.3217753 144.365835,42.3717897 C143.829616,42.8110951 143.157811,43.0511507 142.464616,43.0511507 L98.5295414,43.0511507 L98.5295414,43.0511507 C96.8726872,43.0511507 95.5295414,41.708005 95.5295414,40.0511507 C95.5295414,39.3579554 95.769597,38.6861501 96.2089024,38.1499314 L118.17644,11.3362316 L118.17644,11.3362316 C119.226454,10.0545781 121.116644,9.86679752 122.398298,10.9168119 C122.551616,11.0424203 122.692109,11.1829134 122.817718,11.3362316 Z" id="Triangle" transform="translate(120.497110, 26.379521) rotate(91.000000) translate(-120.497110, -26.379521) "></path>
+                        <rect id="Rectangle-2" x="0" y="13.1896682" width="120.833333" height="27.0735294"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
       </svg>
+
+      <div className={cx('outputs')}>
+        <SampleValueBlock />
+        <SampleValueBlock />
+      </div>
     </div>
   )
 }
