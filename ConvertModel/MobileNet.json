@@ -1,7 +1,15 @@
 {
     "name": "MobileNet", 
     "license": "Unknown", 
-    "author": "Original paper: Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam. Caffe implementation: shicai", 
+    "author": "shicai", 
+
+
+
+
+    "demo": "https://github.com/",
+    "reference": "Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam", 
+
+
     "description": "The network from the paper 'MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications', trained on the ImageNet dataset.", 
     "output": [
         {
