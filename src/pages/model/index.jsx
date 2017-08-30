@@ -16,9 +16,10 @@ class ModalDetail extends Component {
     const {
       name,
       description,
-      author,
+      author, reference,
       size,
       license,
+      input, output,
     } = this.props.model
 
     const renderInfoTag = ({
@@ -51,6 +52,18 @@ class ModalDetail extends Component {
             }
             {
               renderInfoTag({
+                title: 'Type',
+                content: 'Classifier',
+              })
+            }
+            {/*
+              renderInfoTag({
+                title: 'Reference',
+                content: reference,
+              })
+            */}
+            {
+              renderInfoTag({
                 title: 'Model Size',
                 content: size,
               })
@@ -80,9 +93,6 @@ class ModalDetail extends Component {
               label="Demo"
             />
           </div>
-        </div>
-        <div>
-          <TypeDesc />
         </div>
       </div>
       <div className={cx('sampleContainer')}>
