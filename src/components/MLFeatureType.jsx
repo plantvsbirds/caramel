@@ -10,13 +10,17 @@ class MLFeature extends Component {
     super()
   }
   render() {
-    const { className } = this.props
+    const { className, size } = this.props
     return (
-      <div className={cx('type', className, types.find(k => this.props[k]))}>
+      <div className={cx('type', size, className, types.find(k => this.props[k]))}>
 
       </div>
     )
   }
+}
+
+MLFeature.defaultProps = {
+  size: 'small'
 }
 
 export default MLFeature
