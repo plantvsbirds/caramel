@@ -28,21 +28,14 @@ const IOItem = ({
   </div>
 )
 export default ({
-  title
+  title, data
 }) => (
   <div className={cx('ioTable')}>
     <h1 className={cx('title')}>
     { title }
     </h1>
-    <IOItem
-      name="prob"
-      type="Dictionary (String -> Double)"
-      description="Probability of each category"
-    />
-    <IOItem
-      name="prob"
-      type="Dictionary (String -> Double)"
-      description="Probability of each category"
-    />
+    {
+      data.map((data) => <IOItem key={`ioTableItem_${title}_${data.name}`} {...data} />)
+    }
   </div>
 )

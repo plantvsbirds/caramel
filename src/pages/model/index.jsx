@@ -81,9 +81,11 @@ class ModalDetail extends Component {
       <div className={cx('ioLayout')}>
         <IOTable
           title="Input"
+          data={input}
         />
         <IOTable
           title="Output"
+          data={output}
         />
       </div>
       <h1>Apps using {name}</h1>

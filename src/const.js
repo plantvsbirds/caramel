@@ -4,6 +4,7 @@ export const types = [
   'string',
   'dictionary',
   'pixelBuffer',
+  'image', //??
   'multiArray',
   'undefined'
 ]
