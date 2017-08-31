@@ -6,6 +6,7 @@ const cx = classNamesBind.bind(styles)
 
 import Button from '~components/button'
 import Sample from './sample'
+import IOTable from './iotable'
 
 class ModalDetail extends Component {
   constructor() {
@@ -21,7 +22,7 @@ class ModalDetail extends Component {
       input, output,
     } = this.props.model
 
-    const renderInfoTag = ({
+    const InfoTag = ({
       title, content
     }) =>
     <div className={cx('info')}>
@@ -43,42 +44,17 @@ class ModalDetail extends Component {
             {description}
           </p>
           <div className={cx('infoContianer')}>
-            {
-              renderInfoTag({
-                title: 'Author',
-                content: author,
-              })
-            }
-            {
-              renderInfoTag({
-                title: 'Type',
-                content: 'Classifier',
-              })
-            }
+            <InfoTag title="Author" content={author} />
+            <InfoTag title="Type" content={'Classifier'} />
+            <InfoTag title="Model Size" content={size} />
+            <InfoTag title="Last Update" content={'4 days ago (change me)'} />
+            <InfoTag title="License" content={license} />
             {/*
               renderInfoTag({
                 title: 'Reference',
                 content: reference,
               })
             */}
-            {
-              renderInfoTag({
-                title: 'Model Size',
-                content: size,
-              })
-            }
-            {
-              renderInfoTag({
-                title: 'Last Update',
-                content: '4 days ago (change me)',
-              })
-            }
-            {
-              renderInfoTag({
-                title: 'License',
-                content: license,
-              })
-            }
           </div>
           <a href="#info" className={cx('showAllInfo', 'alignLeftHalf')}>
             Scholary Reference and more info ...
@@ -101,6 +77,14 @@ class ModalDetail extends Component {
           <Sample />
           <Sample />
           <Sample />
+      </div>
+      <div className={cx('ioLayout')}>
+        <IOTable
+          title="Input"
+        />
+        <IOTable
+          title="Output"
+        />
       </div>
     </div>
   }

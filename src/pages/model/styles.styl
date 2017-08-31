@@ -1,5 +1,9 @@
 @import '../../const.styl'
 
+text-link = #007aff
+text-primary = #000000
+text-secondary = #8E8E93
+
 /** Ultra Thin */
 @font-face {
   font-family: "San Francisco";
@@ -46,6 +50,7 @@
 .container
   max-width 1000px
   margin 0px auto
+  padding 0px 40px
   background #fff
   font-size 17.36px
   font-family -apple-system, "San Francisco", "Helvetica Neue", "Lucida Grande", serif
@@ -89,7 +94,7 @@
   & > *
     width 25%
   .infoTitle
-    color #8E8E93
+    color text-secondary
 .showAllInfo
   line-height 2em
 .btnContainer
@@ -106,7 +111,7 @@
   overflow-x scroll
   overflow-y hidden
   left calc((100% - 100vw) / 2)
-  width calc(100vw - 70px)
+  width calc(100vw - 80px)
   background #eee
 
 .sampleValuePair
@@ -154,3 +159,7 @@ types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
   for type in types
     &.{type}:before
       content ''+typenames[type]
+
+.ioLayout
+  display flex
+  justify-content space-around
