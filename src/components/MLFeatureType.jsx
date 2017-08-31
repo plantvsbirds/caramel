@@ -10,10 +10,16 @@ class MLFeature extends Component {
     super()
   }
   render() {
-    const { className, size } = this.props
+    const { className, size, type } = this.props
+    const inProps = (k) => {
+      return this.props.type && this.props.type.toLowerCase().indexOf(k) == 0
+    }
     return (
-      <div className={cx('type', size, className, types.find(k => this.props[k]))}>
-
+      <div className={cx(
+        'type',
+        size,
+        className,
+        types.find(k => this.props[k] || inProps(k)))}>
       </div>
     )
   }
