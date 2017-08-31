@@ -1,12 +1,11 @@
 import React from 'react'
-import Type from '~components/MLFeatureType'
 
 import classNamesBind from 'classnames/bind'
 import styles from './styles.styl'
 
 const cx = classNamesBind.bind(styles)
 
-const SampleValueBlock = () => (<div className={cx('sampleValue', 'pixelBuffer')}>
+const SampleValue = () => (<div className={cx('sampleValue', 'pixelBuffer')}>
 
 </div>)
 
@@ -14,9 +13,9 @@ export default () => {
   return (
     <div className={cx('sampleValuePair')}>
       <div className={cx('inputs')}>
-        <SampleValueBlock />
-        <SampleValueBlock />
-        <SampleValueBlock />
+        <SampleValue />
+        <SampleValue />
+        <SampleValue />
       </div>
 
 
@@ -46,9 +45,9 @@ export default () => {
       </svg>
 
       <div className={cx('outputs')}>
-        <SampleValueBlock />
-        <SampleValueBlock />
-        <SampleValueBlock />
+        <SampleValue />
+        <SampleValue />
+        <SampleValue />
       </div>
     </div>
   )
