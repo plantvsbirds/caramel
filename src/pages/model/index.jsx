@@ -86,6 +86,8 @@ class ModalDetail extends Component {
           title="Output"
         />
       </div>
+      <h1>Apps using {name}</h1>
+      <p>no info</p>
     </div>
   }
 }
