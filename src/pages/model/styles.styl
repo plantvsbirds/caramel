@@ -71,65 +71,6 @@ text-secondary = #8E8E93
   width calc(100vw - 70px)
   background #eee
 
-.sampleValuePair
-  height 100%
-  display flex
-  flex-direction column
-  flex-shrink 0
-  flex-grow 0
-  margin 20px
-  .inputs
-    z-index 3
-  .outputs
-    z-index 1
-  .arrow
-    z-index 2
-    margin-top -110px
-    margin-bottom -40px
-    margin-left 50%
-    transform translateX(-50%)
-  .inputs,
-  .outputs
-    display flex
-    flex-direction row
-    justify-content space-around
-    & > *:not(:first-child)
-      margin-left -60px
-
-round-size = 13.89px
-types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
-
-@keyframes pop_up
-  0%
-    bottom 0px
-  10%
-    bottom 5px
-  100%
-    bottom 0px
-
-.sampleValue
-  width 200px
-  height 150px
-  border-radius round-size
-  background #fff
-  box-shadow 0 1px 5px 0 rgba(0,0,0,0.20)
-  cursor zoom-in
-
-  &:before
-    text-transform uppercase
-    padding 0px round-size
-    border-radius round-size 0 round-size 0
-    background: rgba(0, 0, 0, .25)
-    color #fff
-
-  for type in types
-    &.{type}:before
-      content ''+typenames[type]
-  
-  &:hover
-    position relative
-    animation pop_up .2s ease-in
-
 .ioLayout
   display flex
   justify-content space-around

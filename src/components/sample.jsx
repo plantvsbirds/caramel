@@ -1,15 +1,15 @@
 import React from 'react'
 
 import classNamesBind from 'classnames/bind'
-import styles from './styles.styl'
+import styles from './sample.styl'
 
 const cx = classNamesBind.bind(styles)
 
-const SampleValue = () => (<div className={cx('sampleValue', 'pixelBuffer')}>
+export const SampleValue = () => (<div className={cx('sampleValue', 'pixelBuffer')}>
 
 </div>)
 
-export default () => {
+export const SampleValuePair = () => {
   return (
     <div className={cx('sampleValuePair')}>
       <div className={cx('inputs')}>

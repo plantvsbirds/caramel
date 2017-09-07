@@ -5,7 +5,7 @@ import styles from './styles.styl'
 const cx = classNamesBind.bind(styles)
 
 import Button from '~components/button'
-import Sample from './sample'
+import { SampleValuePair } from '~components/sample'
 import IOTable from './iotable'
 
 class ModalDetail extends Component {
@@ -71,12 +71,7 @@ class ModalDetail extends Component {
         </div>
       </div>
       <div className={cx('sampleContainer')}>
-          <Sample />
-          <Sample />
-          <Sample />
-          <Sample />
-          <Sample />
-          <Sample />
+          <SampleValuePair />
       </div>
       <div className={cx('ioLayout')}>
         <IOTable
