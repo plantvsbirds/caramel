@@ -99,12 +99,21 @@ text-secondary = #8E8E93
 round-size = 13.89px
 types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
 
+@keyframes pop_up
+  0%
+    bottom 0px
+  10%
+    bottom 5px
+  100%
+    bottom 0px
+
 .sampleValue
   width 200px
   height 150px
   border-radius round-size
   background #fff
   box-shadow 0 1px 5px 0 rgba(0,0,0,0.20)
+  cursor zoom-in
 
   &:before
     text-transform uppercase
@@ -116,6 +125,10 @@ types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
   for type in types
     &.{type}:before
       content ''+typenames[type]
+  
+  &:hover
+    position relative
+    animation pop_up .2s ease-in
 
 .ioLayout
   display flex
