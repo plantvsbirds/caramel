@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import ModelDetail from './pages/model'
 
-const mockModel = {}
+// !!mock
+import mockData from '../ConvertModel/MobileNet.json'
 
-export default <ModelDetail model={mockModel} />
+export default <ModelDetail model={mockData} />

@@ -1,18 +1,29 @@
 .type
+  background #4A4A4A
+
+.big
   width 120px
   height 120px
   border-radius 24.31px
-  background #4A4A4A
+  &:before
+    line-height 120px
+    font-size 28px
+.small
+  width 50px
+  height 50px
+  border-radius 10px
+  &:before
+    line-height 50px
+    font-size 15px
 
 .pixelBuffer
+.image
   background-image linear-gradient(-121deg, #3023AE 7%, #53A0FD 51%, #B4EC51 100%)
 
 .content
   display block
   text-align center
   height 100%
-  line-height 120px
-  font-size 28px
 
 .int64:before
   content "123"
@@ -27,7 +38,7 @@
 .dictionary:before
   @extend .int64:before
   content "{...}"
-  font-size 20px
+  font-size 0.7em
 
 .string:before
   content "Abc"

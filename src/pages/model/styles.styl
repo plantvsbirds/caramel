@@ -1,4 +1,8 @@
-/*
+@import '../../const.styl'
+
+text-link = #007aff
+text-primary = #000000
+text-secondary = #8E8E93
 
 /** Ultra Thin */
 @font-face {
@@ -46,9 +50,10 @@
 .container
   max-width 1000px
   margin 0px auto
+  padding 0px 40px
   background #fff
   font-size 17.36px
-  font-family "San Francisco"
+  font-family -apple-system, "San Francisco", "Helvetica Neue", "Lucida Grande", serif
   a
     color #007AFF
     text-decoration none
@@ -86,36 +91,75 @@
   width 100%
   justify-content space-between
   margin-top 1em
+  & > *
+    width 25%
   .infoTitle
-    color #8E8E93
+    color text-secondary
 .showAllInfo
   line-height 2em
-
 .btnContainer
   margin 1em 0
 
 .sampleContainer
+  display flex
+  box-sizing content-box
+  flex-direction row
+  flex-wrap nowrap
   position relative
   margin-top 1em
+  padding 35px
+  overflow-x scroll
+  overflow-y hidden
   left calc((100% - 100vw) / 2)
-  width 100vw
+  width calc(100vw - 80px)
   background #eee
-  min-height 50vh
 
-.typeDesc
-  .typeIconContainer
+.sampleValuePair
+  height 100%
+  display flex
+  flex-direction column
+  flex-shrink 0
+  flex-grow 0
+  margin 20px
+  .inputs
+    z-index 3
+  .outputs
+    z-index 1
+  .arrow
+    z-index 2
+    margin-top -110px
+    margin-bottom -40px
+    margin-left 50%
+    transform translateX(-50%)
+  .inputs,
+  .outputs
     display flex
-    justify-content center
-    & > *
-      flex-shrink 0
-    .input
-      margin-right -65px
-      z-index 3
-    .arrow
-      margin-top 40.5px
-      margin-right -35px
-      z-index 2
-    .output
-      z-index 1
-  p
-    text-align center
+    flex-direction row
+    justify-content space-around
+    & > *:not(:first-child)
+      margin-left -60px
+
+round-size = 13.89px
+types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
+
+.sampleValue
+  width 200px
+  height 150px
+  border-radius round-size
+  background #fff
+  box-shadow 0 1px 5px 0 rgba(0,0,0,0.20)
+
+  &:before
+    text-transform uppercase
+    padding 0px round-size
+    border-radius round-size 0 round-size 0
+    background: rgba(0, 0, 0, .25)
+    color #fff
+
+  for type in types
+    &.{type}:before
+      content ''+typenames[type]
+
+.ioLayout
+  display flex
+  justify-content space-around
