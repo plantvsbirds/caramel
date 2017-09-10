@@ -52,13 +52,15 @@ def getTypeInfo(type):
     else:
         print type
 
-model_list = ['MobileNet.mlmodel', 'MNIST.mlmodel']
 
-for file_path in reversed(os.listdir(os.curdir)):
+model_files = os.path.join(os.curdir, "..", "data", "models")
+output_path = os.path.join(os.curdir, "..", "data", "metadata")
+
+for file_path in os.listdir(model_files):
     if '.mlmodel' in file_path:
         result = {}
-        model = coremltools.models.MLModel(file_path)
-
+        model = coremltools.models.MLModel(os.path.join(model_files, file_path))
+        print file_path
         result["description"] = model.short_description
         result["author"] = model.author
         result["license"] = model.license
@@ -68,12 +70,11 @@ for file_path in reversed(os.listdir(os.curdir)):
         result["output"] = []
 
         spec = model.get_spec()
-        print file_path
         for output in spec.description.output:
             result["output"].append({"name": output.name, "description": output.shortDescription, "type": getTypeInfo(output.type)})
 
         for input in spec.description.input:
             result["input"].append({"name": input.name, "description": input.shortDescription, "type": getTypeInfo(input.type)})
 
-        with open(result["name"] + ".json", 'w') as outfile:
+        with open(os.path.join(output_path, result["name"] + ".json"), 'w') as outfile:
             json.dump(result, outfile, indent=4)

@@ -1,0 +1,21 @@
+{
+    "name": "TinyYOLO", 
+    "license": "Public Domain", 
+    "author": "Original paper: Joseph Redmon, Ali Farhadi", 
+    "description": "The Tiny YOLO network from the paper 'YOLO9000: Better, Faster, Stronger' (2016), arXiv:1612.08242", 
+    "output": [
+        {
+            "type": "MultiArray (Double 125 x 13 x 13)", 
+            "name": "grid", 
+            "description": "The 13x13 grid with the bounding box data"
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (RGB 416 x 416)", 
+            "name": "image", 
+            "description": "Input image"
+        }
+    ], 
+    "size": null
+}

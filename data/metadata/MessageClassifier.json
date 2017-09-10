@@ -1,0 +1,26 @@
+{
+    "name": "MessageClassifier", 
+    "license": "", 
+    "author": "", 
+    "description": "", 
+    "output": [
+        {
+            "type": "String", 
+            "name": "label", 
+            "description": ""
+        }, 
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "classProbability", 
+            "description": ""
+        }
+    ], 
+    "input": [
+        {
+            "type": "MultiArray (Double 8713)", 
+            "name": "message", 
+            "description": ""
+        }
+    ], 
+    "size": null
+}

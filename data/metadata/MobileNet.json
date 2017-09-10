@@ -1,15 +1,7 @@
 {
     "name": "MobileNet", 
     "license": "Unknown", 
-    "author": "shicai", 
-
-
-
-
-    "demo": "https://github.com/",
-    "reference": "Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam", 
-
-
+    "author": "Original paper: Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam. Caffe implementation: shicai", 
     "description": "The network from the paper 'MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications', trained on the ImageNet dataset.", 
     "output": [
         {
@@ -18,7 +10,7 @@
             "description": "Probability of each category"
         }, 
         {
-            "type": null, 
+            "type": "String", 
             "name": "classLabel", 
             "description": "Most likely image category"
         }
@@ -30,5 +22,5 @@
             "description": "Input image to be classified"
         }
     ], 
-    "size": "16.4 MB"
+    "size": null
 }

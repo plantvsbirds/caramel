@@ -1,0 +1,26 @@
+{
+    "name": "Food101", 
+    "license": "Unknown", 
+    "author": "Philipp Gabriel", 
+    "description": "This model takes a picture of a food and predicts its name", 
+    "output": [
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "foodConfidence", 
+            "description": "Confidence and label of predicted food"
+        }, 
+        {
+            "type": "String", 
+            "name": "classLabel", 
+            "description": "Label of predicted food"
+        }
+    ], 
+    "input": [
+        {
+            "type": "MultiArray (Double 3 x 299 x 299)", 
+            "name": "image", 
+            "description": "Image of a food"
+        }
+    ], 
+    "size": null
+}
