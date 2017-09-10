@@ -30,11 +30,12 @@ types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
 
 @keyframes pop_up
   0%
-    bottom 0px
-  10%
-    bottom 5px
+    // bottom 0px
+  50%
+    transform scale(1.02)
+    // bottom 5px
   100%
-    bottom 0px
+    // bottom 0px
 
 .sampleValue
   width 200px
@@ -57,4 +58,4 @@ types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
   
   &:hover
     position relative
-    animation pop_up .2s ease-in
+    animation pop_up .3s ease-out
