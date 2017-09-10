@@ -32,26 +32,48 @@ def getTypeInfo(type):
         return "Dictionary (" + key + " -> Double)"
     elif "imageType" == str(type).split(" ")[0]:
         return "Image (" + str(type).split("colorSpace: ")[-1].split("\n")[0] + " " + str(type.imageType.width) + " x " + str(type.imageType.height) + ")"
+    elif "stringType" == str(type).split(" ")[0]:
+        return "String"
+    elif "doubleType" == str(type).split(" ")[0]:
+        return "Double"
+    elif "multiArrayType" == str(type).split(" ")[0]:
+        dataType = str(type.multiArrayType).split("dataType: ")[1].split("\n")[0]
+        result = "MultiArray (" + dataType[0] + dataType[1:].lower()
+        isFirst = True
+        for shape in type.multiArrayType.shape:
+            if isFirst:
+                isFirst = False
+            else:
+                result += " x"
+            result += " " + str(shape)
+        result += ")"
+        print result
+        return result
+    else:
+        print type
 
-result = {}
+model_list = ['MobileNet.mlmodel', 'MNIST.mlmodel']
 
-file_path = sys.argv[1]
-model = coremltools.models.MLModel(file_path)
+for file_path in reversed(os.listdir(os.curdir)):
+    if '.mlmodel' in file_path:
+        result = {}
+        model = coremltools.models.MLModel(file_path)
 
+        result["description"] = model.short_description
+        result["author"] = model.author
+        result["license"] = model.license
+        result["name"] = file_path.split("/")[-1].split(".mlmodel")[0]
+        result["size"] = file_size(file_path)
+        result["input"] = []
+        result["output"] = []
 
-result["description"] = model.short_description
-result["author"] = model.author
-result["license"] = model.license
-result["name"] = file_path.split("/")[-1].split(".mlmodel")[0]
-result["size"] = file_size(file_path)
-result["input"] = []
-result["output"] = []
+        spec = model.get_spec()
+        print file_path
+        for output in spec.description.output:
+            result["output"].append({"name": output.name, "description": output.shortDescription, "type": getTypeInfo(output.type)})
 
-for output in model.get_spec().description.output:
-    result["output"].append({"name": output.name, "description": output.shortDescription, "type": getTypeInfo(output.type)})
+        for input in spec.description.input:
+            result["input"].append({"name": input.name, "description": input.shortDescription, "type": getTypeInfo(input.type)})
 
-for input in model.get_spec().description.input:
-    result["input"].append({"name": input.name, "description": input.shortDescription, "type": getTypeInfo(input.type)})
-
-with open(result["name"] + ".json", 'w') as outfile:
-    json.dump(result, outfile, indent=4)
+        with open(result["name"] + ".json", 'w') as outfile:
+            json.dump(result, outfile, indent=4)
