@@ -113,8 +113,12 @@ for file_name in os.listdir(model_files):
         file_path = os.path.join(model_files, file_name)
         reader = Popen("cat " + file_path + " | protoc --decode CoreML.Specification.Model Model.proto | less", stdout=PIPE,
                        stderr=STDOUT, shell=True)
-
         data, lines = get_block_code(reader.stdout)
+        try:
+            reader.terminate()
+        except OSError:
+            # can't kill a dead proc
+            pass
 
         if 'metadata {\n    shortDescription: "' in data:
             descriptions = data.split('metadata {\n    shortDescription: "')[1]
