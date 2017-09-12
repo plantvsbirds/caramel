@@ -1,0 +1,26 @@
+{
+    "name": "Resnet50", 
+    "license": "MIT License. More information available at https://github.com/fchollet/keras/blob/master/LICENSE", 
+    "author": "Original Paper: Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun. Keras Implementation: Fran\\303\\247ois Chollet", 
+    "description": "Detects the dominant objects present in an image from a set of 1000 categories such as trees, animals, food, vehicles, person etc. The top-5 error from the original publication is 7.8%.", 
+    "output": [
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "classLabelProbs", 
+            "description": "Probability of each category"
+        }, 
+        {
+            "type": "String", 
+            "name": "classLabel", 
+            "description": "Most likely image category"
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (Color 224 x 224)", 
+            "name": "image", 
+            "description": "Input image of scene to be classified"
+        }
+    ], 
+    "size": "97.8 MB"
+}

@@ -1,0 +1,26 @@
+{
+    "name": "CarRecognition", 
+    "license": "MIT", 
+    "author": "Audebert, Nicolas and Le Saux, Bertrand and Lefevre Sebastien", 
+    "description": "Predict the brand & model of a car.", 
+    "output": [
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "prob", 
+            "description": "The probabilities that the input image is a car."
+        }, 
+        {
+            "type": "String", 
+            "name": "classLabel", 
+            "description": "The most likely type of car, for the given input."
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (Color 224 x 224)", 
+            "name": "data", 
+            "description": "An image of a car."
+        }
+    ], 
+    "size": "24.5 MB"
+}

@@ -1,0 +1,41 @@
+{
+    "name": "HED_so", 
+    "license": "Unknown", 
+    "author": "Original paper: Xie, Saining and Tu, Zhuowen. Caffe implementation: Yangqing Jia. CoreML port: Andrey Volodin", 
+    "description": "Holistically-Nested Edge Detection. Side outputs", 
+    "output": [
+        {
+            "type": "MultiArray (Double)", 
+            "name": "upscore-dsn1", 
+            "description": "Tensor that can be treated as single-channel texture where each pixel represents the probability of edge there. Should be normalized before usage (i.e. with sigmoid function)"
+        }, 
+        {
+            "type": "MultiArray (Double)", 
+            "name": "upscore-dsn2", 
+            "description": "Tensor that can be treated as single-channel texture where each pixel represents the probability of edge there. Should be normalized before usage (i.e. with sigmoid function)"
+        }, 
+        {
+            "type": "MultiArray (Double)", 
+            "name": "upscore-dsn3", 
+            "description": "Tensor that can be treated as single-channel texture where each pixel represents the probability of edge there. Should be normalized before usage (i.e. with sigmoid function)"
+        }, 
+        {
+            "type": "MultiArray (Double)", 
+            "name": "upscore-dsn4", 
+            "description": "Tensor that can be treated as single-channel texture where each pixel represents the probability of edge there. Should be normalized before usage (i.e. with sigmoid function)"
+        }, 
+        {
+            "type": "MultiArray (Double)", 
+            "name": "upscore-dsn5", 
+            "description": "Tensor that can be treated as single-channel texture where each pixel represents the probability of edge there. Should be normalized before usage (i.e. with sigmoid function)"
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (Color 500 x 500)", 
+            "name": "data", 
+            "description": "Input image to be edge-detected. Must be exactly 500x500 pixels."
+        }
+    ], 
+    "size": "56.1 MB"
+}

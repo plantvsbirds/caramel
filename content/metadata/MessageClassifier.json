@@ -1,0 +1,20 @@
+{
+    "input": [
+        {
+            "type": "MultiArray (Double 8713)", 
+            "name": "message"
+        }
+    ], 
+    "output": [
+        {
+            "type": "String", 
+            "name": "label"
+        }, 
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "classProbability"
+        }
+    ], 
+    "name": "MessageClassifier", 
+    "size": "68.2 KB"
+}

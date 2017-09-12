@@ -1,0 +1,26 @@
+{
+    "name": "Inceptionv3", 
+    "license": "MIT License. More information available at https://github.com/fchollet/keras/blob/master/LICENSE", 
+    "author": "Original Paper: Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna. Keras Implementation: Fran\\303\\247ois Chollet", 
+    "description": "Detects the dominant objects present in an image from a set of 1000 categories such as trees, animals, food, vehicles, person etc. The top-5 error from the original publication is 5.6%.", 
+    "output": [
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "classLabelProbs", 
+            "description": "Probability of each category"
+        }, 
+        {
+            "type": "String", 
+            "name": "classLabel", 
+            "description": "Most likely image category"
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (Color 299 x 299)", 
+            "name": "image", 
+            "description": "Input image to be classified"
+        }
+    ], 
+    "size": "90.3 MB"
+}

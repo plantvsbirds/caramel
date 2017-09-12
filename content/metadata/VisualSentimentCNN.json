@@ -1,0 +1,26 @@
+{
+    "name": "VisualSentimentCNN", 
+    "license": "MIT", 
+    "author": "Image Processing Group - BarcelonaTECH - UPC", 
+    "description": "Fine-tuning CNNs for Visual Sentiment Prediction", 
+    "output": [
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "prob", 
+            "description": "The probabilities for each sentiment, for the given input."
+        }, 
+        {
+            "type": "String", 
+            "name": "classLabel", 
+            "description": "The most likely sentiment, for the given input."
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (Color 227 x 227)", 
+            "name": "data", 
+            "description": "An image."
+        }
+    ], 
+    "size": "217.0 MB"
+}

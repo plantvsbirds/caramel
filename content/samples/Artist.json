@@ -1,0 +1,25 @@
+{
+    "primary_input": "prob",
+    "primary_output": "classLabel",
+    "samples": [
+        {
+            "input": {
+                "prob": {
+                    "type": "text",
+                    "content": "This is the content"
+                },
+                "classLabel": {
+                    "type": "image",
+                    "url": "image/dfsdf.png"
+                }
+            }, 
+
+            "output": {
+                "classLabel": {
+                    "type": "image",
+                    "url": "image/dfsdf.png"
+                }
+            }
+        }
+    ]
+}

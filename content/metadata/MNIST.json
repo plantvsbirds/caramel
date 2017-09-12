@@ -1,0 +1,25 @@
+{
+    "name": "MNIST", 
+    "license": "MIT", 
+    "author": "Philipp Gabriel", 
+    "description": "Predicts a handwritten digit.", 
+    "output": [
+        {
+            "type": "Dictionary (Int64 -> Double)", 
+            "name": "prediction", 
+            "description": "Array of predictions mapped to their indices"
+        }, 
+        {
+            "type": "Int64", 
+            "name": "classLabel"
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (Gray scale 28 x 28)", 
+            "name": "image", 
+            "description": "Image to analyze"
+        }
+    ], 
+    "size": "2.3 MB"
+}
