@@ -4,13 +4,13 @@
         {
             "input": {
                 "inputImage": {
-                    "content": "IMG_3268.PNG", 
+                    "content": "__FNS-The-Scream_IMG_3268_PNG.png",
                     "type": "image"
                 }
-            }, 
+            },
             "output": {
                 "outputImage": {
-                    "content": "IMG_3270.PNG", 
+                    "content": "__FNS-The-Scream_IMG_3270_PNG.png",
                     "type": "image"
                 }
             }
@@ -18,17 +18,17 @@
         {
             "input": {
                 "inputImage": {
-                    "content": "IMG_3289.PNG", 
+                    "content": "__FNS-The-Scream_IMG_3289_PNG.png",
                     "type": "image"
                 }
-            }, 
+            },
             "output": {
                 "outputImage": {
-                    "content": "IMG_3291.PNG", 
+                    "content": "__FNS-The-Scream_IMG_3291_PNG.png",
                     "type": "image"
                 }
             }
         }
-    ], 
+    ],
     "primary_input": "outputImage"
 }

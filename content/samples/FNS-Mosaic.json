@@ -4,13 +4,13 @@
         {
             "input": {
                 "inputImage": {
-                    "content": "IMG_3303.PNG", 
+                    "content": "__FNS-Mosaic_IMG_3303_PNG.png",
                     "type": "image"
                 }
-            }, 
+            },
             "output": {
                 "outputImage": {
-                    "content": "IMG_3263.PNG", 
+                    "content": "__FNS-Mosaic_IMG_3263_PNG.png",
                     "type": "image"
                 }
             }
@@ -18,13 +18,13 @@
         {
             "input": {
                 "inputImage": {
-                    "content": "IMG_3296.PNG", 
+                    "content": "__FNS-Mosaic_IMG_3296_PNG.png",
                     "type": "image"
                 }
-            }, 
+            },
             "output": {
                 "outputImage": {
-                    "content": "IMG_3297.PNG", 
+                    "content": "__FNS-Mosaic_IMG_3297_PNG.png",
                     "type": "image"
                 }
             }
@@ -32,17 +32,17 @@
         {
             "input": {
                 "inputImage": {
-                    "content": "IMG_3275.PNG", 
+                    "content": "__FNS-Mosaic_IMG_3275_PNG.png",
                     "type": "image"
                 }
-            }, 
+            },
             "output": {
                 "outputImage": {
-                    "content": "IMG_3276.PNG", 
+                    "content": "__FNS-Mosaic_IMG_3276_PNG.png",
                     "type": "image"
                 }
             }
         }
-    ], 
+    ],
     "primary_input": "outputImage"
 }

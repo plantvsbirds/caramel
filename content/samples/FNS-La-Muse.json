@@ -4,27 +4,13 @@
         {
             "input": {
                 "inputImage": {
-                    "content": "IMG_3282.PNG", 
+                    "content": "__FNS-La-Muse_IMG_3282_PNG.png",
                     "type": "image"
                 }
-            }, 
+            },
             "output": {
                 "outputImage": {
-                    "content": "IMG_3287.PNG", 
-                    "type": "image"
-                }
-            }
-        },        
-        {
-            "input": {
-                "inputImage": {
-                    "content": "IMG_3275.PNG", 
-                    "type": "image"
-                }
-            }, 
-            "output": {
-                "outputImage": {
-                    "content": "IMG_3280.PNG", 
+                    "content": "__FNS-La-Muse_IMG_3287_PNG.png",
                     "type": "image"
                 }
             }
@@ -32,18 +18,31 @@
         {
             "input": {
                 "inputImage": {
-                    "content": "IMG_3296.PNG", 
+                    "content": "__FNS-La-Muse_IMG_3275_PNG.png",
                     "type": "image"
                 }
-            }, 
+            },
             "output": {
                 "outputImage": {
-                    "content": "IMG_3301.PNG", 
+                    "content": "__FNS-La-Muse_IMG_3280_PNG.png",
+                    "type": "image"
+                }
+            }
+        },
+        {
+            "input": {
+                "inputImage": {
+                    "content": "__FNS-La-Muse_IMG_3296_PNG.png",
+                    "type": "image"
+                }
+            },
+            "output": {
+                "outputImage": {
+                    "content": "__FNS-La-Muse_IMG_3301_PNG.png",
                     "type": "image"
                 }
             }
         }
-
-    ], 
+    ],
     "primary_input": "outputImage"
 }
