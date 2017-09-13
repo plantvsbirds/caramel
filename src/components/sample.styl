@@ -26,7 +26,6 @@
       margin-left -60px
 
 round-size = 13.89px
-types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
 
 @keyframes pop_up
   0%
@@ -37,25 +36,52 @@ types = int64, double, string, dictionary, pixelBuffer, multiArray, undefined
   100%
     // bottom 0px
 
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(2.0);
+    transform: scale(2.0);
+    opacity: 0;
+  }
+}
+
 .sampleValue
+  position relative
   width 200px
   height 150px
+  padding .5em
+  box-sizing border-box
+  display flex
+  justify-content center
+  align-content center
+  flex-direction column
+  overflow hidden
+
   border-radius round-size
   background #fff
+  background-size cover
   box-shadow 0 1px 5px 0 rgba(0,0,0,0.20)
   cursor zoom-in
 
+  & > p
+    text-align center
+    vertical-align middle
+
   &:before
+    position absolute
+    top 0
+    left 0
     text-transform uppercase
     padding 0px round-size
     border-radius round-size 0 round-size 0
-    background: rgba(0, 0, 0, .25)
+    background: rgb(192, 192, 192)
     color #fff
-
-  for type in types
+  for type, humanFriendlyName in typenames
     &.{type}:before
-      content ''+typenames[type]
+      content ''+humanFriendlyName
   
   &:hover
-    position relative
+    z-index 4
     animation pop_up .3s ease-out

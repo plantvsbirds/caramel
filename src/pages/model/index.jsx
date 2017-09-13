@@ -20,6 +20,7 @@ class ModalDetail extends Component {
       size,
       license,
       input, output,
+      samples,
     } = this.props.model
 
     const InfoTag = ({
@@ -56,9 +57,11 @@ class ModalDetail extends Component {
               })
             */}
           </div>
-          <a href="#info" className={cx('showAllInfo', 'alignLeftHalf')}>
-            Scholary Reference and more info ...
-          </a>
+          {/*
+            <a href="#info" className={cx('showAllInfo', 'alignLeftHalf')}>
+              Scholary Reference and more info ...
+            </a>
+          */}
           <div className={cx('alignLeftHalf', 'btnContainer')}>
             <Button
               label="Get"
@@ -71,7 +74,14 @@ class ModalDetail extends Component {
         </div>
       </div>
       <div className={cx('sampleContainer')}>
-          <SampleValuePair />
+        {
+          samples.map((s, idx) =>
+            <SampleValuePair
+              key={`sample__${idx}`}
+              sample={s}
+              spec={{input, output}}
+            />)
+        }
       </div>
       <div className={cx('ioLayout')}>
         <IOTable
