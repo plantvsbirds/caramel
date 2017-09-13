@@ -1,20 +1,49 @@
 {
-    "primary_output": "", 
+    "primary_output": "inputImage",
     "samples": [
         {
             "input": {
                 "inputImage": {
-                    "content": "", 
-                    "type": ""
+                    "content": "IMG_3282.PNG", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "outputImage": {
-                    "content": "", 
-                    "type": ""
+                    "content": "IMG_3287.PNG", 
+                    "type": "image"
+                }
+            }
+        },        
+        {
+            "input": {
+                "inputImage": {
+                    "content": "IMG_3275.PNG", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "outputImage": {
+                    "content": "IMG_3280.PNG", 
+                    "type": "image"
+                }
+            }
+        },
+        {
+            "input": {
+                "inputImage": {
+                    "content": "IMG_3296.PNG", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "outputImage": {
+                    "content": "IMG_3301.PNG", 
+                    "type": "image"
                 }
             }
         }
+
     ], 
-    "primary_input": ""
+    "primary_input": "outputImage"
 }
