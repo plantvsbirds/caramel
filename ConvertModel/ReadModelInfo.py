@@ -1,9 +1,5 @@
-import coremltools
-import os
 import json
 from subprocess import Popen, PIPE, STDOUT
-from google.protobuf import descriptor_pb2
-import google.protobuf
 import os
 
 def convert_bytes(num):
@@ -14,7 +10,6 @@ def convert_bytes(num):
         if num < 1024.0:
             return "%3.1f %s" % (num, x)
         num /= 1024.0
-
 
 def file_size(file_path):
     """

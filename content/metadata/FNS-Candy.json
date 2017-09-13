@@ -1,0 +1,21 @@
+{
+    "name": "FNS-Candy", 
+    "license": "Free for personal or research use", 
+    "author": "Justin Johnson", 
+    "description": "Feedforward style transfer https://github.com/jcjohnson/fast-neural-style", 
+    "output": [
+        {
+            "type": "Image (Color 720 x 720)", 
+            "name": "outputImage", 
+            "description": "Stylized image"
+        }
+    ], 
+    "input": [
+        {
+            "type": "Image (Color 720 x 720)", 
+            "name": "inputImage", 
+            "description": "Image to stylize"
+        }
+    ], 
+    "size": "1.6 MB"
+}
