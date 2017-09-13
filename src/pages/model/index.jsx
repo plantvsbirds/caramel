@@ -20,8 +20,8 @@ class ModalDetail extends Component {
       size,
       license,
       input, output,
-      samples,
-    } = this.props.model
+    } = this.props.meta
+    const samples = this.props.samples.samples || []
 
     const InfoTag = ({
       title, content
