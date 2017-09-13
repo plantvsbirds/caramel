@@ -3,7 +3,7 @@ import classNameBind from 'classnames/bind'
 import styles from './MLFeatureType.styl'
 
 const cx = classNameBind.bind(styles)
-import { types } from '../const'
+import { getTypeShorthand } from '../utils'
 
 class MLFeature extends Component {
   constructor() {
@@ -11,15 +11,14 @@ class MLFeature extends Component {
   }
   render() {
     const { className, size, type } = this.props
-    const inProps = (k) => {
-      return this.props.type && this.props.type.toLowerCase().indexOf(k) == 0
-    }
     return (
-      <div className={cx(
-        'type',
-        size,
-        className,
-        types.find(k => this.props[k] || inProps(k)))}>
+      <div
+        className={cx(
+          'type',
+          size,
+          className,
+          getTypeShorthand(type)
+        )}>
       </div>
     )
   }
