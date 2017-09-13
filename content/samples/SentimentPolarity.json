@@ -1,26 +1,24 @@
 {
-    "name": "SentimentPolarity", 
-    "license": "MIT", 
-    "author": "Vadym Markov", 
-    "description": "Sentiment polarity LinearSVC.", 
-    "output": [
+    "primary_output": "", 
+    "samples": [
         {
-            "type": "String", 
-            "name": "classLabel", 
-            "description": "The most likely polarity (positive or negative), for the given input."
-        }, 
-        {
-            "type": "Dictionary (String -> Double)", 
-            "name": "classProbability", 
-            "description": "The probabilities for each class label, for the given input."
+            "input": {
+                "input": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "classProbability": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
         }
     ], 
-    "input": [
-        {
-            "type": "Dictionary (String -> Double)", 
-            "name": "input", 
-            "description": "Features extracted from the text."
-        }
-    ], 
-    "size": null
+    "primary_input": ""
 }

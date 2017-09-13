@@ -19,6 +19,6 @@ for file_name in os.listdir(metadata_files):
                 sample["output"][output["name"]] = {"type": "", "content": ""}
             result["samples"] = [sample]
 
-        print
         with open(os.path.join(output_dir, file_name), 'w') as outfile:
             json.dump(result, outfile, indent=4)
+        os.mkdir(os.path.join(output_dir, file_name.strip(".json")))

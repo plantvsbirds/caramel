@@ -1,0 +1,48 @@
+{
+    "primary_output": "inputImage",
+    "samples": [
+        {
+            "input": {
+                "inputImage": {
+                    "content": "IMG_3275.PNG", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "outputImage": {
+                    "content": "IMG_3276.PNG", 
+                    "type": "image"
+                }
+            }
+        },
+        {
+            "input": {
+                "inputImage": {
+                    "content": "IMG_3282.PNG", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "outputImage": {
+                    "content": "IMG_3283.PNG", 
+                    "type": "image"
+                }
+            }
+        },
+        {
+            "input": {
+                "inputImage": {
+                    "content": "IMG_3296.PNG", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "outputImage": {
+                    "content": "IMG_3297.PNG", 
+                    "type": "image"
+                }
+            }
+        }
+    ], 
+    "primary_input": "outputImage"
+}

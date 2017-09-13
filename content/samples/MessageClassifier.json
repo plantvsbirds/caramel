@@ -1,26 +1,24 @@
 {
-    "name": "MessageClassifier", 
-    "license": "", 
-    "author": "", 
-    "description": "", 
-    "output": [
+    "primary_output": "", 
+    "samples": [
         {
-            "type": "String", 
-            "name": "label", 
-            "description": ""
-        }, 
-        {
-            "type": "Dictionary (String -> Double)", 
-            "name": "classProbability", 
-            "description": ""
+            "input": {
+                "message": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "classProbability": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "label": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
         }
     ], 
-    "input": [
-        {
-            "type": "MultiArray (Double 8713)", 
-            "name": "message", 
-            "description": ""
-        }
-    ], 
-    "size": null
+    "primary_input": ""
 }

@@ -3,17 +3,13 @@
     "samples": [
         {
             "input": {
-                "image": {
+                "inputImage": {
                     "content": "", 
                     "type": ""
                 }
             }, 
             "output": {
-                "classLabel": {
-                    "content": "", 
-                    "type": ""
-                }, 
-                "prediction": {
+                "outputImage": {
                     "content": "", 
                     "type": ""
                 }

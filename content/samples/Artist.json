@@ -1,25 +1,32 @@
 {
-    "primary_input": "prob",
-    "primary_output": "classLabel",
+    "primary_output": "", 
     "samples": [
         {
             "input": {
-                "prob": {
-                    "type": "text",
-                    "content": "This is the content"
-                },
-                "classLabel": {
-                    "type": "image",
-                    "url": "image/dfsdf.png"
+                "Genre1": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "City": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "Latitude": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "Longitude": {
+                    "content": "", 
+                    "type": ""
                 }
             }, 
-
             "output": {
-                "classLabel": {
-                    "type": "image",
-                    "url": "image/dfsdf.png"
+                "Artist": {
+                    "content": "", 
+                    "type": ""
                 }
             }
         }
-    ]
+    ], 
+    "primary_input": ""
 }
