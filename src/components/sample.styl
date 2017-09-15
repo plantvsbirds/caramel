@@ -1,11 +1,13 @@
 @import '../const.styl'
 
 .sampleValuePair
-  height 100%
   display flex
   flex-direction column
   flex-shrink 0
   flex-grow 0
+
+.sampleValuePair
+  height 100%
   margin 20px
   .inputs
     z-index 3
@@ -25,21 +27,32 @@
     & > *:not(:first-child)
       margin-left -60px
 
-round-size = 13.89px
+.keySamplePair
+  position relative
+  overflow hidden
+  width 266.43px
+  height 233px
+  .input
+    z-index 2
+  .output
+    z-index 3
+    left 64.58px
+    top -40.55px 
+  .arrow
+    z-index 5
+    position absolute
+    top 114px
 
 @keyframes pop_up
   0%
-    // bottom 0px
+    transform scale(1)
   50%
     transform scale(1.02)
-    // bottom 5px
   100%
-    // bottom 0px
+    transform scale(1)
 
 .sampleValue
   position relative
-  width 200px
-  height 150px
   padding .5em
   box-sizing border-box
   display flex
@@ -48,7 +61,6 @@ round-size = 13.89px
   flex-direction column
   overflow hidden
 
-  border-radius round-size
   background #fff
   background-size cover
   box-shadow 0 1px 5px 0 rgba(0,0,0,0.20)
@@ -63,8 +75,6 @@ round-size = 13.89px
     top 0
     left 0
     text-transform uppercase
-    padding 0px round-size
-    border-radius round-size 0 round-size 0
     background: rgb(192, 192, 192)
     color #fff
   for type, humanFriendlyName in typenames
@@ -74,3 +84,28 @@ round-size = 13.89px
   &:hover
     z-index 4
     animation pop_up .3s ease-out
+
+sampleValueSizer(w, h, r)
+  width w
+  height h
+  border-radius r
+  &:before
+    padding 0px r
+    border-radius r 0 r 0
+
+displayTagOnHover()
+  &:before
+    opacity 0
+  &:hover:before
+    opacity 1
+
+.sampleValue.full
+  sampleValueSizer(200px, 150px, 13.89px)
+
+.sampleValue.mini
+  sampleValueSizer(161.8px, 121.5px, 13.89px)
+  displayTagOnHover()
+
+.sampleValue.medium
+  sampleValueSizer(194.44px, 145.83px, 13.89px)
+  displayTagOnHover()
