@@ -5,17 +5,20 @@ import styles from './sample.styl'
 
 import { mapObject, getTypeShorthand } from '../utils'
 import { SampleArrow } from '../const'
+import { getSampleImagePublicUrl } from '../config'
 
 const cx = classNamesBind.bind(styles)
 
 export const SampleValue = ({ name, sampleValue, type }) => {
   const shouldDisplayLoading = !(sampleValue && sampleValue.type === 'text')
+  const shouldDisplayImage = sampleValue && sampleValue.type === 'image'
+  const imageUrl = getSampleImagePublicUrl(sampleValue.content)
   return (
     <div
       className={
         cx('sampleValue', type, shouldDisplayLoading && 'loading')
       }
-      style={{ backgroundImage: `url(${(sampleValue && sampleValue.type === 'image') ? sampleValue.url : null })`}}
+      style={{ backgroundImage: `url(${imageUrl})`}}
     >
       {
         sampleValue && sampleValue.type === 'text' && <p>{sampleValue.content}</p>
