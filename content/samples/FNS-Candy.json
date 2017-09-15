@@ -1,5 +1,5 @@
 {
-    "primary_output": "inputImage",
+    "primary_input": "inputImage",
     "samples": [
         {
             "input": {
@@ -44,5 +44,5 @@
             }
         }
     ],
-    "primary_input": "outputImage"
+    "primary_output": "outputImage"
 }
