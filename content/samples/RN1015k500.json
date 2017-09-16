@@ -1,0 +1,38 @@
+{
+    "primary_output": "softmax_output", 
+    "samples": [
+        {
+            "input": {
+                "data": {
+                    "content": "ScreenShot2017-09-161.40.24AM.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                }, 
+                "softmax_output": {
+                    "content": "ScreenShot2017-09-161.40.24AM_out.png", 
+                    "type": "image"
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
+                    "content": "ScreenShot2017-09-1611.41.59AM.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                }, 
+                "softmax_output": {
+                    "content": "ScreenShot2017-09-1611.41.59AM_out.png", 
+                    "type": "image"
+                }
+            }
+        }
+    ], 
+    "primary_input": "data"
+}
