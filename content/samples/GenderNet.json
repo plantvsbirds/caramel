@@ -1,5 +1,5 @@
 {
-    "primary_output": "prob", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
@@ -15,7 +15,9 @@
                 }, 
                 "prob": {
                 }
-            },
+            }
+        },
+        {
             "input": {
                 "data": {
                     "content": "ScreenShot2017-09-154.59.42PM.png", 

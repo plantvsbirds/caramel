@@ -1,6 +1,22 @@
 {
-    "primary_output": "prob", 
+    "primary_output": "classLabel", 
     "samples": [
+        {
+            "input": {
+                "data": {
+                    "content": "ScreenShot2017-09-154.59.42PM.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "60-100", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            }
+        },
         {
             "input": {
                 "data": {
@@ -11,20 +27,6 @@
             "output": {
                 "classLabel": {
                     "content": "25-32", 
-                    "type": "text"
-                }, 
-                "prob": {
-                }
-            },
-            "input": {
-                "data": {
-                    "content": "ScreenShot2017-09-154.59.42PM.png", 
-                    "type": "image"
-                }
-            }, 
-            "output": {
-                "classLabel": {
-                    "content": "60-100", 
                     "type": "text"
                 }, 
                 "prob": {
