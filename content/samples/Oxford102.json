@@ -1,24 +1,38 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
                 "data": {
-                    "content": "", 
-                    "type": ""
+                    "content": "rose_screen.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "rose", 
+                    "type": "text"
                 }, 
                 "prob": {
-                    "content": "", 
-                    "type": ""
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
+                    "content": "morning_glory_screen.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "morning_glory", 
+                    "type": "text"
+                }, 
+                "prob": {
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "data"
 }
