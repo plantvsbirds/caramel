@@ -1,24 +1,38 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
                 "data": {
-                    "content": "", 
-                    "type": ""
+                    "content": "vintage_image_sample.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "Vintage", 
+                    "type": "text"
                 }, 
                 "prob": {
-                    "content": "", 
-                    "type": ""
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
+                    "content": "ScreenShot2017-09-16at1.19.30AM.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "Pastel", 
+                    "type": "text"
+                }, 
+                "prob": {
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "data"
 }
