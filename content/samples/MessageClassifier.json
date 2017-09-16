@@ -1,24 +1,38 @@
 {
-    "primary_output": "", 
+    "primary_output": "label", 
     "samples": [
         {
             "input": {
                 "message": {
-                    "content": "", 
-                    "type": ""
+                    "content": "URGENT! You have won a 1 week FREE membership in our £100,000 Prize Jackpot! Txt the word: CLAIM to No: 81010 T&C www.dbuk.net LCCLTD POBOX 4403LDNW1A7RW18", 
+                    "type": "text"
                 }
             }, 
             "output": {
                 "classProbability": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "label": {
-                    "content": "", 
-                    "type": ""
+                    "content": "spam", 
+                    "type": "text"
+                }
+            }
+        },
+        {
+            "input": {
+                "message": {
+                    "content": "Lol your always so convincing.", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classProbability": {
+                }, 
+                "label": {
+                    "content": "ham", 
+                    "type": "text"
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "message"
 }
