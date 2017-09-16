@@ -2,15 +2,22 @@
   height 10em
 
 .col
-  width 100%
+  max-width 100%
+  overflow hidden
   display flex
+  flex-wrap wrap
   flex-direction row
-  justify-content space-evenly
+  justify-content space-between
   position relative
   margin-top 1em
-
+  
+  &:after
+    content ""
+    width 28%
   .item
-    flex 0 0 1
+    flex-shrink 0
+    margin 1em auto
+    width 28%
     .title,
     .content
       cursor pointer

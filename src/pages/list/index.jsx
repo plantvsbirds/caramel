@@ -26,6 +26,7 @@ const Collection = () => <div className={css.col}>
   <Item />
   <Item />
   <Item />
+  <Item />
 </div>
 
 class ModelList extends Component {
