@@ -1,24 +1,70 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
                 "image": {
-                    "content": "", 
-                    "type": ""
+                    "content": "applepie-screen.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "apple pie", 
+                    "type": "text"
                 }, 
                 "foodConfidence": {
-                    "content": "", 
-                    "type": ""
+                }
+            }
+        },        
+        {
+            "input": {
+                "image": {
+                    "content": "lobster-screen.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "lobster roll sandwish", 
+                    "type": "text"
+                }, 
+                "foodConfidence": {
+                }
+            }
+        },        
+        {
+            "input": {
+                "image": {
+                    "content": "ribs-screen.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "baby back ribs", 
+                    "type": "text"
+                }, 
+                "foodConfidence": {
+                }
+            }
+        },        
+        {
+            "input": {
+                "image": {
+                    "content": "steak-screen.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "steak", 
+                    "type": "text"
+                }, 
+                "foodConfidence": {
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "image"
 }
