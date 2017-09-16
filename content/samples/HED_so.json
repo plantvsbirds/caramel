@@ -1,36 +1,66 @@
 {
-    "primary_output": "", 
+    "primary_output": "upscore-dsn3", 
     "samples": [
         {
             "input": {
                 "data": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at9.58.01AM.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "upscore-dsn5": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at9.58.01AM.dsn5.png", 
+                    "type": "image"
                 }, 
                 "upscore-dsn4": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at9.58.01AM.dsn4.png", 
+                    "type": "image"
                 }, 
                 "upscore-dsn1": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at9.58.01AM.dsn1.png", 
+                    "type": "image"
                 }, 
                 "upscore-dsn3": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at9.58.01AM.dsn3.png", 
+                    "type": "image"
                 }, 
                 "upscore-dsn2": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at9.58.01AM.dsn2.png", 
+                    "type": "image"
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
+                    "content": "ScreenShot2017-09-169.56.25M.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "upscore-dsn5": {
+                    "content": "ScreenShot2017-09-169.56.25M-dsn5.png", 
+                    "type": "image"
+                }, 
+                "upscore-dsn4": {
+                    "content": "ScreenShot2017-09-169.56.25M-dsn4.png", 
+                    "type": "image"
+                }, 
+                "upscore-dsn1": {
+                    "content": "ScreenShot2017-09-169.56.25M-dsn1.png", 
+                    "type": "image"
+                }, 
+                "upscore-dsn3": {
+                    "content": "ScreenShot2017-09-169.56.25M-dsn3.png", 
+                    "type": "image"
+                }, 
+                "upscore-dsn2": {
+                    "content": "ScreenShot2017-09-169.56.25M-dsn2.png", 
+                    "type": "image"
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "data"
 }
