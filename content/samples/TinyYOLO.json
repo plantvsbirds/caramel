@@ -1,0 +1,20 @@
+{
+    "primary_output": "", 
+    "samples": [
+        {
+            "input": {
+                "image": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "grid": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
+        }
+    ], 
+    "primary_input": ""
+}

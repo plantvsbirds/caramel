@@ -1,0 +1,32 @@
+{
+    "primary_output": "", 
+    "samples": [
+        {
+            "input": {
+                "Genre1": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "City": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "Latitude": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "Longitude": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "Artist": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
+        }
+    ], 
+    "primary_input": ""
+}

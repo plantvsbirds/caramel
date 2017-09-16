@@ -1,0 +1,24 @@
+{
+    "primary_output": "", 
+    "samples": [
+        {
+            "input": {
+                "sceneImage": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "sceneLabel": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "sceneLabelProbs": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
+        }
+    ], 
+    "primary_input": ""
+}

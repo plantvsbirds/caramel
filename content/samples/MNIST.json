@@ -1,0 +1,24 @@
+{
+    "primary_output": "", 
+    "samples": [
+        {
+            "input": {
+                "image": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "prediction": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
+        }
+    ], 
+    "primary_input": ""
+}

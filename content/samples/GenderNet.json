@@ -1,0 +1,36 @@
+{
+    "primary_output": "prob", 
+    "samples": [
+        {
+            "input": {
+                "data": {
+                    "content": "ScreenShot20170915at4.54.34.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "Male", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            },
+            "input": {
+                "data": {
+                    "content": "ScreenShot2017-09-154.59.42PM.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "Female", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            }
+        }
+    ], 
+    "primary_input": "data"
+}

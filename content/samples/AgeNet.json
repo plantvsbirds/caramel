@@ -1,0 +1,36 @@
+{
+    "primary_output": "prob", 
+    "samples": [
+        {
+            "input": {
+                "data": {
+                    "content": "ScreenShot20170915at4.54.34.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "25-32", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            },
+            "input": {
+                "data": {
+                    "content": "ScreenShot2017-09-154.59.42PM.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "60-100", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            }
+        }
+    ], 
+    "primary_input": "data"
+}

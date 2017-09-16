@@ -21,4 +21,5 @@ for file_name in os.listdir(metadata_files):
 
         with open(os.path.join(output_dir, file_name), 'w') as outfile:
             json.dump(result, outfile, indent=4)
-        os.mkdir(os.path.join(output_dir, file_name.replace(".json", "")))
+#        os.mkdir(os.path.join(output_dir, file_name.replace(".json", "")))
+

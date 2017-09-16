@@ -1,0 +1,24 @@
+{
+    "primary_output": "", 
+    "samples": [
+        {
+            "input": {
+                "message": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "classProbability": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "label": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
+        }
+    ], 
+    "primary_input": ""
+}
