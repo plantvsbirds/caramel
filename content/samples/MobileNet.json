@@ -1,24 +1,22 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
                 "data": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at8.52.00PM.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "tiger cat", 
+                    "type": "text "
                 }, 
                 "prob": {
-                    "content": "", 
-                    "type": ""
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "data"
 }
