@@ -4,6 +4,8 @@ import css from './index.styl'
 import classNamesBind from 'classnames/bind'
 const cx = classNamesBind.bind(css)
 
+import { Helmet } from 'react-helmet'
+
 import ModelDetail from '../model'
 import { KeySamplePair } from '~components/sample'
 
@@ -96,6 +98,9 @@ class ModelList extends Component {
   render() {
     const { models } = this.props
     return <div>
+      <Helmet>
+        <title>{`CoreML.Store`}</title>
+      </Helmet>
       {this.state.isExpanded && (
         <div
           className={css.modelContainer}
