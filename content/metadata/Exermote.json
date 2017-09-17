@@ -1,0 +1,53 @@
+{
+    "name": "Exermote", 
+    "license": "MIT", 
+    "author": "Stephan Lerner", 
+    "description": "Predicts the exercise, when iPhone is worn on right upper arm.", 
+    "output": [
+        {
+            "type": "MultiArray (Double 4)", 
+            "name": "scores", 
+            "description": "Probability of different exercises (Break, Burpee, Situp, Squat)"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_1_h_out"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_1_c_out"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_2_h_out"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_2_c_out"
+        }
+    ], 
+    "input": [
+        {
+            "type": "MultiArray (Double 12)", 
+            "name": "accelerations", 
+            "description": "40 timesteps (0.1 second per timestep) * 12 movement features (3x gravity, 3x acceleration, 3x euler angle, 3x rotation rate)"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_1_h_in"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_1_c_in"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_2_h_in"
+        }, 
+        {
+            "type": "MultiArray (Double 32)", 
+            "name": "lstm_2_c_in"
+        }
+    ], 
+    "size": "84.0 KB"
+}

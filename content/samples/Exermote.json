@@ -1,0 +1,52 @@
+{
+    "primary_output": "", 
+    "samples": [
+        {
+            "input": {
+                "lstm_1_h_in": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "lstm_2_h_in": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "accelerations": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "lstm_2_c_in": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "lstm_1_c_in": {
+                    "content": "", 
+                    "type": ""
+                }
+            }, 
+            "output": {
+                "lstm_2_h_out": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "lstm_1_h_out": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "lstm_1_c_out": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "lstm_2_c_out": {
+                    "content": "", 
+                    "type": ""
+                }, 
+                "scores": {
+                    "content": "", 
+                    "type": ""
+                }
+            }
+        }
+    ], 
+    "primary_input": ""
+}

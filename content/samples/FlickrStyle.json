@@ -4,13 +4,13 @@
         {
             "input": {
                 "data": {
-                    "content": "vintage_image_sample.png", 
+                    "content": "ScreenShot2017-09-16at1.19.30AM.png", 
                     "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "Vintage", 
+                    "content": "Pastel", 
                     "type": "text"
                 }, 
                 "prob": {
@@ -20,13 +20,13 @@
         {
             "input": {
                 "data": {
-                    "content": "ScreenShot2017-09-16at1.19.30AM.png", 
+                    "content": "vintage_image_sample.png", 
                     "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "Pastel", 
+                    "content": "Vintage", 
                     "type": "text"
                 }, 
                 "prob": {
