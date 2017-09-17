@@ -10,7 +10,8 @@ import { getSampleImagePublicUrl } from '../config'
 const cx = classNamesBind.bind(styles)
 
 export const SampleValue = ({ sampleValue, type, full, mini, medium, className }) => {
-  if (!sampleValue) return null
+  if (!sampleValue || !sampleValue.type || !sampleValue.content)
+    return null
   const shouldDisplayLoading = !(sampleValue && sampleValue.type === 'text')
   const shouldDisplayImage = sampleValue && sampleValue.type === 'image'
   const imageUrl = shouldDisplayImage && getSampleImagePublicUrl(sampleValue.content)
