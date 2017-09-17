@@ -3,6 +3,8 @@
   text-align center
 
 .col
+  background #fff
+  transition all .5s
   max-width 100%
   overflow hidden
   display flex
@@ -30,3 +32,29 @@
         color rgb(0, 122, 255)
     .content
       margin-top .5em
+
+bar-height = 240px
+
+@keyframes modelShowUp
+  0%
+    height 0px
+  100%
+    height "calc(100vh - %s)" % bar-height
+    opacity 1
+
+.modelContainer
+  position fixed
+  opacity 0
+  top bar-height
+  left 0
+  height 0
+  width 100vw
+  z-index 1000
+  background #ffffff
+  animation-name modelShowUp
+  animation-delay .2s
+  animation-duration .5s
+  animation-fill-mode forwards
+
+  box-shadow 0px 0px 10px rgba(0, 0, 0, .5)
+  overflow scroll

@@ -11,9 +11,5 @@ import mockSamples from '../content/samples/FNS-Mosaic.json'
 export default (
   <div className={styles.container}>
     <ModelList />
-    <ModelDetail
-      meta={mockMeta}
-      samples={mockSamples}
-    />
   </div>
 )

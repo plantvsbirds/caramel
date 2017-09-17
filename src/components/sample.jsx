@@ -39,8 +39,12 @@ const lookupInIOSpecs = (ioArray, name) => ioArray.find(item => item.name === na
 const specFromInput = (spec, name) => lookupInIOSpecs(spec.input, name)
 const specFromOutput = (spec, name) => lookupInIOSpecs(spec.output, name)
 
-export const KeySamplePair = ({ sample, spec, input, output }) => {
-  return <div className={styles.keySamplePair}>
+export const KeySamplePair = ({ sample, spec, input, output, _ref }) => {
+  return (
+  <div
+    className={styles.keySamplePair}
+    ref={_ref}
+  >
     <SampleValue
       sampleValue={sample.input[input]}
       type={specFromInput(spec, input).type}
@@ -56,10 +60,9 @@ export const KeySamplePair = ({ sample, spec, input, output }) => {
       className={styles.output}
       medium
     />
-  </div>
+  </div>)
 }
 export const SampleValuePair = ({ sample, spec }) => {
-  debugger
   return (
     <div className={cx('sampleValuePair')}>
       <div className={cx('inputs')}>
