@@ -98,8 +98,13 @@ class ModelList extends Component {
       {this.state.isExpanded && (
         <div
           className={css.modelContainer}
-          onClick={this.toggleExpand}
         >
+          <div
+            className={css.modelTopbar}
+            onClick={this.toggleExpand}
+          >
+            <p>Return to list</p>
+          </div>
           <ModelDetail
             meta={mockMeta}
             samples={mockSample}

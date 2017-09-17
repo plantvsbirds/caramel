@@ -1,3 +1,5 @@
+@import '../../const.styl'
+
 .head
   padding 5em
   text-align center
@@ -25,6 +27,7 @@
     .title,
     .content
       cursor pointer
+      padding-left .5em
     .title
       margin 1em auto 0em auto
       font-weight 600
@@ -38,14 +41,18 @@ bar-height = 240px
 @keyframes modelShowUp
   0%
     height 0px
-  100%
+  50%
+    top bar-height
     height "calc(100vh - %s)" % bar-height
+    opacity 1
+  100%
+    top 0
+    height 100vh
     opacity 1
 
 .modelContainer
   position fixed
   opacity 0
-  top bar-height
   left 0
   height 0
   width 100vw
@@ -58,3 +65,20 @@ bar-height = 240px
 
   box-shadow 0px 0px 10px rgba(0, 0, 0, .5)
   overflow scroll
+
+.modelTopbar
+  padding .5em calc((100vw - 1000px) / 2)
+  transition background-color .2s0
+  cursor pointer
+  &:hover
+    background-color #eee
+  p
+    color text-link
+    font-weight 20
+    &:before
+      content "↩"
+      padding .5em
+      margin-right 1em
+      display inline-block
+      border solid 2px text-link
+      border-radius 100%
