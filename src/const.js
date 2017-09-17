@@ -11,6 +11,9 @@ export const types = [
   'undefined'
 ]
 
+const ArrowShadowColorMatrix =
+    <feColorMatrix values="0 0 0 0 0.533333333   0 0 0 0 0.533333333   0 0 0 0 0.533333333  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+
 export const SampleArrow = ({ className }) => (
   <svg width="105px" height="194px" viewBox="0 0 105 194" version="1.1" xmlns="http://www.w3.org/2000/svg" className={className}>
         <desc>Created with Sketch.</desc>
@@ -18,7 +21,7 @@ export const SampleArrow = ({ className }) => (
             <filter x="-33.3%" y="-83.4%" width="166.6%" height="274.8%" filterUnits="objectBoundingBox" id="sample-arrow">
                 <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
                 <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                { ArrowShadowColorMatrix }
                 <feMerge>
                     <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
                     <feMergeNode in="SourceGraphic"></feMergeNode>
@@ -45,7 +48,7 @@ export const KeySampleArrow = ({ className }) => (
             <filter x="-23.8%" y="-22.3%" width="146.8%" height="150.0%" filterUnits="objectBoundingBox" id="key-sample-arrow">
                 <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
                 <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-                <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+                { ArrowShadowColorMatrix }
                 <feMerge>
                     <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
                     <feMergeNode in="SourceGraphic"></feMergeNode>
