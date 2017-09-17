@@ -1,2 +1,8 @@
+import dbFile from '../db.json'
+
 export const getSampleImagePublicUrl = (fname) => 
-  `https://d2ktoy8f87ubed.cloudfront.net/${fname.split('.png')[0]}_tn.jpg`
+  `https://s3-us-west-2.amazonaws.com/coreml-assets/${fname.split('.png')[0]}_tn.jpg`
+
+export const getModelDownloadUrl = (fname) => {}
+
+export const localData = dbFile

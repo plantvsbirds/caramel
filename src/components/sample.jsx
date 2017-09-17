@@ -10,9 +10,10 @@ import { getSampleImagePublicUrl } from '../config'
 const cx = classNamesBind.bind(styles)
 
 export const SampleValue = ({ sampleValue, type, full, mini, medium, className }) => {
+  if (!sampleValue) return null
   const shouldDisplayLoading = !(sampleValue && sampleValue.type === 'text')
   const shouldDisplayImage = sampleValue && sampleValue.type === 'image'
-  const imageUrl = getSampleImagePublicUrl(sampleValue.content)
+  const imageUrl = shouldDisplayImage && getSampleImagePublicUrl(sampleValue.content)
   return (
     <div
       className={
@@ -35,9 +36,10 @@ export const SampleValue = ({ sampleValue, type, full, mini, medium, className }
   )
 }
 
-const lookupInIOSpecs = (ioArray, name) => ioArray.find(item => item.name === name)
-const specFromInput = (spec, name) => lookupInIOSpecs(spec.input, name)
-const specFromOutput = (spec, name) => lookupInIOSpecs(spec.output, name)
+const getTypeNameFromSpecArray = (arr, name) => {
+  const field = arr.find(item => item.name === name)
+  return field ? field.type : undefined
+}
 
 export const KeySamplePair = ({ sample, spec, input, output, _ref }) => {
   return (
@@ -47,7 +49,7 @@ export const KeySamplePair = ({ sample, spec, input, output, _ref }) => {
   >
     <SampleValue
       sampleValue={sample.input[input]}
-      type={specFromInput(spec, input).type}
+      type={getTypeNameFromSpecArray(spec.input, input)}
       className={styles.input}
       mini
     />
@@ -56,7 +58,7 @@ export const KeySamplePair = ({ sample, spec, input, output, _ref }) => {
     />
     <SampleValue
       sampleValue={sample.output[output]}
-      type={specFromOutput(spec, output).type}
+      type={getTypeNameFromSpecArray(spec.output, output)}
       className={styles.output}
       medium
     />
@@ -72,7 +74,7 @@ export const SampleValuePair = ({ sample, spec }) => {
               key={`sampleValue_input_${name}`}
               name={name}
               sampleValue={sampleValue}
-              type={specFromInput(spec, name).type}
+              type={getTypeNameFromSpecArray(spec.input, name)}
               full={true}
             />)
         }
@@ -85,7 +87,7 @@ export const SampleValuePair = ({ sample, spec }) => {
               key={`sampleValue_output_${name}`}
               name={name}
               sampleValue={sampleValue}
-              type={specFromOutput(spec, name).type}
+              type={getTypeNameFromSpecArray(spec.output, name)}
               full={true}
             />)
         }

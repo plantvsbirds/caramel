@@ -7,10 +7,6 @@ const cx = classNamesBind.bind(css)
 import ModelDetail from '../model'
 import { KeySamplePair } from '~components/sample'
 
-// !mock
-import mockMeta from '../../../content/metadata/FNS-Mosaic.json'
-import mockSample from '../../../content/samples/FNS-Mosaic.json'
-
 class Item extends Component {
   constructor() {
     super()
@@ -18,23 +14,24 @@ class Item extends Component {
     this.sampleNode = null
   }
   render() {
-    const { onModelLoad } = this.props
+    const { onModelLoad, model } = this.props
+    if (!model) return null
     return (
-    <div
-      className={css.item}
-      onClick={onModelLoad(this)}
-      ref={(node) => { this.modelItemNode = node }}
-    >
-      <KeySamplePair
-        sample={mockSample.samples[0]}
-        input={mockSample.primary_input}
-        output={mockSample.primary_output}
-        spec={mockMeta}
-        _ref={(node) => { this.sampleNode = node }}
-      />
-      <p className={css.title}>{mockMeta.name}</p>
-      <p className={css.content}>{mockMeta.description}</p>
-    </div>
+      <div
+        className={css.item}
+        onClick={onModelLoad(this, model)}
+        ref={(node) => { this.modelItemNode = node }}
+      >
+        <KeySamplePair
+          sample={model.samples[0]}
+          input={model.primary_input}
+          output={model.primary_output}
+          spec={model}
+          _ref={(node) => { this.sampleNode = node }}
+        />
+        <p className={css.title}>{model.name}</p>
+        <p className={css.content}>{model.description}</p>
+      </div>
     )
   }
 }
@@ -48,11 +45,15 @@ const Collection = (props) => (
       paddingBottom: props.isExpanded ? '200vh' : '0px',
     }}
   >
-    <Item {...props} />
-    <Item {...props} />
-    <Item {...props} />
-    <Item {...props} />
-    <Item {...props} />
+  {
+    props.models.map(m => (
+      <Item
+        onModelLoad={props.onModelLoad}
+        model={m}
+        key={`model_${m.file}`}
+      />
+    ))
+  }
   </div>
 )
 
@@ -62,6 +63,7 @@ class ModelList extends Component {
     this.state = {
       isExpanded: false,
       offsetY: 0,
+      currentModel: null
     }
   }
   toggleBodyScrollable() {
@@ -83,18 +85,17 @@ class ModelList extends Component {
       })
     }
   }
-  onModelLoad = (vm) => (event) => {
+  onModelLoad = (vm, model) => (event) => {
     const itemRect = vm.modelItemNode.getBoundingClientRect()
     const sampleRect = vm.sampleNode.getBoundingClientRect()
     this.toggleExpand(itemRect.top - 5)
+    this.setState({
+      currentModel: model
+    })
   }
   render() {
+    const { models } = this.props
     return <div>
-      <div className={css.head}>
-        <h1>CoreML.Store</h1>
-        <p>Your iOS 11 apps could use some superpower.</p>
-        <p>Download and use per license, remember to acknowledge. You are welcome.</p>
-      </div>
       {this.state.isExpanded && (
         <div
           className={css.modelContainer}
@@ -106,19 +107,16 @@ class ModelList extends Component {
             <p>Return to list</p>
           </div>
           <ModelDetail
-            meta={mockMeta}
-            samples={mockSample}
+            model={this.state.currentModel}
           />
         </div>
       )}
-      <h1>Top Models</h1>
-        <Collection
-          onModelLoad={this.onModelLoad}
-          offset={this.state.offsetY}
-          isExpanded={this.state.isExpanded}
-        />
-      <h1>Style Transfer</h1>
-      <h1>Object Recognition</h1>
+      <Collection
+        onModelLoad={this.onModelLoad}
+        offset={this.state.offsetY}
+        isExpanded={this.state.isExpanded}
+        models={models}
+      />
     </div>
   }
 }
