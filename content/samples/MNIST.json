@@ -1,24 +1,38 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
                 "image": {
-                    "content": "", 
-                    "type": ""
+                    "content": "hand_writter_6.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "6", 
+                    "type": "text"
                 }, 
                 "prediction": {
-                    "content": "", 
-                    "type": ""
+                }
+            }
+        },
+        {
+            "input": {
+                "image": {
+                    "content": "hand_writter_8.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "8", 
+                    "type": "text"
+                }, 
+                "prediction": {
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "image"
 }
