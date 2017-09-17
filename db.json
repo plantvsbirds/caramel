@@ -1070,7 +1070,7 @@
         }
       ],
       "size": "1.6 MB",
-      "primary_output": "oputputImage",
+      "primary_output": "outputImage",
       "samples": [
         {
           "input": {
