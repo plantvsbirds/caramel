@@ -4,21 +4,51 @@
         {
             "input": {
                 "input": {
-                    "content": "", 
-                    "type": ""
+                    "content": "What a bad day.", 
+                    "type": "text"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "😑", 
+                    "type": "text"
                 }, 
                 "classProbability": {
-                    "content": "", 
-                    "type": ""
+                }
+            }
+        },
+        {
+            "input": {
+                "input": {
+                    "content": "I am a boy.", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "😔", 
+                    "type": "text"
+                }, 
+                "classProbability": {
+                }
+            }
+        },
+        {
+            "input": {
+                "input": {
+                    "content": "Nice sunny afternoon,", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "😁", 
+                    "type": "text"
+                }, 
+                "classProbability": {
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "content"
 }
