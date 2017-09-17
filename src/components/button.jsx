@@ -10,10 +10,10 @@ class Button extends Component {
   }
   render() {
     const {
-      label, main
+      label, main, href
     } = this.props
     return (
-      <a className={cx('btn', { main })}>
+      <a className={cx('btn', { main })} href={href} target="_blank">
         { label }
       </a>
     )

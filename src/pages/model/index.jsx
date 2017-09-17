@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet'
 import Button from '~components/button'
 import { SampleValuePair } from '~components/sample'
 import IOTable from './iotable'
+import { getModelDownloadUrl } from '../../config.js'
 
 class ModalDetail extends Component {
   constructor() {
@@ -22,7 +23,8 @@ class ModalDetail extends Component {
       size,
       license,
       input, output,
-      samples
+      samples,
+      file, demo_link,
     } = this.props.model
 
     const InfoTag = ({
@@ -70,10 +72,12 @@ class ModalDetail extends Component {
           <div className={cx('alignLeftHalf', 'btnContainer')}>
             <Button
               label="Get"
+              href={getModelDownloadUrl(file)}
               main
             />
             <Button
               label="Demo"
+              href={demo_link}
             />
           </div>
         </div>
