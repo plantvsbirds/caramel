@@ -44,7 +44,7 @@ const Collection = (props) => (
     className={css.col}
     style={{
       position: 'relative',
-      top: `-${props.offset}px`,
+      transform: `translate3d(0px, -${props.offset}px, 0px)`,
       paddingBottom: props.isExpanded ? '200vh' : '0px',
     }}
   >
