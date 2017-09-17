@@ -1,24 +1,22 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
                 "image": {
-                    "content": "", 
-                    "type": ""
+                    "content": "ScreenShot2017-09-16at8.28.57PM.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "toy poodle", 
+                    "type": "text"
                 }, 
                 "classLabelProbs": {
-                    "content": "", 
-                    "type": ""
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "image"
 }
