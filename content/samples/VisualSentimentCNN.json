@@ -1,24 +1,42 @@
 {
-    "primary_output": "", 
+    "primary_output": "prob", 
     "samples": [
         {
             "input": {
                 "data": {
-                    "content": "", 
-                    "type": ""
+                    "content": "sentiment_screenshot.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "positive", 
+                    "type": "text"
                 }, 
                 "prob": {
-                    "content": "", 
-                    "type": ""
+                    "content": "{\n\tpositive: 90.9%\n\tnegative: 9.1%\n}", 
+                    "type": "text"
+                }
+            }
+        }, 
+        {
+            "input": {
+                "data": {
+                    "content": "sentiment_screenshot2.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "negative", 
+                    "type": "text"
+                }, 
+                "prob": {
+                    "content": "{\n\tpositive: 21.7%\n\tnegative: 78.3%\n}", 
+                    "type": "text"
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "data"
 }
