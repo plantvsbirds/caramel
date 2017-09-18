@@ -5,7 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "rollup -w -c"
+    "watch": "rollup -w -c",
+    "build": "rollup -c rollup.config.build.js",
+    "mv-static": "sudo cp -avr dist /var/www/",
+    "bmv": "npm run build && npm run mv-static"
   },
   "author": "hong",
   "license": "UNLICENSED",
