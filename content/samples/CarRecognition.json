@@ -1,24 +1,54 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
                 "data": {
-                    "content": "", 
-                    "type": ""
+                    "content": "mercedes_e_convertable.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "classLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "Mercedes E class convertable", 
+                    "type": "text"
                 }, 
                 "prob": {
-                    "content": "", 
-                    "type": ""
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
+                    "content": "camaro_samples.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "Camaros", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
+                    "content": "BMW_m5_samples.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "BMW M5", 
+                    "type": "text"
+                }, 
+                "prob": {
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "data"
 }
