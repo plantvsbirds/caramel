@@ -16,6 +16,38 @@
                 "classLabelProbs": {
                 }
             }
+        },
+        {
+            "input": {
+                "image": {
+                    "content": "dam_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "dam, dike", 
+                    "type": "text"
+                }, 
+                "classLabelProbs": {
+                }
+            }
+        },
+        {
+            "input": {
+                "image": {
+                    "content": "coffee_mug_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "coffee mug", 
+                    "type": "text"
+                }, 
+                "classLabelProbs": {
+                }
+            }
         }
     ], 
     "primary_input": "image"

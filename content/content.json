@@ -33,7 +33,7 @@
                "file": "Resnet50.mlmodel",
                "description": "Detects the dominant objects present in an image.",
                "download_link": "https://github.com/ytakzk/CoreML-samples/blob/master/CoreML-samples/Resnet50.mlmodel",
-               "demo_link": "https://github.com/ytakzk/CoreML-samples",
+               "demo_link": "https://github.com/atomic14/VisionCoreMLSample",
                "reference_link": "https://arxiv.org/abs/1512.03385",
                "type": "Object Detection"
                },
