@@ -100,6 +100,12 @@ class ModelList extends Component {
     return <div>
       <Helmet>
         <title>{`CoreML.Store`}</title>
+        <meta name="og:site_name" content="CoreML.Store" />
+        <meta name="og:title" content="CoreML.Store" />
+        <meta name="description" content="Your iOS 11 apps could use these superpower." />
+        <meta name="og:description" content="Your iOS 11 apps could use these superpower." />
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://coreml.store" />
       </Helmet>
       {this.state.isExpanded && (
         <div
