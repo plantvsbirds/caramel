@@ -4,6 +4,38 @@
         {
             "input": {
                 "data": {
+                    "content": "beagles_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "beagle", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
+                    "content": "skyscraper_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "skyscraper", 
+                    "type": "text"
+                }, 
+                "prob": {
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
                     "content": "ScreenShot2017-09-16at8.52.00PM.png", 
                     "type": "image"
                 }
