@@ -1,24 +1,38 @@
 {
-    "primary_output": "", 
+    "primary_output": "sceneLabel", 
     "samples": [
         {
             "input": {
                 "sceneImage": {
-                    "content": "", 
-                    "type": ""
+                    "content": "bamboo_forrest_sample.png", 
+                    "type": "image"
                 }
             }, 
             "output": {
                 "sceneLabel": {
-                    "content": "", 
-                    "type": ""
+                    "content": "bamboo forrest", 
+                    "type": "text"
                 }, 
                 "sceneLabelProbs": {
-                    "content": "", 
-                    "type": ""
+                }
+            }
+        },
+        {
+            "input": {
+                "sceneImage": {
+                    "content": "mountain_snowy_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "sceneLabel": {
+                    "content": "mountain snowy", 
+                    "type": "text"
+                }, 
+                "sceneLabelProbs": {
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "sceneImage"
 }
