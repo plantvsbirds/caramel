@@ -1,6 +1,22 @@
 {
     "primary_output": "classLabel", 
     "samples": [
+    	{
+            "input": {
+                "image": {
+                    "content": "hand_writter_8.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "8", 
+                    "type": "text"
+                }, 
+                "prediction": {
+                }
+            }
+        },
         {
             "input": {
                 "image": {
@@ -11,22 +27,6 @@
             "output": {
                 "classLabel": {
                     "content": "6", 
-                    "type": "text"
-                }, 
-                "prediction": {
-                }
-            }
-        },
-        {
-            "input": {
-                "image": {
-                    "content": "hand_writter_8.png", 
-                    "type": "image"
-                }
-            }, 
-            "output": {
-                "classLabel": {
-                    "content": "8", 
                     "type": "text"
                 }, 
                 "prediction": {

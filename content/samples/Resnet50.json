@@ -4,6 +4,22 @@
         {
             "input": {
                 "image": {
+                    "content": "coffee_mug_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "coffee mug", 
+                    "type": "text"
+                }, 
+                "classLabelProbs": {
+                }
+            }
+        },
+        {
+            "input": {
+                "image": {
                     "content": "ScreenShot2017-09-16at8.28.57PM.png", 
                     "type": "image"
                 }
@@ -27,22 +43,6 @@
             "output": {
                 "classLabel": {
                     "content": "dam, dike", 
-                    "type": "text"
-                }, 
-                "classLabelProbs": {
-                }
-            }
-        },
-        {
-            "input": {
-                "image": {
-                    "content": "coffee_mug_sample.png", 
-                    "type": "image"
-                }
-            }, 
-            "output": {
-                "classLabel": {
-                    "content": "coffee mug", 
                     "type": "text"
                 }, 
                 "classLabelProbs": {
