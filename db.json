@@ -633,13 +633,13 @@
         {
           "input": {
             "data": {
-              "content": "vintage_image_sample.png",
+              "content": "ScreenShot2017-09-16at1.19.30AM.png",
               "type": "image"
             }
           },
           "output": {
             "classLabel": {
-              "content": "Vintage",
+              "content": "Pastel",
               "type": "text"
             },
             "prob": {}
@@ -648,13 +648,13 @@
         {
           "input": {
             "data": {
-              "content": "ScreenShot2017-09-16at1.19.30AM.png",
+              "content": "vintage_image_sample.png",
               "type": "image"
             }
           },
           "output": {
             "classLabel": {
-              "content": "Pastel",
+              "content": "Vintage",
               "type": "text"
             },
             "prob": {}
@@ -933,13 +933,13 @@
         {
           "input": {
             "inputImage": {
-              "content": "__FNS-Feathers_IMG_3296_PNG.png",
+              "content": "__FNS-Feather_IMG_3296_PNG.png",
               "type": "image"
             }
           },
           "output": {
             "outputImage": {
-              "content": "__FNS-Feathers_IMG_3302_PNG.png",
+              "content": "__FNS-Feather_IMG_3302_PNG.png",
               "type": "image"
             }
           }
@@ -947,13 +947,13 @@
         {
           "input": {
             "inputImage": {
-              "content": "__FNS-Feathers_IMG_3282_PNG.png",
+              "content": "__FNS-Feather_IMG_3282_PNG.png",
               "type": "image"
             }
           },
           "output": {
             "outputImage": {
-              "content": "__FNS-Feathers_IMG_3288_PNG.png",
+              "content": "__FNS-Feather_IMG_3288_PNG.png",
               "type": "image"
             }
           }
@@ -961,13 +961,13 @@
         {
           "input": {
             "inputImage": {
-              "content": "__FNS-Feathers_IMG_3303_PNG.png",
+              "content": "__FNS-Feather_IMG_3303_PNG.png",
               "type": "image"
             }
           },
           "output": {
             "outputImage": {
-              "content": "__FNS-Feathers_IMG_3267_PNG.png",
+              "content": "__FNS-Feather_IMG_3267_PNG.png",
               "type": "image"
             }
           }
