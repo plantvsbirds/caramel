@@ -1,7 +1,6 @@
 {
   "types": [
     "Object Detection",
-    "image_processing",
     "Style Transfer",
     "text",
     "others"
@@ -107,6 +106,86 @@
         }
       ],
       "primary_input": "image"
+    },
+    {
+      "name": "CarRecognition",
+      "file": "CarRecognition.mlmodel",
+      "description": "Predict the brand & model of a car.",
+      "download_link": "https://github.com/likedan/Core-ML-Car-Recognition/blob/master/Convert/CarRecognition.mlmodel",
+      "demo_link": "https://github.com/likedan/Core-ML-Car-Recognition",
+      "reference_link": "http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/index.html",
+      "type": "Object Detection",
+      "license": "MIT",
+      "author": "Audebert, Nicolas and Le Saux, Bertrand and Lefevre Sebastien",
+      "output": [
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "prob",
+          "description": "The probabilities that the input image is a car."
+        },
+        {
+          "type": "String",
+          "name": "classLabel",
+          "description": "The most likely type of car, for the given input."
+        }
+      ],
+      "input": [
+        {
+          "type": "Image (Color 224 x 224)",
+          "name": "data",
+          "description": "An image of a car."
+        }
+      ],
+      "size": "24.5 MB",
+      "primary_output": "classLabel",
+      "samples": [
+        {
+          "input": {
+            "data": {
+              "content": "mercedes_e_convertable.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "Mercedes E class convertable",
+              "type": "text"
+            },
+            "prob": {}
+          }
+        },
+        {
+          "input": {
+            "data": {
+              "content": "camaro_samples.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "Camaros",
+              "type": "text"
+            },
+            "prob": {}
+          }
+        },
+        {
+          "input": {
+            "data": {
+              "content": "BMW_m5_samples.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "BMW M5",
+              "type": "text"
+            },
+            "prob": {}
+          }
+        }
+      ],
+      "primary_input": "data"
     },
     {
       "name": "AgeNet",
@@ -730,7 +809,7 @@
       "download_link": "https://github.com/s1ddok/HED-CoreML/blob/master/HED-CoreML/Models/HED_so.mlmodel",
       "demo_link": "https://github.com/s1ddok/HED-CoreML",
       "reference_link": "http://dl.acm.org/citation.cfm?id=2654889",
-      "type": "image_processing",
+      "type": "Style Transfer",
       "license": "Unknown",
       "author": "Original paper: Xie, Saining and Tu, Zhuowen. Caffe implementation: Yangqing Jia. CoreML port: Andrey Volodin",
       "output": [
@@ -1004,20 +1083,6 @@
         {
           "input": {
             "inputImage": {
-              "content": "__FNS-La-Muse_IMG_3282_PNG.png",
-              "type": "image"
-            }
-          },
-          "output": {
-            "outputImage": {
-              "content": "__FNS-La-Muse_IMG_3287_PNG.png",
-              "type": "image"
-            }
-          }
-        },
-        {
-          "input": {
-            "inputImage": {
               "content": "__FNS-La-Muse_IMG_3275_PNG.png",
               "type": "image"
             }
@@ -1025,6 +1090,20 @@
           "output": {
             "outputImage": {
               "content": "__FNS-La-Muse_IMG_3280_PNG.png",
+              "type": "image"
+            }
+          }
+        },
+        {
+          "input": {
+            "inputImage": {
+              "content": "__FNS-La-Muse_IMG_3282_PNG.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "outputImage": {
+              "content": "__FNS-La-Muse_IMG_3287_PNG.png",
               "type": "image"
             }
           }
@@ -1304,6 +1383,112 @@
         }
       ],
       "primary_input": "message"
+    },
+    {
+      "name": "Exermote",
+      "file": "Exermote.mlmodel",
+      "description": "Predicts the exercise, when iPhone is worn on right upper arm.",
+      "download_link": "https://github.com/Lausbert/Exermote/raw/master/ExermoteInference/ExermoteCoreML/ExermoteCoreML/Model/Exermote.mlmodel",
+      "demo_link": "https://github.com/Lausbert/Exermote/tree/master/ExermoteInference",
+      "reference_link": "http://lausbert.com/2017/08/03/exermote/",
+      "type": "others",
+      "license": "MIT",
+      "author": "Stephan Lerner",
+      "output": [
+        {
+          "type": "MultiArray (Double 4)",
+          "name": "scores",
+          "description": "Probability of different exercises (Break, Burpee, Situp, Squat)"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_1_h_out"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_1_c_out"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_2_h_out"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_2_c_out"
+        }
+      ],
+      "input": [
+        {
+          "type": "MultiArray (Double 12)",
+          "name": "accelerations",
+          "description": "40 timesteps (0.1 second per timestep) * 12 movement features (3x gravity, 3x acceleration, 3x euler angle, 3x rotation rate)"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_1_h_in"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_1_c_in"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_2_h_in"
+        },
+        {
+          "type": "MultiArray (Double 32)",
+          "name": "lstm_2_c_in"
+        }
+      ],
+      "size": "84.0 KB",
+      "primary_output": "scores",
+      "samples": [
+        {
+          "input": {
+            "lstm_1_h_in": {},
+            "lstm_2_h_in": {},
+            "accelerations": {
+              "content": "squat_sample.png",
+              "type": "image"
+            },
+            "lstm_2_c_in": {},
+            "lstm_1_c_in": {}
+          },
+          "output": {
+            "lstm_2_h_out": {},
+            "lstm_1_h_out": {},
+            "lstm_1_c_out": {},
+            "lstm_2_c_out": {},
+            "scores": {
+              "content": "squat",
+              "type": "text"
+            }
+          }
+        },
+        {
+          "input": {
+            "lstm_1_h_in": {},
+            "lstm_2_h_in": {},
+            "accelerations": {
+              "content": "situp_sample.png",
+              "type": "image"
+            },
+            "lstm_2_c_in": {},
+            "lstm_1_c_in": {}
+          },
+          "output": {
+            "lstm_2_h_out": {},
+            "lstm_1_h_out": {},
+            "lstm_1_c_out": {},
+            "lstm_2_c_out": {},
+            "scores": {
+              "content": "situp",
+              "type": "text"
+            }
+          }
+        }
+      ],
+      "primary_input": "accelerations"
     }
   ]
 }
