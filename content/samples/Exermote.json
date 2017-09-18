@@ -1,52 +1,66 @@
 {
-    "primary_output": "", 
+    "primary_output": "scores", 
     "samples": [
         {
             "input": {
                 "lstm_1_h_in": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "lstm_2_h_in": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "accelerations": {
-                    "content": "", 
-                    "type": ""
+                    "content": "squat_sample.png", 
+                    "type": "image"
                 }, 
                 "lstm_2_c_in": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "lstm_1_c_in": {
-                    "content": "", 
-                    "type": ""
                 }
             }, 
             "output": {
                 "lstm_2_h_out": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "lstm_1_h_out": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "lstm_1_c_out": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "lstm_2_c_out": {
-                    "content": "", 
-                    "type": ""
                 }, 
                 "scores": {
-                    "content": "", 
-                    "type": ""
+                    "content": "squat", 
+                    "type": "text"
+                }
+            }
+        },
+        {
+            "input": {
+                "lstm_1_h_in": {
+                }, 
+                "lstm_2_h_in": {
+                }, 
+                "accelerations": {
+                    "content": "situp_sample.png", 
+                    "type": "image"
+                }, 
+                "lstm_2_c_in": {
+                }, 
+                "lstm_1_c_in": {
+                }
+            }, 
+            "output": {
+                "lstm_2_h_out": {
+                }, 
+                "lstm_1_h_out": {
+                }, 
+                "lstm_1_c_out": {
+                }, 
+                "lstm_2_c_out": {
+                }, 
+                "scores": {
+                    "content": "situp", 
+                    "type": "text"
                 }
             }
         }
     ], 
-    "primary_input": ""
+    "primary_input": "accelerations"
 }
