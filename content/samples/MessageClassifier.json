@@ -4,7 +4,7 @@
         {
             "input": {
                 "message": {
-                    "content": "URGENT! You have won a 1 week FREE membership in our £100,000 Prize Jackpot! Txt the word: CLAIM to No: 81010 T&C www.dbuk.net LCCLTD POBOX 4403LDNW1A7RW18", 
+                    "content": "URGENT! You have won a 1 week FREE membership in our £100,000 Prize Jackpot!", 
                     "type": "text"
                 }
             }, 
@@ -29,6 +29,38 @@
                 }, 
                 "label": {
                     "content": "ham", 
+                    "type": "text"
+                }
+            }
+        },
+        {
+            "input": {
+                "message": {
+                    "content": "What time you coming down later?", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classProbability": {
+                }, 
+                "label": {
+                    "content": "ham", 
+                    "type": "text"
+                }
+            }
+        },
+        {
+            "input": {
+                "message": {
+                    "content": "SMS. ac Blind Date 4U!: Rodds1 is 21/m from Aberdeen", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classProbability": {
+                }, 
+                "label": {
+                    "content": "spam", 
                     "type": "text"
                 }
             }
