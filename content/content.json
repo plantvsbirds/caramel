@@ -194,7 +194,6 @@
                "reference_link": "http://cs.stanford.edu/people/jcjohns/eccv16/",
                "type": "Style Transfer"
                },
-
                {
                "name": "Mosaic",
                "file": "FNS-Mosaic.mlmodel",
@@ -204,10 +203,17 @@
                "type": "Style Transfer"
                },
                {
+               "name": "AnimeScale2x",
+               "file": "AnimeScale2x.mlmodel",
+               "description": "Scale and denoise anime-style artworks.",
+               "demo_link": "https://github.com/imxieyi/waifu2x-ios",
+               "reference_link": "https://arxiv.org/abs/1501.00092",
+               "type": "Style Transfer"
+               },
+               {
                "name": "Sentiment Polarity",
                "file": "SentimentPolarity.mlmodel",
                "description": "Predict positive or negative sentiments from sentences.",
-               "download_link": "https://github.com/cocoa-ai/SentimentCoreMLDemo/raw/master/SentimentPolarity/Resources/SentimentPolarity.mlmodel",
                "demo_link": "https://github.com/cocoa-ai/SentimentCoreMLDemo",
                "reference_link": "http://boston.lti.cs.cmu.edu/classes/95-865-K/HW/HW3/",
                "type": "text"
@@ -216,7 +222,6 @@
                "name": "iMessage Spam Detection",
                "file": "MessageClassifier.mlmodel",
                "description": "Detect whether a message is spam.",
-               "download_link": "https://github.com/gkswamy98/imessage-spam-detection/blob/master/MessageClassifier.mlmodel",
                "demo_link": "https://github.com/gkswamy98/imessage-spam-detection/tree/master",
                "reference_link": "http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/",
                "type": "text"

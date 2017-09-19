@@ -1,0 +1,21 @@
+{
+    "name": "AnimeScale2x", 
+    "license": "MIT", 
+    "author": "Original paper: Chao Dong, Chen Change Loy, Kaiming He, Xiaoou Tang. Caffe implementation: lltcggie", 
+    "description": "Process a bicubic-scaled anime-style artwork", 
+    "output": [
+        {
+            "type": "MultiArray (Double)", 
+            "name": "conv7", 
+            "description": "Output image"
+        }
+    ], 
+    "input": [
+        {
+            "type": "MultiArray (Double 3 x 142 x 142)", 
+            "name": "input", 
+            "description": "Input image"
+        }
+    ], 
+    "size": "1.1 MB"
+}

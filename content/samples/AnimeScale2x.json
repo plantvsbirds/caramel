@@ -1,0 +1,34 @@
+{
+    "primary_output": "conv7", 
+    "samples": [
+        {
+            "input": {
+                "input": {
+                    "content": "waifu2x_small_noisy_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "conv7": {
+                    "content": "waifu2x_small_noisy_sample_output.png", 
+                    "type": "image"
+                }
+            }
+        },
+        {
+            "input": {
+                "input": {
+                    "content": "waifu2x_small_sample_output.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "conv7": {
+                    "content": "waifu2x_small_noisy_sample_output.png", 
+                    "type": "image"
+                }
+            }
+        }
+    ], 
+    "primary_input": "input"
+}
