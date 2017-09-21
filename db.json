@@ -267,6 +267,21 @@
         {
           "input": {
             "image": {
+              "content": "coffee_mug_sample.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "coffee mug",
+              "type": "text"
+            },
+            "classLabelProbs": {}
+          }
+        },
+        {
+          "input": {
+            "image": {
               "content": "ScreenShot2017-09-16at8.28.57PM.png",
               "type": "image"
             }
@@ -289,21 +304,6 @@
           "output": {
             "classLabel": {
               "content": "dam, dike",
-              "type": "text"
-            },
-            "classLabelProbs": {}
-          }
-        },
-        {
-          "input": {
-            "image": {
-              "content": "coffee_mug_sample.png",
-              "type": "image"
-            }
-          },
-          "output": {
-            "classLabel": {
-              "content": "coffee mug",
               "type": "text"
             },
             "classLabelProbs": {}
@@ -621,13 +621,13 @@
         {
           "input": {
             "image": {
-              "content": "hand_writter_6.png",
+              "content": "hand_writter_8.png",
               "type": "image"
             }
           },
           "output": {
             "classLabel": {
-              "content": "6",
+              "content": "8",
               "type": "text"
             },
             "prediction": {}
@@ -636,13 +636,13 @@
         {
           "input": {
             "image": {
-              "content": "hand_writter_8.png",
+              "content": "hand_writter_6.png",
               "type": "image"
             }
           },
           "output": {
             "classLabel": {
-              "content": "8",
+              "content": "6",
               "type": "text"
             },
             "prediction": {}
@@ -1595,10 +1595,66 @@
       "primary_input": "inputImage"
     },
     {
+      "name": "AnimeScale2x",
+      "file": "AnimeScale2x.mlmodel",
+      "description": "Process a bicubic-scaled anime-style artwork",
+      "demo_link": "https://github.com/imxieyi/waifu2x-ios",
+      "reference_link": "https://arxiv.org/abs/1501.00092",
+      "type": "Style Transfer",
+      "license": "MIT",
+      "author": "Original paper: Chao Dong, Chen Change Loy, Kaiming He, Xiaoou Tang. Caffe implementation: lltcggie",
+      "output": [
+        {
+          "type": "MultiArray (Double)",
+          "name": "conv7",
+          "description": "Output image"
+        }
+      ],
+      "input": [
+        {
+          "type": "MultiArray (Double 3 x 142 x 142)",
+          "name": "input",
+          "description": "Input image"
+        }
+      ],
+      "size": "1.1 MB",
+      "primary_output": "conv7",
+      "samples": [
+        {
+          "input": {
+            "input": {
+              "content": "waifu2x_small_noisy_sample.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "conv7": {
+              "content": "waifu2x_small_noisy_sample_output.png",
+              "type": "image"
+            }
+          }
+        },
+        {
+          "input": {
+            "input": {
+              "content": "waifu2x_small_sample_output.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "conv7": {
+              "content": "waifu2x_small_noisy_sample_output.png",
+              "type": "image"
+            }
+          }
+        }
+      ],
+      "primary_input": "input"
+    },
+    {
       "name": "MessageClassifier",
       "file": "MessageClassifier.mlmodel",
       "description": "Detect whether a message is spam.",
-      "download_link": "https://github.com/gkswamy98/imessage-spam-detection/blob/master/MessageClassifier.mlmodel",
       "demo_link": "https://github.com/gkswamy98/imessage-spam-detection/tree/master",
       "reference_link": "http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/",
       "type": "text",
