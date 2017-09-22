@@ -1,3 +1,5 @@
+@import "../const.styl"
+
 body
   background #FAFAFA
 
@@ -14,3 +16,67 @@ body
 .head
   padding 5em
   text-align center
+
+
+bar-height = 240px
+
+@keyframes modelShowUp
+  0%
+    transform translate3d(0, 0, 0)
+    height 0vh
+  10%
+    transform translate3d(0, bar-height, 0)
+    height 0vh
+    opacity 1
+  60%
+    transform translate3d(0, bar-height, 0)
+    height 100vh
+  100%
+    transform translate3d(0, 0, 0)
+    height 100vh
+    opacity 1
+
+.modelContainer
+  position fixed
+  opacity 0
+  top 0
+  left 0
+  transform translate3d(0, 0, 0)
+  width 100vw
+  z-index 1000
+  background #fafafa
+  animation-name modelShowUp
+  animation-delay .2s
+  animation-duration .8s
+  animation-fill-mode forwards
+
+  box-shadow 0px 0px 10px rgba(0, 0, 0, .5)
+  overflow-y scroll
+  -webkit-overflow-scrolling touch
+
+.modelTopbar
+  padding .5em calc((100vw - 1000px) / 2)
+  transition background-color .2s
+  cursor pointer
+  &:hover
+    background-color #eee
+  p
+    margin-left -2.4em
+    color text-link
+    font-weight 20
+    &:before
+      content "↩"
+      height 1em
+      width 1em
+      padding .2em
+      margin-right 1em
+      display inline-block
+      border solid 2px text-link
+      border-radius 100%
+
+@media screen and (max-width: 641px)
+  .modelTopbar p:before
+    border none
+@media screen and (max-width: 1100px)
+  .modelTopbar p
+    margin-left 1em

@@ -4,9 +4,6 @@ import css from './index.styl'
 import classNamesBind from 'classnames/bind'
 const cx = classNamesBind.bind(css)
 
-import { Helmet } from 'react-helmet'
-
-import ModelDetail from '../model'
 import { KeySamplePair } from '~components/sample'
 
 class Item extends Component {
@@ -16,12 +13,12 @@ class Item extends Component {
     this.sampleNode = null
   }
   render() {
-    const { onModelLoad, model } = this.props
+    const { onModelClick, model } = this.props
     if (!model) return null
     return (
       <div
         className={css.item}
-        onClick={onModelLoad(this, model)}
+        onClick={onModelClick(this, model)}
         ref={(node) => { this.modelItemNode = node }}
       >
         <KeySamplePair
@@ -50,7 +47,7 @@ const Collection = (props) => (
   {
     props.models.map(m => (
       <Item
-        onModelLoad={props.onModelLoad}
+        onModelClick={props.onModelClick}
         model={m}
         key={`model_${m.file}`}
       />
@@ -60,72 +57,13 @@ const Collection = (props) => (
 )
 
 class ModelList extends Component {
-  constructor() {
-    super()
-    this.state = {
-      isExpanded: false,
-      offsetY: 0,
-      currentModel: null
-    }
-  }
-  toggleBodyScrollable() {
-    const $body = document.body
-    $body.style.overflow = 
-      !$body.style.overflow ? 'hidden' : ''
-  }
-  toggleExpand = (newOffset) => {
-    this.toggleBodyScrollable()
-    if (this.state.isExpanded) {
-      this.setState({
-        offsetY: 0,
-        isExpanded: false,
-      })
-    } else {
-      this.setState({
-        offsetY: newOffset,
-        isExpanded: true,
-      })
-    }
-  }
-  onModelLoad = (vm, model) => (event) => {
-    const itemRect = vm.modelItemNode.getBoundingClientRect()
-    const sampleRect = vm.sampleNode.getBoundingClientRect()
-    this.toggleExpand(itemRect.top - 5)
-    this.setState({
-      currentModel: model
-    })
-  }
   render() {
-    const { models } = this.props
+    const { models, offsetY, isExpanded, onModelClick } = this.props
     return <div>
-      <Helmet>
-        <title>{`CoreML.Store`}</title>
-        <meta name="og:site_name" content="CoreML.Store" />
-        <meta name="og:title" content="CoreML.Store" />
-        <meta name="description" content="Your iOS 11 apps could use these superpower." />
-        <meta name="og:description" content="Your iOS 11 apps could use these superpower." />
-        <meta name="og:type" content="website" />
-        <meta name="og:url" content="https://coreml.store" />
-      </Helmet>
-      {this.state.isExpanded && (
-        <div
-          className={css.modelContainer}
-        >
-          <div
-            className={css.modelTopbar}
-            onClick={this.toggleExpand}
-          >
-            <p>Return to list</p>
-          </div>
-          <ModelDetail
-            model={this.state.currentModel}
-          />
-        </div>
-      )}
       <Collection
-        onModelLoad={this.onModelLoad}
-        offset={this.state.offsetY}
-        isExpanded={this.state.isExpanded}
+        onModelClick={onModelClick}
+        offset={offsetY}
+        isExpanded={isExpanded}
         models={models}
       />
     </div>
