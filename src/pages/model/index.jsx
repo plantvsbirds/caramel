@@ -4,8 +4,6 @@ import styles from './styles.styl'
 import pageStyles from '../page.styl'
 const cx = classNamesBind.bind(styles)
 
-import { Helmet } from 'react-helmet'
-
 import Button from '~components/button'
 import { SampleValuePair } from '~components/sample'
 import IOTable from './iotable'
@@ -40,9 +38,6 @@ class ModalDetail extends Component {
     </div>
 
     return <div className={pageStyles.container}>
-      <Helmet>
-        <title>{`CoreML.Store ${name}`}</title>
-      </Helmet>
       <div className={cx("meta")}>
         <div style={{ overflow: 'hidden' }}>
           <h1 className={cx('title')}>
