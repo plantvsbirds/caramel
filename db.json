@@ -85,7 +85,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "mobilenet"
     },
     {
       "name": "GoogLeNetPlaces",
@@ -150,7 +151,8 @@
           }
         }
       ],
-      "primary_input": "sceneImage"
+      "primary_input": "sceneImage",
+      "key": "googlenetplaces"
     },
     {
       "name": "Inceptionv3",
@@ -230,7 +232,8 @@
           }
         }
       ],
-      "primary_input": "image"
+      "primary_input": "image",
+      "key": "inceptionv3"
     },
     {
       "name": "Resnet50",
@@ -310,7 +313,8 @@
           }
         }
       ],
-      "primary_input": "image"
+      "primary_input": "image",
+      "key": "resnet50"
     },
     {
       "name": "VGG16",
@@ -375,7 +379,8 @@
           }
         }
       ],
-      "primary_input": "image"
+      "primary_input": "image",
+      "key": "vgg16"
     },
     {
       "name": "CarRecognition",
@@ -455,7 +460,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "carrecognition"
     },
     {
       "name": "AgeNet",
@@ -520,7 +526,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "agenet"
     },
     {
       "name": "GenderNet",
@@ -585,7 +592,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "gendernet"
     },
     {
       "name": "MNIST",
@@ -649,7 +657,8 @@
           }
         }
       ],
-      "primary_input": "image"
+      "primary_input": "image",
+      "key": "mnist"
     },
     {
       "name": "CNNEmotions",
@@ -714,7 +723,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "cnnemotions"
     },
     {
       "name": "VisualSentimentCNN",
@@ -785,7 +795,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "visualsentimentcnn"
     },
     {
       "name": "Food101",
@@ -880,7 +891,8 @@
           }
         }
       ],
-      "primary_input": "image"
+      "primary_input": "image",
+      "key": "food101"
     },
     {
       "name": "Oxford102",
@@ -945,7 +957,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "oxford102"
     },
     {
       "name": "FlickrStyle",
@@ -1010,7 +1023,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "flickrstyle"
     },
     {
       "name": "RN1015k500",
@@ -1070,7 +1084,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "rn1015k500"
     },
     {
       "name": "HED_so",
@@ -1180,7 +1195,8 @@
           }
         }
       ],
-      "primary_input": "data"
+      "primary_input": "data",
+      "key": "hed_so"
     },
     {
       "name": "FNS-Candy",
@@ -1251,7 +1267,8 @@
           }
         }
       ],
-      "primary_input": "inputImage"
+      "primary_input": "inputImage",
+      "key": "fns-candy"
     },
     {
       "name": "FNS-Feathers",
@@ -1322,7 +1339,8 @@
           }
         }
       ],
-      "primary_input": "inputImage"
+      "primary_input": "inputImage",
+      "key": "fns-feathers"
     },
     {
       "name": "FNS-La-Muse",
@@ -1393,7 +1411,8 @@
           }
         }
       ],
-      "primary_input": "inputImage"
+      "primary_input": "inputImage",
+      "key": "fns-la-muse"
     },
     {
       "name": "FNS-The-Scream",
@@ -1450,7 +1469,8 @@
           }
         }
       ],
-      "primary_input": "inputImage"
+      "primary_input": "inputImage",
+      "key": "fns-the-scream"
     },
     {
       "name": "FNS-Udnie",
@@ -1521,7 +1541,8 @@
           }
         }
       ],
-      "primary_input": "inputImage"
+      "primary_input": "inputImage",
+      "key": "fns-udnie"
     },
     {
       "name": "FNS-Mosaic",
@@ -1592,7 +1613,8 @@
           }
         }
       ],
-      "primary_input": "inputImage"
+      "primary_input": "inputImage",
+      "key": "fns-mosaic"
     },
     {
       "name": "AnimeScale2x",
@@ -1649,7 +1671,8 @@
           }
         }
       ],
-      "primary_input": "input"
+      "primary_input": "input",
+      "key": "animescale2x"
     },
     {
       "name": "MessageClassifier",
@@ -1738,7 +1761,8 @@
           }
         }
       ],
-      "primary_input": "message"
+      "primary_input": "message",
+      "key": "messageclassifier"
     },
     {
       "name": "Exermote",
@@ -1844,7 +1868,8 @@
           }
         }
       ],
-      "primary_input": "accelerations"
+      "primary_input": "accelerations",
+      "key": "exermote"
     }
   ]
 }
