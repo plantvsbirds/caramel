@@ -77,6 +77,7 @@ class ModalDetail extends Component {
           </div>
         </div>
       </div>
+      <h1>Samples</h1>
       <div className={cx('sampleContainer')}>
         {
           samples.map((s, idx) =>
