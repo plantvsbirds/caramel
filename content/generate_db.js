@@ -27,7 +27,7 @@ mergeFrom('sample', (name) => `../content/samples/${name}json`, (m) => {
 })
 
 db.models.forEach(m => {
-  m.pathname = encodeURIComponent(m.name.toLowerCase())
+  m.pathname = '/' + encodeURIComponent(m.name.toLowerCase())
 })
 
 const lenBeforeUniq = db.models.length
