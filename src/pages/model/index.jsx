@@ -22,7 +22,7 @@ class ModalDetail extends Component {
       license,
       input, output,
       samples,
-      file, demo_link,
+      file, demo_link, reference_link,
     } = this.props.model
 
     const InfoTag = ({
@@ -71,8 +71,12 @@ class ModalDetail extends Component {
               main
             />
             <Button
-              label="Demo"
+              label="See Demo"
               href={demo_link}
+            />
+            <Button
+              label="Check Reference"
+              href={reference_link}
             />
           </div>
         </div>
