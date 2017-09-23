@@ -29,7 +29,7 @@ class Item extends Component {
           _ref={(node) => { this.sampleNode = node }}
         />
         <p className={css.title}>{model.name}</p>
-        <p className={css.content}>{model.description}</p>
+        <div className={css.content}>{model.description}</div>
       </div>
     )
   }
