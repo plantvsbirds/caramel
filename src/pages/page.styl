@@ -65,14 +65,20 @@ bar-height = 240px
     color text-link
     font-weight 20
     &:before
-      content "↩"
       height 1em
       width 1em
       padding .2em
       margin-right 1em
       display inline-block
+      line-height 1em
       border solid 2px text-link
       border-radius 100%
+
+.returnIconBefore:before
+  content "↩"
+
+.checkoutIconBefore:before
+  content "☜"
 
 @media screen and (max-width: 641px)
   .modelTopbar p:before
@@ -80,3 +86,17 @@ bar-height = 240px
 @media screen and (max-width: 1100px)
   .modelTopbar p
     margin-left 1em
+
+@keyframes titleFlipEntry
+  100%
+    transform rotate3d(1, 0, 0, 0deg)
+
+.flipEntry
+  :before
+    transform rotate3d(1, 0, 0, 0deg)
+  transform rotate3d(1, 0, 0, 90deg)
+  transform-origin top
+  animation-fill-mode forwards
+  animation-name titleFlipEntry
+  animation-duration .4s
+  animation-delay 1s

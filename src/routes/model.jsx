@@ -4,9 +4,18 @@ import { Helmet } from 'react-helmet'
 import ModelDetail from '../pages/model'
 import css from '../pages/page.styl'
 
+import classNamesBind from 'classnames/bind'
+const cx = classNamesBind.bind(css)
+
 import { navigationWithPath } from '../config'
 
 export default class ModelRoute extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      firstLanding: false
+    }
+  }
   toggleBodyScrollable(op) {
     const $body = document.body
     $body.style.overflow = 
@@ -14,6 +23,9 @@ export default class ModelRoute extends Component {
   }
   componentWillMount() {
     this.toggleBodyScrollable(false)
+    this.setState({
+      firstLanding: this.props.history.action === 'POP',
+    })
   }
   componentWillUnmount() {
     this.toggleBodyScrollable(true)
@@ -33,7 +45,11 @@ export default class ModelRoute extends Component {
             history.push('/')
           }}
         >
-          <p>Return to list</p>
+          {
+            this.state.firstLanding ? 
+              <p className={cx('flipEntry', 'checkoutIconBefore')}>Check out more models</p>
+            : <p className={css.returnIconBefore}>Return to list</p>
+          }
         </div>
         {!location.state ? (
           <Redirect
