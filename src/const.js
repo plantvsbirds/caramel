@@ -47,7 +47,7 @@ export const KeySampleArrow = ({ className }) => (
         <defs>
             <filter x="-23.8%" y="-22.3%" width="146.8%" height="150.0%" filterUnits="objectBoundingBox" id="key-sample-arrow">
                 <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-                <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
                 { ArrowShadowColorMatrix }
                 <feMerge>
                     <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
