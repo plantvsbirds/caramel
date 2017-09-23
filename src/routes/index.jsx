@@ -17,10 +17,15 @@ export default class HomeRoute extends Component {
       offsetY: newOffset || 0,
     })
   }
+  get isCurrentPage() {
+    return this.props.location && this.props.location.pathname === '/'
+  }
+  /*
   componentWillReceiveProps({ location }) {
-    if (location.pathname == '/')
+    if (this.isCurrentPage)
       this.setModelListOffset()
   }
+  */
   onModelClick = (history) => (vm, model) => (event) => {
     const itemRect = vm.modelItemNode.getBoundingClientRect()
     const sampleRect = vm.sampleNode.getBoundingClientRect()
@@ -50,6 +55,7 @@ export default class HomeRoute extends Component {
           models={localData.models}
           offsetY={this.state.offsetY}
           onModelClick={this.onModelClick(history)}
+          isExpanded={!this.isCurrentPage}
         />
         <h1>Style Transfer</h1>
         <h1>Object Recognition</h1>
