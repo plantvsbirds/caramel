@@ -86,7 +86,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "mobilenet"
+      "pathname": "mobilenet"
     },
     {
       "name": "GoogLeNetPlaces",
@@ -152,7 +152,7 @@
         }
       ],
       "primary_input": "sceneImage",
-      "key": "googlenetplaces"
+      "pathname": "googlenetplaces"
     },
     {
       "name": "Inceptionv3",
@@ -233,7 +233,7 @@
         }
       ],
       "primary_input": "image",
-      "key": "inceptionv3"
+      "pathname": "inceptionv3"
     },
     {
       "name": "Resnet50",
@@ -314,7 +314,7 @@
         }
       ],
       "primary_input": "image",
-      "key": "resnet50"
+      "pathname": "resnet50"
     },
     {
       "name": "VGG16",
@@ -380,7 +380,7 @@
         }
       ],
       "primary_input": "image",
-      "key": "vgg16"
+      "pathname": "vgg16"
     },
     {
       "name": "CarRecognition",
@@ -461,7 +461,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "carrecognition"
+      "pathname": "carrecognition"
     },
     {
       "name": "AgeNet",
@@ -527,7 +527,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "agenet"
+      "pathname": "agenet"
     },
     {
       "name": "GenderNet",
@@ -593,7 +593,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "gendernet"
+      "pathname": "gendernet"
     },
     {
       "name": "MNIST",
@@ -658,7 +658,7 @@
         }
       ],
       "primary_input": "image",
-      "key": "mnist"
+      "pathname": "mnist"
     },
     {
       "name": "CNNEmotions",
@@ -724,7 +724,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "cnnemotions"
+      "pathname": "cnnemotions"
     },
     {
       "name": "VisualSentimentCNN",
@@ -796,7 +796,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "visualsentimentcnn"
+      "pathname": "visualsentimentcnn"
     },
     {
       "name": "Food101",
@@ -892,7 +892,7 @@
         }
       ],
       "primary_input": "image",
-      "key": "food101"
+      "pathname": "food101"
     },
     {
       "name": "Oxford102",
@@ -958,7 +958,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "oxford102"
+      "pathname": "oxford102"
     },
     {
       "name": "FlickrStyle",
@@ -1024,7 +1024,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "flickrstyle"
+      "pathname": "flickrstyle"
     },
     {
       "name": "RN1015k500",
@@ -1085,7 +1085,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "rn1015k500"
+      "pathname": "rn1015k500"
     },
     {
       "name": "HED_so",
@@ -1196,7 +1196,7 @@
         }
       ],
       "primary_input": "data",
-      "key": "hed_so"
+      "pathname": "hed_so"
     },
     {
       "name": "FNS-Candy",
@@ -1268,7 +1268,7 @@
         }
       ],
       "primary_input": "inputImage",
-      "key": "fns-candy"
+      "pathname": "fns-candy"
     },
     {
       "name": "FNS-Feathers",
@@ -1340,7 +1340,7 @@
         }
       ],
       "primary_input": "inputImage",
-      "key": "fns-feathers"
+      "pathname": "fns-feathers"
     },
     {
       "name": "FNS-La-Muse",
@@ -1412,7 +1412,7 @@
         }
       ],
       "primary_input": "inputImage",
-      "key": "fns-la-muse"
+      "pathname": "fns-la-muse"
     },
     {
       "name": "FNS-The-Scream",
@@ -1470,7 +1470,7 @@
         }
       ],
       "primary_input": "inputImage",
-      "key": "fns-the-scream"
+      "pathname": "fns-the-scream"
     },
     {
       "name": "FNS-Udnie",
@@ -1542,7 +1542,7 @@
         }
       ],
       "primary_input": "inputImage",
-      "key": "fns-udnie"
+      "pathname": "fns-udnie"
     },
     {
       "name": "FNS-Mosaic",
@@ -1614,7 +1614,7 @@
         }
       ],
       "primary_input": "inputImage",
-      "key": "fns-mosaic"
+      "pathname": "fns-mosaic"
     },
     {
       "name": "AnimeScale2x",
@@ -1672,7 +1672,7 @@
         }
       ],
       "primary_input": "input",
-      "key": "animescale2x"
+      "pathname": "animescale2x"
     },
     {
       "name": "MessageClassifier",
@@ -1762,7 +1762,7 @@
         }
       ],
       "primary_input": "message",
-      "key": "messageclassifier"
+      "pathname": "messageclassifier"
     },
     {
       "name": "Exermote",
@@ -1869,7 +1869,7 @@
         }
       ],
       "primary_input": "accelerations",
-      "key": "exermote"
+      "pathname": "exermote"
     }
   ]
 }

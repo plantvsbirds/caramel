@@ -27,14 +27,14 @@ mergeFrom('sample', (name) => `../content/samples/${name}json`, (m) => {
 })
 
 db.models.forEach(m => {
-  m.key = encodeURIComponent(m.name.toLowerCase())
+  m.pathname = encodeURIComponent(m.name.toLowerCase())
 })
 
 const lenBeforeUniq = db.models.length
 
-_.uniqBy(db.models, (m) => m.key)
+_.uniqBy(db.models, (m) => m.pathname)
 
 if (db.models.length !== lenBeforeUniq)
-  console.log(`Dropping ${lenBeforeUniq - db.models.length} due to dup key!`)
+  console.log(`Dropping ${lenBeforeUniq - db.models.length} due to dup pathname!`)
 
 fs.writeFileSync('db.json', JSON.stringify(db, null ,2))
