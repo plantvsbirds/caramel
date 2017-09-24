@@ -1,0 +1,28 @@
+@import "../const.styl"
+
+.bar
+  display flex
+  justify-content space-between
+  position fixed
+  top 0
+  left 0
+  right 0
+  padding .3em
+  height 1.3em
+  color text-content
+  background rgba(255, 255, 255, .45)
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  font-size 2em
+  z-index 10
+  transform translate3d(0, -1.9em, 0)
+  transition transform .4s
+  &.show
+    transform translate3d(0, 0, 0)
+
+.logo
+  width 10em
+  margin 0 auto
+  color text-primary
+  text-align center
+  font-weight bold
