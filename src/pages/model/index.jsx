@@ -4,13 +4,12 @@ import styles from './styles.styl'
 import pageStyles from '../page.styl'
 const cx = classNamesBind.bind(styles)
 
-import _ from 'lodash'
-
 import Button from '~components/button'
 import { SampleValuePair } from '~components/sample'
 import IOTable from './iotable'
 import { getModelDownloadUrl } from '../../config'
 import { promptRender } from '../../const'
+import { bindScrollFunc, unbindScrollFunc, processScrollCb } from '../../utils'
 
 
 let hookedScrollEvent = false
@@ -18,21 +17,17 @@ let hookedScrollEvent = false
 class ModalDetail extends Component {
   constructor() {
     super()
-    this.onScroll =
-      _ .debounce(this.onScroll, 30, { leading: true })
-        .bind(this)
+    this.onScroll = processScrollCb(this.onScroll, this)
     this.state = {
       showPrompt: false,
       prompt: {}
     }
   }
   componentWillMount() {
-    document.body.addEventListener('mousewheel', this.onScroll)
-    document.body.addEventListener('touchmove', this.onScroll)
+    bindScrollFunc(this.onScroll)
   }
   componentWillUnmount() {
-    document.body.removeEventListener('mousewheel', this.onScroll)
-    document.body.removeEventListener('touchmove', this.onScroll)
+    unbindScrollFunc(this.onScroll)
   }
   onScroll(evt) {
     const scrollNode = this.props.scrollBody
