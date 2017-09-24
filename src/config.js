@@ -8,15 +8,15 @@ export const getModelDownloadUrl = (fname) =>
 
 export const localData = dbFile
 
-export const navigationWithPath = ({ pathname }) => {
+export const navigationWithModel = (loc) => {
+  const { pathname } = loc
   const model = localData.models.find(m => m.pathname === pathname)
-  if (model)
-    return {
-      to: '/' + model.pathname,
-      state: {
-        model
-      }
+  if (model) {
+    loc.state = {
+      model
     }
+    return loc
+  }
   else
     return '/'
 }

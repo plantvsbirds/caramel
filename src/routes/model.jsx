@@ -7,13 +7,15 @@ import css from '../pages/page.styl'
 import classNamesBind from 'classnames/bind'
 const cx = classNamesBind.bind(css)
 
-import { navigationWithPath } from '../config'
+import { navigationWithModel } from '../config'
+import { promptSearches } from '../const'
 
 export default class ModelRoute extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      firstLanding: false
+      firstLanding: false,
+      promptType: null,
     }
   }
   toggleBodyScrollable(op) {
@@ -30,14 +32,23 @@ export default class ModelRoute extends Component {
   componentWillUnmount() {
     this.toggleBodyScrollable(true)
   }
+  componentDidMount() {
+    const { location } = this.props
+    this.setState({
+      promptType: this.state.promptType || promptSearches.find(s => s === location.search).slice(1)
+    })
+  }
+  bindModelContainer = (modelContainer) => {
+    this.setState({
+      modelContainer
+    })
+  }
   render () {
     const { location, history } = this.props
     return (
       <div
         className={css.modelContainer}
-        onScroll={(ev) => {
-          ev.stopPropagation()
-        }}
+        ref={this.bindModelContainer}
       >
         <div
           className={css.modelTopbar}
@@ -47,17 +58,19 @@ export default class ModelRoute extends Component {
         >
           {
             this.state.firstLanding ? 
-              <p className={cx('flipEntry', 'checkoutIconBefore')}>Check out more models</p>
+              <p className={cx('flipEntry', 'checkoutIconBefore')}>Check out 116+ Core ML models</p>
             : <p className={css.returnIconBefore}>Return to list</p>
           }
         </div>
         {!location.state ? (
           <Redirect
-            to={navigationWithPath(location)}
+            to={navigationWithModel(location)}
           />
         ) : (
           <ModelDetail
             model={location.state.model}
+            scrollBody={this.state.modelContainer}
+            promptType={this.state.promptType}
           />
         )}
         {location.state && 
