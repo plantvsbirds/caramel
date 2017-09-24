@@ -1,5 +1,6 @@
 {
     "types": ["Object Detection", "Style Transfer", "text", "others"],
+     "model_download_url_prefix": "https://s3-us-west-2.amazonaws.com/coreml-models/",
     "models": [{
                "name": "MobileNet",
                "file": "MobileNet.mlmodel",
