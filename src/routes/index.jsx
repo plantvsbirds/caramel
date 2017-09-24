@@ -4,13 +4,29 @@ import ModelList from '../pages/list'
 import css from '../pages/page.styl'
 
 import { localData } from '../config'
+import { bindScrollFunc, unbindScrollFunc, processScrollCb } from '../utils'
+
+import TopBar from '~components/topbar'
 
 export default class HomeRoute extends Component {
   constructor() {
     super()
     this.state = {
       offsetY: 0,
+      showTopBar: false
     }
+    this.onScroll = processScrollCb(this.onScroll, this)
+  }
+  componentWillMount() {
+    bindScrollFunc(this.onScroll)
+  }
+  componentWillUnmount() {
+    unbindScrollFunc(this.onScroll)
+  }
+  onScroll() {
+    this.setState({
+      showTopBar: document.body.scrollTop > 300
+    })
   }
   setModelListOffset = (newOffset) => {
     this.setState({
@@ -45,6 +61,9 @@ export default class HomeRoute extends Component {
           <meta name="og:type" content="website" />
           <meta name="og:url" content="https://coreml.store" />
         </Helmet>
+        <TopBar
+          show={this.state.showTopBar}
+        />
         <div className={css.head}>
           <h1>CoreML.Store</h1>
           <p>Your iOS 11 apps could use some superpower.</p>
