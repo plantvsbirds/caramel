@@ -11,9 +11,6 @@ import { getModelDownloadUrl } from '../../config'
 import { promptRender } from '../../const'
 import { bindScrollFunc, unbindScrollFunc, processScrollCb } from '../../utils'
 
-
-let hookedScrollEvent = false
-
 class ModalDetail extends Component {
   constructor() {
     super()
