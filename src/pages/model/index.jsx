@@ -4,26 +4,74 @@ import styles from './styles.styl'
 import pageStyles from '../page.styl'
 const cx = classNamesBind.bind(styles)
 
+import _ from 'lodash'
+
 import Button from '~components/button'
 import { SampleValuePair } from '~components/sample'
 import IOTable from './iotable'
-import { getModelDownloadUrl } from '../../config.js'
+import { getModelDownloadUrl } from '../../config'
+import { promptRender } from '../../const'
+
+
+let hookedScrollEvent = false
 
 class ModalDetail extends Component {
   constructor() {
     super()
+    this.onScroll =
+      _ .debounce(this.onScroll, 30, { leading: true })
+        .bind(this)
+    this.state = {
+      showPrompt: false,
+      prompt: {}
+    }
+  }
+  componentWillMount() {
+    document.body.addEventListener('mousewheel', this.onScroll)
+    document.body.addEventListener('touchmove', this.onScroll)
+  }
+  componentWillUnmount() {
+    document.body.removeEventListener('mousewheel', this.onScroll)
+    document.body.removeEventListener('touchmove', this.onScroll)
+  }
+  componentWillReceiveProps({ promptType }) {
+    const vm = this
+    if (promptType && !this.promptTimeout)
+      this.promptTimeout = setTimeout(() => {
+        vm.showPrompt(promptRender(promptType, vm.props.model))
+      }, 1400)
+  }
+  onScroll(evt) {
+    const scrollNode = this.props.scrollBody
+    if (scrollNode.scrollTop > 100)
+      this.hidePrompt()
+  }
+  showPrompt = (prompt) => {
+    this.setState({
+      showPrompt: true,
+      prompt,
+    })
+  }
+  hidePrompt = () => {
+    this.setState({
+      showPrompt: false
+    })
   }
   render() {
     const {
       name,
       description,
-      author, reference,
+      author,
       size,
       license,
       input, output,
       samples,
       file, demo_link, reference_link,
     } = this.props.model
+    const {
+      prompt
+    } = this.state
+    const downloadUrl = getModelDownloadUrl(file)
 
     const InfoTag = ({
       title, content
@@ -38,8 +86,35 @@ class ModalDetail extends Component {
     </div>
 
     return <div className={pageStyles.container}>
-      <div className={cx("meta")}>
-        <div style={{ overflow: 'hidden' }}>
+      <div
+        className={cx('prompt', { exist: this.state.showPrompt })}
+        onScroll={this.onScroll}
+      >
+        <h1>
+          {prompt.title}
+        </h1>
+        <p>
+          {prompt.content}
+        </p>
+        <p className={styles.promptBtnGroup}>
+          <Button
+            label={prompt.yesLabel || "Yes"}
+            href={prompt.yesHref}
+            onClick={this.hidePrompt}
+            simple
+            main
+          />
+          <Button
+            label="Nevermind"
+            onClick={this.hidePrompt}
+            simple
+          />
+        </p>
+      </div>
+      <div
+        className={cx("meta", { blur: this.state.showPrompt })}
+      >
+        <div className={styles.modelBody}>
           <h1 className={cx('title')}>
             {name}
           </h1>
@@ -67,16 +142,19 @@ class ModalDetail extends Component {
           <div className={cx('alignLeftHalf', 'btnContainer')}>
             <Button
               label="Get"
-              href={getModelDownloadUrl(file)}
+              href={downloadUrl}
               main
+              round
             />
             <Button
               label="See Demo"
               href={demo_link}
+              round
             />
             <Button
               label="Check Reference"
               href={reference_link}
+              round
             />
           </div>
         </div>

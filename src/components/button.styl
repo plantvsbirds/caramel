@@ -1,4 +1,6 @@
-.btn
+@import "../const.styl"
+
+.round
   display inline-block
   padding 0em .45em
   margin-right .8em
@@ -13,14 +15,29 @@
   font-weight 400
   text-transform uppercase
 
-  border 1px solid #007AFF
+  border 1px solid text-link
   border-radius 2em
-  color #007AFF
+  color text-link
   background transparent
   cursor pointer
   user-select none
 
-.main
-  background #007AFF
-  color #fff!important
+  &.main
+    background text-link
+    color #fff!important
+    font-weight 600
+
+.simple
+  margin .45em
+  margin-left 0em
+  padding 1em
   font-weight 600
+  border-radius .5em
+  cursor pointer
+  &.main
+    color white
+    background text-link
+  &:not(.main)
+    color text-link
+    &:hover
+      background #f3f3f3

@@ -1,9 +1,27 @@
 @import '../../const.styl'
 
+.prompt
+  opacity 0
+  min-height 30vh
+  padding-top 5vh
+  z-index 2
+  position absolute
+  transition opacity .4s
+  &.exist
+    opacity 1
+  .promptBtnGroup
+    margin-top 2em
+
 .meta
+  z-index 1
   display flex
   justify-content space-between
   align-items center
+  transition all .4s
+  &.blur
+    filter blur(10px)
+    transform translate3d(0, 0, 0)
+    opacity .3
   @media screen and (max-width: 769px)
     flex-direction row
     flex-wrap wrap
