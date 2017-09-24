@@ -34,13 +34,6 @@ class ModalDetail extends Component {
     document.body.removeEventListener('mousewheel', this.onScroll)
     document.body.removeEventListener('touchmove', this.onScroll)
   }
-  componentWillReceiveProps({ promptType }) {
-    const vm = this
-    if (promptType && !this.promptTimeout)
-      this.promptTimeout = setTimeout(() => {
-        vm.showPrompt(promptRender(promptType, vm.props.model))
-      }, 1400)
-  }
   onScroll(evt) {
     const scrollNode = this.props.scrollBody
     if (scrollNode.scrollTop > 100)
@@ -57,6 +50,14 @@ class ModalDetail extends Component {
       showPrompt: false
     })
   }
+  setPromptTrigger = (promptType) => {
+    const vm = this
+    if (promptType && !this.promptTimeout)
+      this.promptTimeout = setTimeout(() => {
+        vm.showPrompt(promptRender(promptType, vm.props.model))
+      }, 1400)
+    return null
+  }
   render() {
     const {
       name,
@@ -68,11 +69,14 @@ class ModalDetail extends Component {
       samples,
       file, demo_link, reference_link,
     } = this.props.model
+    const downloadUrl = getModelDownloadUrl(file)
+
     const {
       prompt
     } = this.state
-    const downloadUrl = getModelDownloadUrl(file)
 
+    this.setPromptTrigger(this.props.promptType)
+    
     const InfoTag = ({
       title, content
     }) =>

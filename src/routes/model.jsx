@@ -34,8 +34,9 @@ export default class ModelRoute extends Component {
   }
   componentDidMount() {
     const { location } = this.props
+    const promptTypeLookup = promptSearches.find(s => s === location.search)
     this.setState({
-      promptType: this.state.promptType || promptSearches.find(s => s === location.search).slice(1)
+      promptType: this.state.promptType || (promptTypeLookup ? promptTypeLookup.slice(1) : null)
     })
   }
   bindModelContainer = (modelContainer) => {
