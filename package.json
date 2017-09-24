@@ -9,7 +9,8 @@
     "build": "rollup -c rollup.config.build.js",
     "mv-static": "sudo cp -avr dist /var/www/",
     "bmv": "npm run build && npm run mv-static",
-    "db": "babel-node content/generate_db.js"
+    "db": "babel-node content/generate_db.js",
+    "update": "git pull && npm install && npm run bmv"
   },
   "author": "hong",
   "license": "UNLICENSED",
