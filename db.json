@@ -5,7 +5,6 @@
     "text",
     "others"
   ],
-  "model_download_url_prefix": "https://s3-us-west-2.amazonaws.com/coreml-models/",
   "models": [
     {
       "name": "MobileNet",
@@ -15,6 +14,7 @@
       "demo_link": "https://github.com/hollance/MobileNet-CoreML",
       "reference_link": "https://arxiv.org/abs/1704.04861",
       "type": "Object Detection",
+      "pathname": "/mobilenet",
       "license": "Unknown",
       "author": "Original paper: Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam. Caffe implementation: shicai",
       "output": [
@@ -85,8 +85,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/mobilenet"
+      "primary_input": "data"
     },
     {
       "name": "GoogLeNetPlaces",
@@ -96,6 +95,7 @@
       "demo_link": "https://github.com/chenyi1989/CoreMLDemo",
       "reference_link": "http://places.csail.mit.edu/index.html",
       "type": "Object Detection",
+      "pathname": "/googlenetplaces",
       "license": "Creative Common License. More information available at http://places.csail.mit.edu",
       "author": "B. Zhou, A. Lapedriza, J. Xiao, A. Torralba, and A. Oliva",
       "output": [
@@ -151,8 +151,7 @@
           }
         }
       ],
-      "primary_input": "sceneImage",
-      "pathname": "/googlenetplaces"
+      "primary_input": "sceneImage"
     },
     {
       "name": "Inceptionv3",
@@ -162,6 +161,7 @@
       "demo_link": "https://github.com/yulingtianxia/Core-ML-Sample/",
       "reference_link": "https://arxiv.org/abs/1512.00567",
       "type": "Object Detection",
+      "pathname": "/inceptionv3",
       "license": "MIT License. More information available at https://github.com/fchollet/keras/blob/master/LICENSE",
       "author": "Original Paper: Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna. Keras Implementation: Fran\\303\\247ois Chollet",
       "output": [
@@ -232,8 +232,7 @@
           }
         }
       ],
-      "primary_input": "image",
-      "pathname": "/inceptionv3"
+      "primary_input": "image"
     },
     {
       "name": "Resnet50",
@@ -243,6 +242,7 @@
       "demo_link": "https://github.com/atomic14/VisionCoreMLSample",
       "reference_link": "https://arxiv.org/abs/1512.03385",
       "type": "Object Detection",
+      "pathname": "/resnet50",
       "license": "MIT License. More information available at https://github.com/fchollet/keras/blob/master/LICENSE",
       "author": "Original Paper: Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun. Keras Implementation: Fran\\303\\247ois Chollet",
       "output": [
@@ -313,8 +313,7 @@
           }
         }
       ],
-      "primary_input": "image",
-      "pathname": "/resnet50"
+      "primary_input": "image"
     },
     {
       "name": "VGG16",
@@ -324,6 +323,7 @@
       "demo_link": "https://github.com/alaphao/CoreMLExample",
       "reference_link": "https://arxiv.org/abs/1409.1556",
       "type": "Object Detection",
+      "pathname": "/vgg16",
       "license": "Creative Commons Attribution 4.0 International(CC BY 4.0). More information available at https://creativecommons.org/licenses/by/4.0/",
       "author": "Original Paper: Karen Simonyan & Andrew Zisserman. Keras Implementation: Fran\\303\\247ois Chollet",
       "output": [
@@ -379,8 +379,7 @@
           }
         }
       ],
-      "primary_input": "image",
-      "pathname": "/vgg16"
+      "primary_input": "image"
     },
     {
       "name": "CarRecognition",
@@ -390,6 +389,7 @@
       "demo_link": "https://github.com/likedan/Core-ML-Car-Recognition",
       "reference_link": "http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/index.html",
       "type": "Object Detection",
+      "pathname": "/carrecognition",
       "license": "MIT",
       "author": "Audebert, Nicolas and Le Saux, Bertrand and Lefevre Sebastien",
       "output": [
@@ -460,8 +460,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/carrecognition"
+      "primary_input": "data"
     },
     {
       "name": "AgeNet",
@@ -471,6 +470,7 @@
       "demo_link": "https://github.com/cocoa-ai/FacesVisionDemo",
       "reference_link": "http://www.openu.ac.il/home/hassner/projects/cnn_agegender/",
       "type": "Object Detection",
+      "pathname": "/agenet",
       "license": "Unknown",
       "author": "Gil Levi and Tal Hassner",
       "output": [
@@ -526,8 +526,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/agenet"
+      "primary_input": "data"
     },
     {
       "name": "GenderNet",
@@ -537,6 +536,7 @@
       "demo_link": "https://github.com/cocoa-ai/FacesVisionDemo",
       "reference_link": "http://www.openu.ac.il/home/hassner/projects/cnn_agegender/",
       "type": "Object Detection",
+      "pathname": "/gendernet",
       "license": "Unknown",
       "author": "Gil Levi and Tal Hassner",
       "output": [
@@ -592,8 +592,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/gendernet"
+      "primary_input": "data"
     },
     {
       "name": "MNIST",
@@ -603,6 +602,7 @@
       "demo_link": "https://github.com/ph1ps/MNIST-CoreML",
       "reference_link": "http://yann.lecun.com/exdb/mnist/",
       "type": "Object Detection",
+      "pathname": "/mnist",
       "license": "MIT",
       "author": "Philipp Gabriel",
       "output": [
@@ -657,8 +657,7 @@
           }
         }
       ],
-      "primary_input": "image",
-      "pathname": "/mnist"
+      "primary_input": "image"
     },
     {
       "name": "CNNEmotions",
@@ -668,6 +667,7 @@
       "demo_link": "https://github.com/cocoa-ai/FacesVisionDemo",
       "reference_link": "http://www.openu.ac.il/home/hassner/projects/cnn_emotions/",
       "type": "Object Detection",
+      "pathname": "/cnnemotions",
       "license": "Unknown",
       "author": "Gil Levi and Tal Hassner",
       "output": [
@@ -723,8 +723,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/cnnemotions"
+      "primary_input": "data"
     },
     {
       "name": "VisualSentimentCNN",
@@ -734,6 +733,7 @@
       "demo_link": "https://github.com/cocoa-ai/SentimentVisionDemo",
       "reference_link": "http://www.sciencedirect.com/science/article/pii/S0262885617300355?via%3Dihub",
       "type": "Object Detection",
+      "pathname": "/visualsentimentcnn",
       "license": "MIT",
       "author": "Image Processing Group - BarcelonaTECH - UPC",
       "output": [
@@ -795,8 +795,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/visualsentimentcnn"
+      "primary_input": "data"
     },
     {
       "name": "Food101",
@@ -806,6 +805,7 @@
       "demo_link": "https://github.com/ph1ps/Food101-CoreML",
       "reference_link": "http://visiir.lip6.fr/explore",
       "type": "Object Detection",
+      "pathname": "/food101",
       "license": "Unknown",
       "author": "Philipp Gabriel",
       "output": [
@@ -891,8 +891,7 @@
           }
         }
       ],
-      "primary_input": "image",
-      "pathname": "/food101"
+      "primary_input": "image"
     },
     {
       "name": "Oxford102",
@@ -902,6 +901,7 @@
       "demo_link": "https://github.com/cocoa-ai/FlowersVisionDemo",
       "reference_link": "http://jimgoo.com/flower-power/",
       "type": "Object Detection",
+      "pathname": "/oxford102",
       "license": "Unknown",
       "author": "Jimmie Goode",
       "output": [
@@ -957,8 +957,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/oxford102"
+      "primary_input": "data"
     },
     {
       "name": "FlickrStyle",
@@ -968,6 +967,7 @@
       "demo_link": "https://github.com/cocoa-ai/StylesVisionDemo",
       "reference_link": "http://sergeykarayev.com/files/1311.3715v3.pdf",
       "type": "Object Detection",
+      "pathname": "/flickrstyle",
       "license": "Unknown",
       "author": "Sergey Karayev",
       "output": [
@@ -1023,8 +1023,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/flickrstyle"
+      "primary_input": "data"
     },
     {
       "name": "RN1015k500",
@@ -1034,6 +1033,7 @@
       "demo_link": "https://github.com/awslabs/MXNet2CoreML_iOS_sample_app",
       "reference_link": "https://aws.amazon.com/blogs/ai/estimating-the-location-of-images-using-mxnet-and-multimedia-commons-dataset-on-aws-ec2",
       "type": "Object Detection",
+      "pathname": "/rn1015k500",
       "input": [
         {
           "type": "Image (Color 224 x 224)",
@@ -1084,8 +1084,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/rn1015k500"
+      "primary_input": "data"
     },
     {
       "name": "HED_so",
@@ -1095,6 +1094,7 @@
       "demo_link": "https://github.com/s1ddok/HED-CoreML",
       "reference_link": "http://dl.acm.org/citation.cfm?id=2654889",
       "type": "Style Transfer",
+      "pathname": "/hed_so",
       "license": "Unknown",
       "author": "Original paper: Xie, Saining and Tu, Zhuowen. Caffe implementation: Yangqing Jia. CoreML port: Andrey Volodin",
       "output": [
@@ -1195,8 +1195,7 @@
           }
         }
       ],
-      "primary_input": "data",
-      "pathname": "/hed_so"
+      "primary_input": "data"
     },
     {
       "name": "FNS-Candy",
@@ -1205,6 +1204,7 @@
       "demo_link": "https://github.com/prisma-ai/torch2coreml",
       "reference_link": "http://cs.stanford.edu/people/jcjohns/eccv16/",
       "type": "Style Transfer",
+      "pathname": "/fns-candy",
       "license": "Free for personal or research use",
       "author": "Justin Johnson",
       "output": [
@@ -1267,8 +1267,7 @@
           }
         }
       ],
-      "primary_input": "inputImage",
-      "pathname": "/fns-candy"
+      "primary_input": "inputImage"
     },
     {
       "name": "FNS-Feathers",
@@ -1277,6 +1276,7 @@
       "demo_link": "https://github.com/prisma-ai/torch2coreml",
       "reference_link": "http://cs.stanford.edu/people/jcjohns/eccv16/",
       "type": "Style Transfer",
+      "pathname": "/fns-feathers",
       "license": "Free for personal or research use",
       "author": "Justin Johnson",
       "output": [
@@ -1339,8 +1339,7 @@
           }
         }
       ],
-      "primary_input": "inputImage",
-      "pathname": "/fns-feathers"
+      "primary_input": "inputImage"
     },
     {
       "name": "FNS-La-Muse",
@@ -1349,6 +1348,7 @@
       "demo_link": "https://github.com/prisma-ai/torch2coreml",
       "reference_link": "http://cs.stanford.edu/people/jcjohns/eccv16/",
       "type": "Style Transfer",
+      "pathname": "/fns-la-muse",
       "license": "Free for personal or research use",
       "author": "Justin Johnson",
       "output": [
@@ -1411,8 +1411,7 @@
           }
         }
       ],
-      "primary_input": "inputImage",
-      "pathname": "/fns-la-muse"
+      "primary_input": "inputImage"
     },
     {
       "name": "FNS-The-Scream",
@@ -1421,6 +1420,7 @@
       "demo_link": "https://github.com/prisma-ai/torch2coreml",
       "reference_link": "http://cs.stanford.edu/people/jcjohns/eccv16/",
       "type": "Style Transfer",
+      "pathname": "/fns-the-scream",
       "license": "Free for personal or research use",
       "author": "Justin Johnson",
       "output": [
@@ -1469,8 +1469,7 @@
           }
         }
       ],
-      "primary_input": "inputImage",
-      "pathname": "/fns-the-scream"
+      "primary_input": "inputImage"
     },
     {
       "name": "FNS-Udnie",
@@ -1479,6 +1478,7 @@
       "demo_link": "https://github.com/prisma-ai/torch2coreml",
       "reference_link": "http://cs.stanford.edu/people/jcjohns/eccv16/",
       "type": "Style Transfer",
+      "pathname": "/fns-udnie",
       "license": "Free for personal or research use",
       "author": "Justin Johnson",
       "output": [
@@ -1541,8 +1541,7 @@
           }
         }
       ],
-      "primary_input": "inputImage",
-      "pathname": "/fns-udnie"
+      "primary_input": "inputImage"
     },
     {
       "name": "FNS-Mosaic",
@@ -1551,6 +1550,7 @@
       "demo_link": "https://github.com/prisma-ai/torch2coreml",
       "reference_link": "http://cs.stanford.edu/people/jcjohns/eccv16/",
       "type": "Style Transfer",
+      "pathname": "/fns-mosaic",
       "license": "Free for personal or research use",
       "author": "Justin Johnson",
       "output": [
@@ -1613,8 +1613,7 @@
           }
         }
       ],
-      "primary_input": "inputImage",
-      "pathname": "/fns-mosaic"
+      "primary_input": "inputImage"
     },
     {
       "name": "AnimeScale2x",
@@ -1623,6 +1622,7 @@
       "demo_link": "https://github.com/imxieyi/waifu2x-ios",
       "reference_link": "https://arxiv.org/abs/1501.00092",
       "type": "Style Transfer",
+      "pathname": "/animescale2x",
       "license": "MIT",
       "author": "Original paper: Chao Dong, Chen Change Loy, Kaiming He, Xiaoou Tang. Caffe implementation: lltcggie",
       "output": [
@@ -1671,8 +1671,7 @@
           }
         }
       ],
-      "primary_input": "input",
-      "pathname": "/animescale2x"
+      "primary_input": "input"
     },
     {
       "name": "MessageClassifier",
@@ -1681,6 +1680,7 @@
       "demo_link": "https://github.com/gkswamy98/imessage-spam-detection/tree/master",
       "reference_link": "http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/",
       "type": "text",
+      "pathname": "/messageclassifier",
       "input": [
         {
           "type": "MultiArray (Double 8713)",
@@ -1761,8 +1761,7 @@
           }
         }
       ],
-      "primary_input": "message",
-      "pathname": "/messageclassifier"
+      "primary_input": "message"
     },
     {
       "name": "Exermote",
@@ -1772,6 +1771,7 @@
       "demo_link": "https://github.com/Lausbert/Exermote/tree/master/ExermoteInference",
       "reference_link": "http://lausbert.com/2017/08/03/exermote/",
       "type": "others",
+      "pathname": "/exermote",
       "license": "MIT",
       "author": "Stephan Lerner",
       "output": [
@@ -1868,8 +1868,7 @@
           }
         }
       ],
-      "primary_input": "accelerations",
-      "pathname": "/exermote"
+      "primary_input": "accelerations"
     }
   ]
 }

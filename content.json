@@ -1,0 +1,280 @@
+{
+  "types": [
+    "Object Detection",
+    "Style Transfer",
+    "text",
+    "others"
+  ],
+  "models": [
+    {
+      "name": "MobileNet",
+      "file": "MobileNet.mlmodel",
+      "description": "Detects the dominant objects present in an image.",
+      "download_link": "https://coreml.store/mobilenet?download",
+      "demo_link": "https://coreml.store/mobilenet?demo",
+      "reference_link": "https://coreml.store/mobilenet?reference",
+      "type": "Object Detection",
+      "pathname": "/mobilenet"
+    },
+    {
+      "name": "Places CNN",
+      "file": "GoogLeNetPlaces.mlmodel",
+      "description": "Detects the scene of an image from 205 categories such as bedroom, forest, coast etc.",
+      "download_link": "https://coreml.store/googlenetplaces?download",
+      "demo_link": "https://coreml.store/googlenetplaces?demo",
+      "reference_link": "https://coreml.store/googlenetplaces?reference",
+      "type": "Object Detection",
+      "pathname": "/googlenetplaces"
+    },
+    {
+      "name": "Inception v3",
+      "file": "Inceptionv3.mlmodel",
+      "description": "Detects the dominant objects present in an image.",
+      "download_link": "https://coreml.store/inceptionv3?download",
+      "demo_link": "https://coreml.store/inceptionv3?demo",
+      "reference_link": "https://coreml.store/inceptionv3?reference",
+      "type": "Object Detection",
+      "pathname": "/inceptionv3"
+    },
+    {
+      "name": "ResNet50",
+      "file": "Resnet50.mlmodel",
+      "description": "Detects the dominant objects present in an image.",
+      "download_link": "https://coreml.store/resnet50?download",
+      "demo_link": "https://coreml.store/resnet50?demo",
+      "reference_link": "https://coreml.store/resnet50?reference",
+      "type": "Object Detection",
+      "pathname": "/resnet50"
+    },
+    {
+      "name": "VGG16",
+      "file": "VGG16.mlmodel",
+      "description": "Detects the dominant objects present in an image.",
+      "download_link": "https://coreml.store/vgg16?download",
+      "demo_link": "https://coreml.store/vgg16?demo",
+      "reference_link": "https://coreml.store/vgg16?reference",
+      "type": "Object Detection",
+      "pathname": "/vgg16"
+    },
+    {
+      "name": "Car Recognition",
+      "file": "CarRecognition.mlmodel",
+      "description": "Predict the brand & model of a car.",
+      "download_link": "https://coreml.store/carrecognition?download",
+      "demo_link": "https://coreml.store/carrecognition?demo",
+      "reference_link": "https://coreml.store/carrecognition?reference",
+      "type": "Object Detection",
+      "pathname": "/carrecognition"
+    },
+    {
+      "name": "YOLO",
+      "file": "TinyYOLO.mlmodel",
+      "description": "Recognize what the objects are inside a given image and where they are in the image.",
+      "download_link": "https://coreml.store/tinyyolo?download",
+      "demo_link": "https://coreml.store/tinyyolo?demo",
+      "reference_link": "https://coreml.store/tinyyolo?reference",
+      "type": "Object Detection",
+      "pathname": "/tinyyolo"
+    },
+    {
+      "name": "AgeNet",
+      "file": "AgeNet.mlmodel",
+      "description": "Predict a person's age from one's portrait.",
+      "download_link": "https://coreml.store/agenet?download",
+      "demo_link": "https://coreml.store/agenet?demo",
+      "reference_link": "https://coreml.store/agenet?reference",
+      "type": "Object Detection",
+      "pathname": "/agenet"
+    },
+    {
+      "name": "GenderNet",
+      "file": "GenderNet.mlmodel",
+      "description": "Predict a person's gender from one's portrait.",
+      "download_link": "https://coreml.store/gendernet?download",
+      "demo_link": "https://coreml.store/gendernet?demo",
+      "reference_link": "https://coreml.store/gendernet?reference",
+      "type": "Object Detection",
+      "pathname": "/gendernet"
+    },
+    {
+      "name": "MNIST",
+      "file": "MNIST.mlmodel",
+      "description": "Predict handwritten (drawn) digits from images.",
+      "download_link": "https://coreml.store/mnist?download",
+      "demo_link": "https://coreml.store/mnist?demo",
+      "reference_link": "https://coreml.store/mnist?reference",
+      "type": "Object Detection",
+      "pathname": "/mnist"
+    },
+    {
+      "name": "EmotionNet",
+      "file": "CNNEmotions.mlmodel",
+      "description": "Predict a person's emotion from one's portrait.",
+      "download_link": "https://coreml.store/cnnemotions?download",
+      "demo_link": "https://coreml.store/cnnemotions?demo",
+      "reference_link": "https://coreml.store/cnnemotions?reference",
+      "type": "Object Detection",
+      "pathname": "/cnnemotions"
+    },
+    {
+      "name": "SentimentVision",
+      "file": "VisualSentimentCNN.mlmodel",
+      "description": "Predict positive or negative sentiments from images.",
+      "download_link": "https://coreml.store/visualsentimentcnn?download",
+      "demo_link": "https://coreml.store/visualsentimentcnn?demo",
+      "reference_link": "https://coreml.store/visualsentimentcnn?reference",
+      "type": "Object Detection",
+      "pathname": "/visualsentimentcnn"
+    },
+    {
+      "name": "Food101",
+      "file": "Food101.mlmodel",
+      "description": "Predict the type of foods from images.",
+      "download_link": "https://coreml.store/food101?download",
+      "demo_link": "https://coreml.store/food101?demo",
+      "reference_link": "https://coreml.store/food101?reference",
+      "type": "Object Detection",
+      "pathname": "/food101"
+    },
+    {
+      "name": "Oxford102",
+      "file": "Oxford102.mlmodel",
+      "description": "Detect the type of flowers from images.",
+      "download_link": "https://coreml.store/oxford102?download",
+      "demo_link": "https://coreml.store/oxford102?demo",
+      "reference_link": "https://coreml.store/oxford102?reference",
+      "type": "Object Detection",
+      "pathname": "/oxford102"
+    },
+    {
+      "name": "FlickrStyle",
+      "file": "FlickrStyle.mlmodel",
+      "description": "Detect the artistic style of images.",
+      "download_link": "https://coreml.store/flickrstyle?download",
+      "demo_link": "https://coreml.store/flickrstyle?demo",
+      "reference_link": "https://coreml.store/flickrstyle?reference",
+      "type": "Object Detection",
+      "pathname": "/flickrstyle"
+    },
+    {
+      "name": "LocationNet",
+      "file": "RN1015k500.mlmodel",
+      "description": "Predict the location where a picture was taken.",
+      "download_link": "https://coreml.store/rn1015k500?download",
+      "demo_link": "https://coreml.store/rn1015k500?demo",
+      "reference_link": "https://coreml.store/rn1015k500?reference",
+      "type": "Object Detection",
+      "pathname": "/rn1015k500"
+    },
+    {
+      "name": "HED",
+      "file": "HED_so.mlmodel",
+      "description": "Output the nested edges of a color image.",
+      "download_link": "https://coreml.store/hed_so?download",
+      "demo_link": "https://coreml.store/hed_so?demo",
+      "reference_link": "https://coreml.store/hed_so?reference",
+      "type": "Style Transfer",
+      "pathname": "/hed_so"
+    },
+    {
+      "name": "Candy",
+      "file": "FNS-Candy.mlmodel",
+      "description": "Transfer a color image into Candy style.",
+      "demo_link": "https://coreml.store/fns-candy?demo",
+      "reference_link": "https://coreml.store/fns-candy?reference",
+      "type": "Style Transfer",
+      "pathname": "/fns-candy",
+      "download_link": "https://coreml.store/fns-candy?download"
+    },
+    {
+      "name": "Feathers",
+      "file": "FNS-Feathers.mlmodel",
+      "description": "Transfer a color image into Feathers style.",
+      "demo_link": "https://coreml.store/fns-feathers?demo",
+      "reference_link": "https://coreml.store/fns-feathers?reference",
+      "type": "Style Transfer",
+      "pathname": "/fns-feathers",
+      "download_link": "https://coreml.store/fns-feathers?download"
+    },
+    {
+      "name": "La Muse",
+      "file": "FNS-La-Muse.mlmodel",
+      "description": "Transfer a color image into La-muse style.",
+      "demo_link": "https://coreml.store/fns-la-muse?demo",
+      "reference_link": "https://coreml.store/fns-la-muse?reference",
+      "type": "Style Transfer",
+      "pathname": "/fns-la-muse",
+      "download_link": "https://coreml.store/fns-la-muse?download"
+    },
+    {
+      "name": "The Scream",
+      "file": "FNS-The-Scream.mlmodel",
+      "description": "Transfer a color image into The-Scream style.",
+      "demo_link": "https://coreml.store/fns-the-scream?demo",
+      "reference_link": "https://coreml.store/fns-the-scream?reference",
+      "type": "Style Transfer",
+      "pathname": "/fns-the-scream",
+      "download_link": "https://coreml.store/fns-the-scream?download"
+    },
+    {
+      "name": "Udnie",
+      "file": "FNS-Udnie.mlmodel",
+      "description": "Transfer a color image into Udnie style.",
+      "demo_link": "https://coreml.store/fns-udnie?demo",
+      "reference_link": "https://coreml.store/fns-udnie?reference",
+      "type": "Style Transfer",
+      "pathname": "/fns-udnie",
+      "download_link": "https://coreml.store/fns-udnie?download"
+    },
+    {
+      "name": "Mosaic",
+      "file": "FNS-Mosaic.mlmodel",
+      "description": "Transfer a color image into Mosaic style.",
+      "demo_link": "https://coreml.store/fns-mosaic?demo",
+      "reference_link": "https://coreml.store/fns-mosaic?reference",
+      "type": "Style Transfer",
+      "pathname": "/fns-mosaic",
+      "download_link": "https://coreml.store/fns-mosaic?download"
+    },
+    {
+      "name": "AnimeScale2x",
+      "file": "AnimeScale2x.mlmodel",
+      "description": "Scale and denoise anime-style artworks.",
+      "demo_link": "https://coreml.store/animescale2x?demo",
+      "reference_link": "https://coreml.store/animescale2x?reference",
+      "type": "Style Transfer",
+      "pathname": "/animescale2x",
+      "download_link": "https://coreml.store/animescale2x?download"
+    },
+    {
+      "name": "Sentiment Polarity",
+      "file": "SentimentPolarity.mlmodel",
+      "description": "Predict positive or negative sentiments from sentences.",
+      "demo_link": "https://coreml.store/sentimentpolarity?demo",
+      "reference_link": "https://coreml.store/sentimentpolarity?reference",
+      "type": "text",
+      "pathname": "/sentimentpolarity",
+      "download_link": "https://coreml.store/sentimentpolarity?download"
+    },
+    {
+      "name": "iMessage Spam Detection",
+      "file": "MessageClassifier.mlmodel",
+      "description": "Detect whether a message is spam.",
+      "demo_link": "https://coreml.store/messageclassifier?demo",
+      "reference_link": "https://coreml.store/messageclassifier?reference",
+      "type": "text",
+      "pathname": "/messageclassifier",
+      "download_link": "https://coreml.store/messageclassifier?download"
+    },
+    {
+      "name": "Exermote",
+      "file": "Exermote.mlmodel",
+      "description": "Predicts the type of exercise from movement data.",
+      "download_link": "https://coreml.store/exermote?download",
+      "demo_link": "https://coreml.store/exermote?demo",
+      "reference_link": "https://coreml.store/exermote?reference",
+      "type": "others",
+      "pathname": "/exermote"
+    }
+  ]
+}

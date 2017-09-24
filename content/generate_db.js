@@ -2,6 +2,20 @@ const _ = require('lodash')
 const db = require('./content.json')
 const fs = require('fs')
 
+db.models.forEach(m => {
+  const name = m.file.split('.mlmodel')[0]
+  m.pathname = '/' + encodeURIComponent(name.toLowerCase())
+})
+
+const lenBeforeUniq = db.models.length
+
+_.uniqBy(db.models, (m) => m.pathname)
+
+if (db.models.length !== lenBeforeUniq)
+  console.log(`Dropping ${lenBeforeUniq - db.models.length} due to dup pathname!`)
+
+let markdownContent = _.cloneDeep(db)
+
 const truthy = (x) => !!x
 
 const mergeFrom = (fieldName, pathFunc, shouldIgnore) => {
@@ -26,15 +40,15 @@ mergeFrom('sample', (name) => `../content/samples/${name}json`, (m) => {
   return res
 })
 
-db.models.forEach(m => {
-  m.pathname = '/' + encodeURIComponent(m.name.toLowerCase())
+fs.writeFileSync('db.json', JSON.stringify(db, null ,2))
+
+const urlGen = (path, action) => `https://coreml.store${path}?${action}`
+
+markdownContent.models.forEach(m => {
+  const p = m.pathname
+  ;['download', 'demo', 'reference'].forEach(k => {
+    m[k + '_link'] = urlGen(p, k)
+  })
 })
 
-const lenBeforeUniq = db.models.length
-
-_.uniqBy(db.models, (m) => m.pathname)
-
-if (db.models.length !== lenBeforeUniq)
-  console.log(`Dropping ${lenBeforeUniq - db.models.length} due to dup pathname!`)
-
-fs.writeFileSync('db.json', JSON.stringify(db, null ,2))
+fs.writeFileSync('content.json', JSON.stringify(markdownContent, null, 2))
