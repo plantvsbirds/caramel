@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { getModelDownloadUrl } from './config'
+
 export const types = [
   'int64',
   'double',
@@ -10,6 +12,41 @@ export const types = [
   'multiArray',
   'undefined'
 ]
+
+export const promptTypes = ['download', 'reference', 'demo']
+export const promptSearches = promptTypes.map(s => '?' + s)
+export const promptRender = (flag, prop) => {
+  const {
+    name, size, license, file,
+    reference_link,
+    demo_link
+  } = prop
+  switch(flag) {
+    case "download":
+      return {
+        title: `Downloading ${name}..`,
+        content: `Please confirm your download with size of ${size} and acknowledge license specified (${license}).`,
+        yesLabel: 'Yes',
+        yesHref: getModelDownloadUrl(file),
+      }
+    case "reference":
+      return {
+        title: `Scholary Reference of ${name}`,
+        content: `Redirecting you to ${reference_link}`,
+        yesLabel: 'Visit',
+        yesHref: reference_link
+      }
+    case "demo":
+      return {
+        title: `Demo project using ${name}`,
+        content: `Redirecting you to ${demo_link}`,
+        yesLabel: 'Visit',
+        yesHref: demo_link
+      }
+    default:
+      return {}
+  }
+}
 
 const ArrowShadowColorMatrix =
     <feColorMatrix values="0 0 0 0 0.533333333   0 0 0 0 0.533333333   0 0 0 0 0.533333333  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
