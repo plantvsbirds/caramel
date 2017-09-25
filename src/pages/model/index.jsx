@@ -142,16 +142,12 @@ class ModalDetail extends Component {
               main
               round
             />
-            <Button
-              label="See Demo"
-              href={demo_link}
-              round
-            />
-            <Button
-              label="Check Reference"
-              href={reference_link}
-              round
-            />
+            <a className={styles.linky} href={demo_link} target="_blank">
+              Demo
+            </a>
+            <a className={styles.linky} href={reference_link} target="_blank">
+              Reference
+            </a>
           </div>
         </div>
       </div>
