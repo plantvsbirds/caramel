@@ -28,8 +28,10 @@ class ModalDetail extends Component {
   }
   onScroll(evt) {
     const scrollNode = this.props.scrollBody
-    if (scrollNode.scrollTop > 100)
+    if (scrollNode.scrollTop > 100) {
+      ga('send', 'event', 'Model', 'ignore_prompt_by_scroll');
       this.hidePrompt()
+    }
   }
   showPrompt = (prompt) => {
     this.setState({
@@ -96,13 +98,19 @@ class ModalDetail extends Component {
           <Button
             label={prompt.yesLabel || "Yes"}
             href={prompt.yesHref}
-            onClick={this.hidePrompt}
+            onClick={() => {
+              ga('send', 'event', 'Model', 'prompt_yes');
+              this.hidePrompt()
+            }}
             simple
             main
           />
           <Button
             label="Nevermind"
-            onClick={this.hidePrompt}
+            onClick={() => {
+              ga('send', 'event', 'Model', 'prompt_ignore');
+              this.hidePrompt()
+            }}
             simple
           />
         </p>
@@ -139,13 +147,24 @@ class ModalDetail extends Component {
             <Button
               label="Get"
               href={downloadUrl}
+              onClick={() => {
+                ga('send', 'event', 'Model', 'download');
+              }}
               main
               round
             />
-            <a className={styles.linky} href={demo_link} target="_blank">
+            <a className={styles.linky} href={demo_link} target="_blank"
+              onClick={() => {
+                ga('send', 'event', 'Model', 'demo');
+              }}
+            >
               Demo
             </a>
-            <a className={styles.linky} href={reference_link} target="_blank">
+            <a className={styles.linky} href={reference_link} target="_blank"
+              onClick={() => {
+                ga('send', 'event', 'Model', 'reference');
+              }}
+            >
               Reference
             </a>
           </div>
