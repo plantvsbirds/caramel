@@ -69,10 +69,33 @@ export default class HomeRoute extends Component {
         */}
         <div className={css.head}>
           <CaramelLogo />
-          <p>
-            Your iOS 11 apps could use some superpower.<br /><br />
-            Download and use per license, remember to acknowledge. You are welcome.
-          </p>
+          <div style={{
+            marginLeft: '4em'
+          }}>
+            <p className={css.intro}>
+              Your iOS 11 apps could use some superpower.<br /><br />
+              Download and use per license, remember to acknowledge. You are welcome.<br />
+            </p>
+            <br/>
+            <p className={css.secondary}>
+              How can we serve you better with cool ML models? Please answer this 
+              <a
+                className="typeform-share"
+                data-mode="drawer_right"
+                href="https://plantvsbird.typeform.com/to/grz0b2"
+                target="_blank"
+              > form</a>.
+            </p>
+            <p className={css.secondary}>
+              To receive new models updated every week, please
+              <a 
+                className="typeform-share"
+                data-mode="drawer_right"
+                href="http://eepurl.com/c4II-r"
+                target="_blank"
+              > subscribe</a>.
+            </p>
+          </div>
         </div>
         <h1>Top Models</h1>
         <ModelList
