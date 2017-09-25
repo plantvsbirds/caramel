@@ -74,9 +74,19 @@ export default class HomeRoute extends Component {
           }}>
             <p className={css.intro}>
               Your iOS 11 apps could use some superpower.<br /><br />
-              Download and use per license, remember to acknowledge. You are welcome.<br />
+              Download and use the models abide by their licenses.<br />
             </p>
             <br/>
+            <p className={css.secondary}>
+              Please contribute to our curated list of free coreml models by 
+              <a
+                onClick={() => {
+                  ga('send', 'event', 'Index', 'click_feedback');
+                }}
+                href="https://github.com/likedan/Awesome-CoreML-Models/pulls"
+                target="_blank"
+              > submitting a PR</a>.
+            </p>
             <p className={css.secondary}>
               How can we serve you better with cool ML models? Please answer this 
               <a
@@ -88,7 +98,7 @@ export default class HomeRoute extends Component {
               > form</a>.
             </p>
             <p className={css.secondary}>
-              To receive new models updated every week, please
+              To receive weekly updates for new ML models, please
               <a
                 onClick={() => {
                   ga('send', 'event', 'Index', 'click_subscribe');
