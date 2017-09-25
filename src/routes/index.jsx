@@ -4,6 +4,7 @@ import ModelList from '../pages/list'
 import css from '../pages/page.styl'
 
 import { localData } from '../config'
+import { CaramelLogo } from '../const'
 import { bindScrollFunc, unbindScrollFunc, processScrollCb } from '../utils'
 
 import TopBar from '~components/topbar'
@@ -65,9 +66,11 @@ export default class HomeRoute extends Component {
           show={this.state.showTopBar && this.isCurrentPage}
         />
         <div className={css.head}>
-          <h1>CoreML.Store</h1>
-          <p>Your iOS 11 apps could use some superpower.</p>
-          <p>Download and use per license, remember to acknowledge. You are welcome.</p>
+          <CaramelLogo />
+          <p>
+            Your iOS 11 apps could use some superpower.<br /><br />
+            Download and use per license, remember to acknowledge. You are welcome.
+          </p>
         </div>
         <h1>Top Models</h1>
         <ModelList
