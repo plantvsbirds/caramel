@@ -80,7 +80,7 @@ export default class HomeRoute extends Component {
             <p className={css.secondary}>
               How can we serve you better with cool ML models? Please answer this 
               <a
-                href="https://plantvsbird.typeform.com/to/grz0b2"
+                href="https://coreml.typeform.com/to/grz0b2"
                 target="_blank"
               > form</a>.
             </p>
