@@ -80,6 +80,9 @@ export default class HomeRoute extends Component {
             <p className={css.secondary}>
               How can we serve you better with cool ML models? Please answer this 
               <a
+                onClick={() => {
+                  ga('send', 'event', 'Index', 'click_feedback');
+                }}
                 href="https://coreml.typeform.com/to/grz0b2"
                 target="_blank"
               > form</a>.
@@ -87,6 +90,9 @@ export default class HomeRoute extends Component {
             <p className={css.secondary}>
               To receive new models updated every week, please
               <a
+                onClick={() => {
+                  ga('send', 'event', 'Index', 'click_subscribe');
+                }}
                 href="http://eepurl.com/c4II-r"
                 target="_blank"
               > subscribe</a>.
