@@ -62,9 +62,11 @@ export default class HomeRoute extends Component {
           <meta name="og:type" content="website" />
           <meta name="og:url" content="https://coreml.store" />
         </Helmet>
+        {/*
         <TopBar
           show={this.state.showTopBar && this.isCurrentPage}
         />
+        */}
         <div className={css.head}>
           <CaramelLogo />
           <p>
