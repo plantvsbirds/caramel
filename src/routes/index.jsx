@@ -80,17 +80,13 @@ export default class HomeRoute extends Component {
             <p className={css.secondary}>
               How can we serve you better with cool ML models? Please answer this 
               <a
-                className="typeform-share"
-                data-mode="drawer_right"
                 href="https://plantvsbird.typeform.com/to/grz0b2"
                 target="_blank"
               > form</a>.
             </p>
             <p className={css.secondary}>
               To receive new models updated every week, please
-              <a 
-                className="typeform-share"
-                data-mode="drawer_right"
+              <a
                 href="http://eepurl.com/c4II-r"
                 target="_blank"
               > subscribe</a>.
