@@ -99,7 +99,7 @@ class ModalDetail extends Component {
             label={prompt.yesLabel || "Yes"}
             href={prompt.yesHref}
             onClick={() => {
-              ga('send', 'event', 'Model', 'prompt_yes');
+              ga('send', 'event', 'Model', 'prompt_yes', name);
               this.hidePrompt()
             }}
             simple
@@ -108,7 +108,7 @@ class ModalDetail extends Component {
           <Button
             label="Nevermind"
             onClick={() => {
-              ga('send', 'event', 'Model', 'prompt_ignore');
+              ga('send', 'event', 'Model', 'prompt_ignore', name);
               this.hidePrompt()
             }}
             simple
