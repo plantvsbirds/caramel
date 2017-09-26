@@ -29,7 +29,7 @@ class ModalDetail extends Component {
   onScroll(evt) {
     const scrollNode = this.props.scrollBody
     if (scrollNode.scrollTop > 100) {
-      ga('send', 'event', 'Model', 'ignore_prompt_by_scroll');
+      ga('send', 'event', 'Model', 'ignore_prompt_by_scroll', this.props.model.name || 'unnamed');
       this.hidePrompt()
     }
   }
@@ -150,21 +150,21 @@ class ModalDetail extends Component {
               label="Get"
               href={downloadUrl}
               onClick={() => {
-                ga('send', 'event', 'Model', 'download');
+                ga('send', 'event', 'Model', 'download', name);
               }}
               main
               round
             />
             <a className={styles.linky} href={demo_link} target="_blank"
               onClick={() => {
-                ga('send', 'event', 'Model', 'demo');
+                ga('send', 'event', 'Model', 'demo', name);
               }}
             >
               Demo
             </a>
             <a className={styles.linky} href={reference_link} target="_blank"
               onClick={() => {
-                ga('send', 'event', 'Model', 'reference');
+                ga('send', 'event', 'Model', 'reference', name);
               }}
             >
               Reference
