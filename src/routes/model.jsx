@@ -54,6 +54,7 @@ export default class ModelRoute extends Component {
         <div
           className={css.modelTopbar}
           onClick={() => {
+            ga('send', 'event', 'List', 'go_to_home', this.state.firstLanding ? 'first_landing' : 'not_first_landing');
             history.push('/')
           }}
         >
