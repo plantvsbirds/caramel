@@ -52,7 +52,10 @@ export default class HomeRoute extends Component {
   render () {
     const { history } = this.props
     return (
-      <div>
+      <div style={{
+        transform: this.isCurrentPage ? null : `translate3d(0px, -${this.state.offsetY}px, 0px)`,
+        transition: 'transform 0.4s',
+      }}>
         <Helmet>
           <title>{`CoreML.Store`}</title>
           <meta name="og:site_name" content="CoreML.Store" />
@@ -68,20 +71,18 @@ export default class HomeRoute extends Component {
         />
         */}
         <div className={css.head}>
-          <CaramelLogo />
-          <div style={{
-            marginLeft: '4em'
-          }}>
+          <CaramelLogo className={css.logo} />
+          <div>
             <p className={css.intro}>
-              Your iOS 11 apps could use some superpower.<br /><br />
-              Download and use the models abide by their licenses.<br />
+              Your iOS 11 apps could use some superpower.<br />
+              Download and use per license, remember to acknowledge. You are welcome.<br />
             </p>
             <br/>
             <p className={css.secondary}>
               Please contribute to our curated list of free coreml models by 
               <a
                 onClick={() => {
-                  ga('send', 'event', 'Index', 'click_feedback');
+                  ga('send', 'event', 'Index', 'click_contribute');
                 }}
                 href="https://github.com/likedan/Awesome-CoreML-Models/pulls"
                 target="_blank"
@@ -112,7 +113,6 @@ export default class HomeRoute extends Component {
         <h1>Top Models</h1>
         <ModelList
           models={localData.models}
-          offsetY={this.state.offsetY}
           onModelClick={this.onModelClick(history)}
           isExpanded={!this.isCurrentPage}
         />

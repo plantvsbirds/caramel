@@ -38,11 +38,6 @@ class Item extends Component {
 const Collection = (props) => (
   <div
     className={css.col}
-    style={{
-      position: 'relative',
-      transform: props.isExpanded ? `translate3d(0px, -${props.offset}px, 0px)` : null,
-      paddingBottom: props.isExpanded ? '200vh' : '0px',
-    }}
   >
   {
     props.models.map(m => (
@@ -58,12 +53,10 @@ const Collection = (props) => (
 
 class ModelList extends Component {
   render() {
-    const { models, offsetY, isExpanded, onModelClick } = this.props
+    const { models, onModelClick } = this.props
     return <div>
       <Collection
         onModelClick={onModelClick}
-        offset={offsetY}
-        isExpanded={isExpanded}
         models={models}
       />
     </div>
