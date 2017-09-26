@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
 import ModelList from '../pages/list'
 import css from '../pages/page.styl'
 
@@ -56,15 +55,6 @@ export default class HomeRoute extends Component {
         transform: this.isCurrentPage ? null : `translate3d(0px, -${this.state.offsetY}px, 0px)`,
         transition: 'transform 0.4s',
       }}>
-        <Helmet>
-          <title>{`CoreML.Store`}</title>
-          <meta name="og:site_name" content="CoreML.Store" />
-          <meta name="og:title" content="CoreML.Store" />
-          <meta name="description" content="Your iOS 11 apps could use these superpower." />
-          <meta name="og:description" content="Your iOS 11 apps could use these superpower." />
-          <meta name="og:type" content="website" />
-          <meta name="og:url" content="https://coreml.store" />
-        </Helmet>
         {/*
         <TopBar
           show={this.state.showTopBar && this.isCurrentPage}
