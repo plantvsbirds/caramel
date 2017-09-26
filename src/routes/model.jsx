@@ -7,7 +7,7 @@ import css from '../pages/page.styl'
 import classNamesBind from 'classnames/bind'
 const cx = classNamesBind.bind(css)
 
-import { navigationWithModel } from '../config'
+import { navigationWithModel, localData } from '../config'
 import { promptSearches } from '../const'
 
 export default class ModelRoute extends Component {
@@ -25,9 +25,12 @@ export default class ModelRoute extends Component {
   }
   componentWillMount() {
     this.toggleBodyScrollable(false)
+    const firstLanding = this.props.history.action === 'POP'
     this.setState({
-      firstLanding: this.props.history.action === 'POP',
+      firstLanding,
     })
+    if (firstLanding)
+      ga('set', 'page', this.props.location.pathname);
   }
   componentWillUnmount() {
     this.toggleBodyScrollable(true)
@@ -61,7 +64,7 @@ export default class ModelRoute extends Component {
         >
           {
             this.state.firstLanding ? 
-              <p className={cx('flipEntry', 'checkoutIconBefore')}>Check out 116+ Core ML models</p>
+              <p className={cx('flipEntry', 'checkoutIconBefore')}>Check out {localData.models.length}+ Core ML models</p>
             : <p className={css.returnIconBefore}>Return to list</p>
           }
         </div>
