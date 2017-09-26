@@ -47,6 +47,7 @@ export default class HomeRoute extends Component {
     const sampleRect = vm.sampleNode.getBoundingClientRect()
     this.setModelListOffset(itemRect.top - 5)
     ga('send', 'event', 'List', 'go_to_model', model.name);
+    ga('set', 'page', model.pathname);
     history.push(model.pathname, { model })
   }
   render () {
