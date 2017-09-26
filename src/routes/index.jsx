@@ -114,7 +114,6 @@ export default class HomeRoute extends Component {
         <ModelList
           models={localData.models}
           onModelClick={this.onModelClick(history)}
-          isExpanded={!this.isCurrentPage}
         />
         <h1>Style Transfer</h1>
         <h1>Object Recognition</h1>
