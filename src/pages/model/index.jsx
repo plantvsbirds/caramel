@@ -127,10 +127,12 @@ class ModalDetail extends Component {
           </p>
           <div className={cx('infoContianer')}>
             <InfoTag title="Author" content={author} />
+            {/*
             <InfoTag title="Type" content={'Classifier'} />
+            */}
             <InfoTag title="Model Size" content={size} />
-            <InfoTag title="Last Update" content={'4 days ago (change me)'} />
             <InfoTag title="License" content={license} />
+            <InfoTag title="Last Update" content={'Recently'} />
             {/*
               renderInfoTag({
                 title: 'Reference',
