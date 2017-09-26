@@ -110,13 +110,16 @@ export default class HomeRoute extends Component {
             </p>
           </div>
         </div>
-        <h1>Top Models</h1>
         <ModelList
           models={localData.models}
           onModelClick={this.onModelClick(history)}
         />
+
+        {/*
+        <h1>Top Models</h1>
         <h1>Style Transfer</h1>
         <h1>Object Recognition</h1>
+        */}
       </div>
     )
   }
