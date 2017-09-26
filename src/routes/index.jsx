@@ -69,7 +69,7 @@ export default class HomeRoute extends Component {
             </p>
             <br/>
             <p className={css.secondary}>
-              Please contribute to our curated list of free coreml models by 
+              Please contribute to our curated list of free Core ML models by 
               <a
                 onClick={() => {
                   ga('send', 'event', 'Index', 'click_contribute');
@@ -98,6 +98,7 @@ export default class HomeRoute extends Component {
                 target="_blank"
               > subscribe</a>.
             </p>
+            <p className={css.secondary}>Thwis Inc., 2017 <a href="mailto:hello@thywis.com">Email Us</a></p>
           </div>
         </div>
         <ModelList
