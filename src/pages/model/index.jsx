@@ -84,6 +84,7 @@ class ModalDetail extends Component {
     </div>
 
     return <div className={pageStyles.container}>
+      {this.state.showPrompt && (
       <div
         className={cx('prompt', { exist: this.state.showPrompt })}
         onScroll={this.onScroll}
@@ -115,6 +116,7 @@ class ModalDetail extends Component {
           />
         </p>
       </div>
+      )}
       <div
         className={cx("meta", { blur: this.state.showPrompt })}
       >
