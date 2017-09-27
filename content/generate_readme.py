@@ -36,11 +36,11 @@ If you've converted a Core ML model, feel free to submit a PR here.
 
 # Models
 
-## Object Detection
+## Image Processing
 *Models that takes image data as input and output useful information about the image.*
 """
 
-for model in model_metadata["Object Detection"]:
+for model in model_metadata["image"]:
     content += render_model_line(model)
 
 content += """
