@@ -1,7 +1,7 @@
 import json
 from string import Template
 
-with open('content.json', 'r') as f:
+with open('../db.json', 'r') as f:
     data = json.load(f)
 
 model_metadata = {}
@@ -27,36 +27,67 @@ def render_model_line(model):
         link_reference=model["reference_link"]
       )
 
+image_template = Template("""[<img src="https://s3-us-west-2.amazonaws.com/coreml-assets/cover_$fname.jpg">]($link)|""")
+no_sample_image_template = Template("""[<img src="http://via.placeholder.com/552x486/fafafa/dddddd/?text=great%20model%20to%20come">]($link)|""")
+
 def render_thumbs(line):
-    image_template = Template("""[<img src="https://s3-us-west-2.amazonaws.com/coreml-assets/cover_$fname.jpg">]($link)|""")
     ans = "|"
     for model in line:
-      ans += image_template.substitute(
-        fname=model["file"].split('.mlmodel')[0],
-        link=data["site_prefix"] + model["pathname"])
+        if model is None:
+            ans += no_sample_image_template.substitute(
+                link=data["site_prefix"])
+        elif model["primary_input"]:
+            ans += image_template.substitute(
+                fname=model["file"].split('.mlmodel')[0],
+                link=data["site_prefix"] + model["pathname"])
+        else:
+            ans += no_sample_image_template.substitute(
+                link=data["site_prefix"] + model["pathname"])
     return ans
 
+content_template = Template("""<b>$name</b><br />$desc<br />[Download]($link?download) [Demo]($link_demo) [Reference]($link_reference)|""")
 def render_content(line):
-    content_template = Template("""<b>$name</b><br />$desc<br />[Download]($link?download) [Demo]($link_demo) [Reference]($link_reference)|""")
     ans = "|"
     for model in line:
-      ans += content_template.substitute(
-        desc=model["description"],
-        name=model["name"],
-        link=data["site_prefix"] + model["pathname"],
-        link_demo=model["demo_link"],
-        link_reference=model["reference_link"])
+        if model is None:
+            ans += "|"
+        else:
+            ans += content_template.substitute(
+                desc=model["description"],
+                name=model["name"],
+                link=data["site_prefix"] + model["pathname"],
+                link_demo=model["demo_link"],
+                link_reference=model["reference_link"])
     return ans
 
 def render_line(line):
     return "".join(render_thumbs(line)) + "\n" + "".join(render_content(line))
 
-def render_models(models):
+
+
+def render_models_grid(models):
     chunks_list = list(chunks(models, 3))
     ans = ""
+    while len(chunks_list[-1]) < 3:
+        chunks_list[-1].append(None)
     for c in chunks_list:
       ans += render_line(c)
       ans += "\n"
+    return ans
+
+def render_models_line(models):
+    ans = "|"
+    for model in models:
+        ans += image_template.substitute(
+                fname=model["file"].split('.mlmodel')[0],
+                link=data["site_prefix"] + model["pathname"])
+        ans += content_template.substitute(
+                desc=model["description"],
+                name=model["name"],
+                link=data["site_prefix"] + model["pathname"],
+                link_demo=model["demo_link"],
+                link_reference=model["reference_link"])
+        ans += "\n"
     return ans
 
 content = """
@@ -89,7 +120,7 @@ If you've converted a Core ML model, feel free to submit a PR here.
 |-|-|-|
 """
 
-content += render_models(model_metadata["image"])
+content += render_models_grid(model_metadata["image"])
 
 content += """
 ## Style Transfer
@@ -99,7 +130,7 @@ content += """
 |-|-|-|
 """
 
-content += render_models(model_metadata["Style Transfer"])
+content += render_models_grid(model_metadata["Style Transfer"])
 
 
 content += """
@@ -110,7 +141,7 @@ content += """
 |-|-|-|
 """
 
-content += render_models(model_metadata["text"])
+content += render_models_grid(model_metadata["text"])
 
 content += """
 ## Others
@@ -119,7 +150,7 @@ content += """
 |-|-|-|
 """
 
-content += render_models(model_metadata["others"])
+content += render_models_grid(model_metadata["others"])
 
 content += """
 
