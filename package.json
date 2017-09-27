@@ -10,7 +10,7 @@
     "mv-static": "sudo cp -avr dist /var/www/",
     "bmv": "npm run build && npm run mv-static",
     "db": "babel-node content/generate_db.js",
-    "update": "git pull && npm install && npm run bmv",
+    "update": "git stash && git pull && npm install && npm run bmv",
     "generate_pic": "babel-node content_generator/index.js",
     "upload_pic": "aws s3 sync content_generator/output_pic s3://coreml-assets --acl public-read"
   },
