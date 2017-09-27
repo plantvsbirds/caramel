@@ -1,6 +1,7 @@
 import json
+from string import Template
 
-with open('content.json', 'r') as f:
+with open('../db.json', 'r') as f:
     data = json.load(f)
 
 model_metadata = {}
@@ -10,8 +11,84 @@ for type in data["types"]:
 for model in data["models"]:
     model_metadata[model["type"]].append(model)
 
+def chunks(l, n):
+    for i in range(0, len(l), n):
+        yield l[i:i + n]
+
 def render_model_line(model):
-    return "* **" + model["name"] + "** - " + model["description"] + " [Download](" + data["site_prefix"] + model["pathname"] + "?download) | [Demo](" + model["demo_link"] + ") | [Reference](" + model["reference_link"] + ")\n"
+    model_template = Template("""|[<img src="https://s3-us-west-2.amazonaws.com/coreml-assets/cover_$fname.jpg">]($link)|<b>$name</b><br />$desc<br />[Download]($link?download) [Demo]($link_demo) [Reference]($link_reference)|\n""")
+    link = data["site_prefix"] + model["pathname"]
+    return model_template.substitute(
+        fname=model["file"].split('.mlmodel')[0],
+        name=model["name"],
+        link=link,
+        desc=model["description"],
+        link_demo=model["demo_link"],
+        link_reference=model["reference_link"]
+      )
+
+image_template = Template("""[<img src="https://s3-us-west-2.amazonaws.com/coreml-assets/cover_$fname.jpg">]($link)|""")
+no_sample_image_template = Template("""[<img src="http://via.placeholder.com/552x486/fafafa/dddddd/?text=great%20model%20to%20come">]($link)|""")
+
+def render_thumbs(line):
+    ans = "|"
+    for model in line:
+        if model is None:
+            ans += no_sample_image_template.substitute(
+                link=data["site_prefix"])
+        elif model["primary_input"]:
+            ans += image_template.substitute(
+                fname=model["file"].split('.mlmodel')[0],
+                link=data["site_prefix"] + model["pathname"])
+        else:
+            ans += no_sample_image_template.substitute(
+                link=data["site_prefix"] + model["pathname"])
+    return ans
+
+content_template = Template("""<b>$name</b><br />$desc<br />[Download]($link?download) [Demo]($link_demo) [Reference]($link_reference)|""")
+def render_content(line):
+    ans = "|"
+    for model in line:
+        if model is None:
+            ans += "|"
+        else:
+            ans += content_template.substitute(
+                desc=model["description"],
+                name=model["name"],
+                link=data["site_prefix"] + model["pathname"],
+                link_demo=model["demo_link"],
+                link_reference=model["reference_link"])
+    return ans
+
+def render_line(line):
+    return "".join(render_thumbs(line)) + "\n" + "".join(render_content(line))
+
+
+
+def render_models_grid(models):
+    chunks_list = list(chunks(models, 3))
+    ans = ""
+    while len(chunks_list[-1]) < 3:
+        chunks_list[-1].append(None)
+    for c in chunks_list:
+      ans += render_line(c)
+      ans += "\n"
+    return ans
+
+def render_models_line(models):
+    ans = "|"
+    for model in models:
+        ans += image_template.substitute(
+                fname=model["file"].split('.mlmodel')[0],
+                link=data["site_prefix"] + model["pathname"])
+        ans += content_template.substitute(
+                desc=model["description"],
+                name=model["name"],
+                link=data["site_prefix"] + model["pathname"],
+                link_demo=model["demo_link"],
+                link_reference=model["reference_link"])
+        ans += "\n"
+    return ans
 
 content = """
 <!--
@@ -29,7 +106,7 @@ Since iOS 11, Apple released Core ML framework to help developers integrate mach
 
 We've put up the largest collection of machine learning models in Core ML format, to help  iOS, macOS, tvOS, and watchOS developers experiment with machine learning techniques. We've created a site with better visualization of the models [CoreML.Store](https://coreml.store), and are working on more advance features.
 
-If you've converted a Core ML model, feel free to submit a PR here.
+If you've converted a Core ML model, feel free to submit an [issue](https://github.com/likedan/Awesome-CoreML-Models/issues/new).
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
@@ -38,31 +115,42 @@ If you've converted a Core ML model, feel free to submit a PR here.
 
 ## Image Processing
 *Models that takes image data as input and output useful information about the image.*
+
+| | | |
+|-|-|-|
 """
 
-for model in model_metadata["image"]:
-    content += render_model_line(model)
+content += render_models_grid(model_metadata["image"])
 
 content += """
 ## Style Transfer
-*Models that transform image data into other form of image data.*
+*Models that transform image to specific style.*
+
+| | | |
+|-|-|-|
 """
 
-for model in model_metadata["Style Transfer"]:
-    content += render_model_line(model)
+content += render_models_grid(model_metadata["Style Transfer"])
+
 
 content += """
 ## Text Analysis
 *Models that takes text data as input and output useful information about the text.*
+
+| | | |
+|-|-|-|
 """
 
-for model in model_metadata["text"]:
-    content += render_model_line(model)
+content += render_models_grid(model_metadata["text"])
 
-content += "## Others\n"
+content += """
+## Others
 
-for model in model_metadata["others"]:
-    content += render_model_line(model)
+| | | |
+|-|-|-|
+"""
+
+content += render_models_grid(model_metadata["others"])
 
 content += """
 
