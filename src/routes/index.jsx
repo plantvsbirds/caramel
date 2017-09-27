@@ -76,7 +76,7 @@ export default class HomeRoute extends Component {
                 onClick={() => {
                   ga('send', 'event', 'Index', 'click_contribute');
                 }}
-                href="https://github.com/likedan/Awesome-CoreML-Models/pulls"
+                href="https://github.com/likedan/Awesome-CoreML-Models/issues/new"
                 target="_blank"
               > submitting a PR</a>.
             </p>
