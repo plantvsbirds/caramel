@@ -1,10 +1,12 @@
 {
   "types": [
-    "Object Detection",
+    "image",
     "Style Transfer",
     "text",
     "others"
   ],
+  "model_download_url_prefix": "https://s3-us-west-2.amazonaws.com/coreml-models/",
+  "site_prefix": "https://coreml.store",
   "models": [
     {
       "name": "MobileNet",
@@ -13,7 +15,7 @@
       "download_link": "https://github.com/hollance/MobileNet-CoreML/raw/master/MobileNet.mlmodel",
       "demo_link": "https://github.com/hollance/MobileNet-CoreML",
       "reference_link": "https://arxiv.org/abs/1704.04861",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/mobilenet",
       "license": "Unknown",
       "author": "Original paper: Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam. Caffe implementation: shicai",
@@ -94,7 +96,7 @@
       "download_link": "https://github.com/hollance/MobileNet-CoreML/raw/master/MobileNet.mlmodel",
       "demo_link": "https://github.com/chenyi1989/CoreMLDemo",
       "reference_link": "http://places.csail.mit.edu/index.html",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/googlenetplaces",
       "license": "Creative Common License. More information available at http://places.csail.mit.edu",
       "author": "B. Zhou, A. Lapedriza, J. Xiao, A. Torralba, and A. Oliva",
@@ -160,7 +162,7 @@
       "download_link": "https://github.com/yulingtianxia/Core-ML-Sample/blob/master/CoreMLSample/Inceptionv3.mlmodel",
       "demo_link": "https://github.com/yulingtianxia/Core-ML-Sample/",
       "reference_link": "https://arxiv.org/abs/1512.00567",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/inceptionv3",
       "license": "MIT License. More information available at https://github.com/fchollet/keras/blob/master/LICENSE",
       "author": "Original Paper: Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna. Keras Implementation: Fran\\303\\247ois Chollet",
@@ -241,7 +243,7 @@
       "download_link": "https://github.com/ytakzk/CoreML-samples/blob/master/CoreML-samples/Resnet50.mlmodel",
       "demo_link": "https://github.com/atomic14/VisionCoreMLSample",
       "reference_link": "https://arxiv.org/abs/1512.03385",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/resnet50",
       "license": "MIT License. More information available at https://github.com/fchollet/keras/blob/master/LICENSE",
       "author": "Original Paper: Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun. Keras Implementation: Fran\\303\\247ois Chollet",
@@ -322,7 +324,7 @@
       "download_link": "https://docs-assets.developer.apple.com/coreml/models/VGG16.mlmodel",
       "demo_link": "https://github.com/alaphao/CoreMLExample",
       "reference_link": "https://arxiv.org/abs/1409.1556",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/vgg16",
       "license": "Creative Commons Attribution 4.0 International(CC BY 4.0). More information available at https://creativecommons.org/licenses/by/4.0/",
       "author": "Original Paper: Karen Simonyan & Andrew Zisserman. Keras Implementation: Fran\\303\\247ois Chollet",
@@ -388,7 +390,7 @@
       "download_link": "https://github.com/likedan/Core-ML-Car-Recognition/blob/master/Convert/CarRecognition.mlmodel",
       "demo_link": "https://github.com/likedan/Core-ML-Car-Recognition",
       "reference_link": "http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/index.html",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/carrecognition",
       "license": "MIT",
       "author": "Audebert, Nicolas and Le Saux, Bertrand and Lefevre Sebastien",
@@ -469,7 +471,7 @@
       "download_link": "https://s3-us-west-2.amazonaws.com/coreml-models/AgeNet.mlmodel",
       "demo_link": "https://github.com/cocoa-ai/FacesVisionDemo",
       "reference_link": "http://www.openu.ac.il/home/hassner/projects/cnn_agegender/",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/agenet",
       "license": "Unknown",
       "author": "Gil Levi and Tal Hassner",
@@ -535,7 +537,7 @@
       "download_link": "https://drive.google.com/file/d/0B1ghKa_MYL6mYkNsZHlyc2ZuaFk/view?usp=sharing",
       "demo_link": "https://github.com/cocoa-ai/FacesVisionDemo",
       "reference_link": "http://www.openu.ac.il/home/hassner/projects/cnn_agegender/",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/gendernet",
       "license": "Unknown",
       "author": "Gil Levi and Tal Hassner",
@@ -601,7 +603,7 @@
       "download_link": "https://github.com/ph1ps/MNIST-CoreML/raw/master/MNISTPrediction/MNIST.mlmodel",
       "demo_link": "https://github.com/ph1ps/MNIST-CoreML",
       "reference_link": "http://yann.lecun.com/exdb/mnist/",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/mnist",
       "license": "MIT",
       "author": "Philipp Gabriel",
@@ -666,7 +668,7 @@
       "download_link": "https://drive.google.com/file/d/0B1ghKa_MYL6mTlYtRGdXNFlpWDQ/view?usp=sharing",
       "demo_link": "https://github.com/cocoa-ai/FacesVisionDemo",
       "reference_link": "http://www.openu.ac.il/home/hassner/projects/cnn_emotions/",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/cnnemotions",
       "license": "Unknown",
       "author": "Gil Levi and Tal Hassner",
@@ -732,7 +734,7 @@
       "download_link": "https://drive.google.com/open?id=0B1ghKa_MYL6mZ0dITW5uZlgyNTg",
       "demo_link": "https://github.com/cocoa-ai/SentimentVisionDemo",
       "reference_link": "http://www.sciencedirect.com/science/article/pii/S0262885617300355?via%3Dihub",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/visualsentimentcnn",
       "license": "MIT",
       "author": "Image Processing Group - BarcelonaTECH - UPC",
@@ -804,7 +806,7 @@
       "download_link": "https://drive.google.com/open?id=0B5TjkH3njRqnVjBPZGRZbkNITjA",
       "demo_link": "https://github.com/ph1ps/Food101-CoreML",
       "reference_link": "http://visiir.lip6.fr/explore",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/food101",
       "license": "Unknown",
       "author": "Philipp Gabriel",
@@ -900,7 +902,7 @@
       "download_link": "https://drive.google.com/file/d/0B1ghKa_MYL6meDBHT2NaZGxkNzQ/view?usp=sharing",
       "demo_link": "https://github.com/cocoa-ai/FlowersVisionDemo",
       "reference_link": "http://jimgoo.com/flower-power/",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/oxford102",
       "license": "Unknown",
       "author": "Jimmie Goode",
@@ -966,7 +968,7 @@
       "download_link": "https://drive.google.com/file/d/0B1ghKa_MYL6meDBHT2NaZGxkNzQ/view?usp=sharing",
       "demo_link": "https://github.com/cocoa-ai/StylesVisionDemo",
       "reference_link": "http://sergeykarayev.com/files/1311.3715v3.pdf",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/flickrstyle",
       "license": "Unknown",
       "author": "Sergey Karayev",
@@ -1032,7 +1034,7 @@
       "download_link": "https://s3.amazonaws.com/aws-bigdata-blog/artifacts/RN1015k500/RN1015k500.mlmodel",
       "demo_link": "https://github.com/awslabs/MXNet2CoreML_iOS_sample_app",
       "reference_link": "https://aws.amazon.com/blogs/ai/estimating-the-location-of-images-using-mxnet-and-multimedia-commons-dataset-on-aws-ec2",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/rn1015k500",
       "input": [
         {
@@ -1659,13 +1661,13 @@
         {
           "input": {
             "input": {
-              "content": "waifu2x_small_sample_output.png",
+              "content": "waifu2x_small_sample.png",
               "type": "image"
             }
           },
           "output": {
             "conv7": {
-              "content": "waifu2x_small_noisy_sample_output.png",
+              "content": "waifu2x_small_sample_output.png",
               "type": "image"
             }
           }

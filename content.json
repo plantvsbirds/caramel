@@ -1,10 +1,12 @@
 {
   "types": [
-    "Object Detection",
+    "image",
     "Style Transfer",
     "text",
     "others"
   ],
+  "model_download_url_prefix": "https://s3-us-west-2.amazonaws.com/coreml-models/",
+  "site_prefix": "https://coreml.store",
   "models": [
     {
       "name": "MobileNet",
@@ -13,7 +15,7 @@
       "download_link": "https://coreml.store/mobilenet?download",
       "demo_link": "https://coreml.store/mobilenet?demo",
       "reference_link": "https://coreml.store/mobilenet?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/mobilenet"
     },
     {
@@ -23,7 +25,7 @@
       "download_link": "https://coreml.store/googlenetplaces?download",
       "demo_link": "https://coreml.store/googlenetplaces?demo",
       "reference_link": "https://coreml.store/googlenetplaces?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/googlenetplaces"
     },
     {
@@ -33,7 +35,7 @@
       "download_link": "https://coreml.store/inceptionv3?download",
       "demo_link": "https://coreml.store/inceptionv3?demo",
       "reference_link": "https://coreml.store/inceptionv3?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/inceptionv3"
     },
     {
@@ -43,7 +45,7 @@
       "download_link": "https://coreml.store/resnet50?download",
       "demo_link": "https://coreml.store/resnet50?demo",
       "reference_link": "https://coreml.store/resnet50?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/resnet50"
     },
     {
@@ -53,7 +55,7 @@
       "download_link": "https://coreml.store/vgg16?download",
       "demo_link": "https://coreml.store/vgg16?demo",
       "reference_link": "https://coreml.store/vgg16?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/vgg16"
     },
     {
@@ -63,7 +65,7 @@
       "download_link": "https://coreml.store/carrecognition?download",
       "demo_link": "https://coreml.store/carrecognition?demo",
       "reference_link": "https://coreml.store/carrecognition?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/carrecognition"
     },
     {
@@ -73,7 +75,7 @@
       "download_link": "https://coreml.store/tinyyolo?download",
       "demo_link": "https://coreml.store/tinyyolo?demo",
       "reference_link": "https://coreml.store/tinyyolo?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/tinyyolo"
     },
     {
@@ -83,7 +85,7 @@
       "download_link": "https://coreml.store/agenet?download",
       "demo_link": "https://coreml.store/agenet?demo",
       "reference_link": "https://coreml.store/agenet?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/agenet"
     },
     {
@@ -93,7 +95,7 @@
       "download_link": "https://coreml.store/gendernet?download",
       "demo_link": "https://coreml.store/gendernet?demo",
       "reference_link": "https://coreml.store/gendernet?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/gendernet"
     },
     {
@@ -103,7 +105,7 @@
       "download_link": "https://coreml.store/mnist?download",
       "demo_link": "https://coreml.store/mnist?demo",
       "reference_link": "https://coreml.store/mnist?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/mnist"
     },
     {
@@ -113,7 +115,7 @@
       "download_link": "https://coreml.store/cnnemotions?download",
       "demo_link": "https://coreml.store/cnnemotions?demo",
       "reference_link": "https://coreml.store/cnnemotions?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/cnnemotions"
     },
     {
@@ -123,7 +125,7 @@
       "download_link": "https://coreml.store/visualsentimentcnn?download",
       "demo_link": "https://coreml.store/visualsentimentcnn?demo",
       "reference_link": "https://coreml.store/visualsentimentcnn?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/visualsentimentcnn"
     },
     {
@@ -133,7 +135,7 @@
       "download_link": "https://coreml.store/food101?download",
       "demo_link": "https://coreml.store/food101?demo",
       "reference_link": "https://coreml.store/food101?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/food101"
     },
     {
@@ -143,7 +145,7 @@
       "download_link": "https://coreml.store/oxford102?download",
       "demo_link": "https://coreml.store/oxford102?demo",
       "reference_link": "https://coreml.store/oxford102?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/oxford102"
     },
     {
@@ -153,7 +155,7 @@
       "download_link": "https://coreml.store/flickrstyle?download",
       "demo_link": "https://coreml.store/flickrstyle?demo",
       "reference_link": "https://coreml.store/flickrstyle?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/flickrstyle"
     },
     {
@@ -163,7 +165,7 @@
       "download_link": "https://coreml.store/rn1015k500?download",
       "demo_link": "https://coreml.store/rn1015k500?demo",
       "reference_link": "https://coreml.store/rn1015k500?reference",
-      "type": "Object Detection",
+      "type": "image",
       "pathname": "/rn1015k500"
     },
     {
