@@ -45,7 +45,7 @@ def render_thumbs(line):
                 link=data["site_prefix"] + model["pathname"])
     return ans
 
-content_template = Template("""<b>$name</b><br />$desc<br />[Download]($link?download) [Demo]($link_demo) [Reference]($link_reference)|""")
+content_template = Template("""<b>$name</b><br />$desc<br />[Download]($link?download) \| [Demo]($link_demo) \| [Reference]($link_reference)|""")
 def render_content(line):
     ans = "|"
     for model in line:

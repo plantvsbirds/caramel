@@ -78,7 +78,7 @@ export default class HomeRoute extends Component {
                 }}
                 href="https://github.com/likedan/Awesome-CoreML-Models/issues/new"
                 target="_blank"
-              > submitting a PR</a>.
+              > submitting an issue</a>.
             </p>
             <p className={css.secondary}>
               How can we serve you better with cool ML models? Please answer this 
