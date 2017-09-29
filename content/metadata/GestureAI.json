@@ -1,0 +1,27 @@
+{
+    "name": "GestureAI", 
+    "license": "MIT", 
+    "author": "Akimasa KIMURA", 
+    "description": "GestureAI", 
+    "output": [
+        {
+            "type": "MultiArray (Double 5)", 
+            "name": "output1"
+        }, 
+        {
+            "type": "MultiArray (Double 512)", 
+            "name": "gru_1_h_out"
+        }
+    ], 
+    "input": [
+        {
+            "type": "MultiArray (Double 120)", 
+            "name": "input1"
+        }, 
+        {
+            "type": "MultiArray (Double 512)", 
+            "name": "gru_1_h_in"
+        }
+    ], 
+    "size": "3.0 MB"
+}

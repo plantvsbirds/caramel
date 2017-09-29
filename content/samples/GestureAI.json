@@ -1,0 +1,42 @@
+{
+    "primary_output": "gru_1_h_out", 
+    "samples": [
+        {
+            "input": {
+                "gru_1_h_in": {
+                }, 
+                "input1": {
+                    "content": "triangle_gesture_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "output1": {
+                }, 
+                "gru_1_h_out": {
+                    "content": "triangle", 
+                    "type": "text"
+                }
+            }
+        },
+        {
+            "input": {
+                "gru_1_h_in": {
+                }, 
+                "input1": {
+                    "content": "rectangle_gesture_sample.png", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "output1": {
+                }, 
+                "gru_1_h_out": {
+                    "content": "rectangle", 
+                    "type": "text"
+                }
+            }
+        }
+    ], 
+    "primary_input": "gru_1_h_in"
+}

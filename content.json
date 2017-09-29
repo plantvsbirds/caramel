@@ -277,6 +277,16 @@
       "reference_link": "https://coreml.store/exermote?reference",
       "type": "others",
       "pathname": "/exermote"
+    },
+    {
+      "name": "GestureAI",
+      "file": "GestureAI.mlmodel",
+      "description": "Predicts the type of gesture from movement data.",
+      "demo_link": "https://coreml.store/gestureai?demo",
+      "type": "others",
+      "pathname": "/gestureai",
+      "download_link": "https://coreml.store/gestureai?download",
+      "reference_link": "https://coreml.store/gestureai?reference"
     }
   ]
 }

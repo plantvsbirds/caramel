@@ -262,6 +262,14 @@
                "reference_link": "http://lausbert.com/2017/08/03/exermote/",
                "type": "others",
                "pathname": "/exermote"
+               },
+               {
+               "name": "GestureAI",
+               "file": "GestureAI.mlmodel",
+               "description": "Predicts the type of gesture from movement data.",
+               "demo_link": "https://github.com/akimach/GestureAI-iOS/tree/master/GestureAI",
+               "type": "others",
+               "pathname": "/gestureai"
                }
     ]
 }

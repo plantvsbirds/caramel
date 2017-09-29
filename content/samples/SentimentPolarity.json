@@ -1,5 +1,5 @@
 {
-    "primary_output": "", 
+    "primary_output": "classLabel", 
     "samples": [
         {
             "input": {
@@ -50,5 +50,5 @@
             }
         }
     ], 
-    "primary_input": "content"
+    "primary_input": "input"
 }
