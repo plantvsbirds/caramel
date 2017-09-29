@@ -28,8 +28,8 @@ class ModalDetail extends Component {
   }
   onScroll(evt) {
     const scrollNode = this.props.scrollBody
-    if (scrollNode.scrollTop > 100) {
-      ga('send', 'event', 'Model', 'ignore_prompt_by_scroll', this.props.model.name || 'unnamed');
+    if (scrollNode.scrollTop > 100 && this.state.showPrompt) {
+      ga('send', 'event', 'Model', 'real_ignore_prompt_by_scroll', this.props.model.name || 'unnamed');
       this.hidePrompt()
     }
   }
