@@ -2016,6 +2016,7 @@
       "file": "GestureAI.mlmodel",
       "description": "GestureAI",
       "demo_link": "https://github.com/akimach/GestureAI-iOS/tree/master/GestureAI",
+      "reference_link": "https://github.com/akimach/GestureAI-iOS/tree/master/GestureAI",
       "type": "others",
       "pathname": "/gestureai",
       "license": "MIT",

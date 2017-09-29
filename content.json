@@ -283,10 +283,10 @@
       "file": "GestureAI.mlmodel",
       "description": "Predicts the type of gesture from movement data.",
       "demo_link": "https://coreml.store/gestureai?demo",
+      "reference_link": "https://coreml.store/gestureai?reference",
       "type": "others",
       "pathname": "/gestureai",
-      "download_link": "https://coreml.store/gestureai?download",
-      "reference_link": "https://coreml.store/gestureai?reference"
+      "download_link": "https://coreml.store/gestureai?download"
     }
   ]
 }
