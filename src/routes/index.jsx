@@ -71,14 +71,14 @@ export default class HomeRoute extends Component {
             </p>
             <br/>
             <p className={css.secondary}>
-              Please contribute to our curated list of free Core ML models by 
+              Please contribute to our curated list of free Core ML models 
               <a
                 onClick={() => {
                   ga('send', 'event', 'Index', 'click_contribute');
                 }}
                 href="https://github.com/likedan/Awesome-CoreML-Models/issues/new"
                 target="_blank"
-              > submitting an issue</a>.
+              > here</a>.
             </p>
             <p className={css.secondary}>
               How can we serve you better with cool ML models? Please answer this 
