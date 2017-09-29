@@ -465,6 +465,65 @@
       "primary_input": "data"
     },
     {
+      "name": "TinyYOLO",
+      "file": "TinyYOLO.mlmodel",
+      "description": "The Tiny YOLO network from the paper \\'YOLO9000: Better, Faster, Stronger\\' (2016), arXiv:1612.08242",
+      "download_link": "https://github.com/hollance/YOLO-CoreML-MPSNNGraph/blob/master/TinyYOLO-CoreML/TinyYOLO-CoreML/TinyYOLO.mlmodel",
+      "demo_link": "https://github.com/hollance/YOLO-CoreML-MPSNNGraph",
+      "reference_link": "http://machinethink.net/blog/object-detection-with-yolo",
+      "type": "image",
+      "pathname": "/tinyyolo",
+      "license": "Public Domain",
+      "author": "Original paper: Joseph Redmon, Ali Farhadi",
+      "output": [
+        {
+          "type": "MultiArray (Double 125 x 13 x 13)",
+          "name": "grid",
+          "description": "The 13x13 grid with the bounding box data"
+        }
+      ],
+      "input": [
+        {
+          "type": "Image (Color 416 x 416)",
+          "name": "image",
+          "description": "Input image"
+        }
+      ],
+      "size": "60.5 MB",
+      "primary_output": "grid",
+      "samples": [
+        {
+          "input": {
+            "image": {
+              "content": "yolo_table_sample_input.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "grid": {
+              "content": "yolo_table_sample_output.png",
+              "type": "image"
+            }
+          }
+        },
+        {
+          "input": {
+            "image": {
+              "content": "yolo_hotel_sample_input.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "grid": {
+              "content": "yolo_hotel_sample_output.png",
+              "type": "image"
+            }
+          }
+        }
+      ],
+      "primary_input": "image"
+    },
+    {
       "name": "AgeNet",
       "file": "AgeNet.mlmodel",
       "description": "Age Classification using Convolutional Neural Networks",
@@ -1676,6 +1735,86 @@
       "primary_input": "input"
     },
     {
+      "name": "SentimentPolarity",
+      "file": "SentimentPolarity.mlmodel",
+      "description": "Sentiment polarity LinearSVC.",
+      "demo_link": "https://github.com/cocoa-ai/SentimentCoreMLDemo",
+      "reference_link": "http://boston.lti.cs.cmu.edu/classes/95-865-K/HW/HW3/",
+      "type": "text",
+      "pathname": "/sentimentpolarity",
+      "license": "MIT",
+      "author": "Vadym Markov",
+      "output": [
+        {
+          "type": "String",
+          "name": "classLabel",
+          "description": "The most likely polarity (positive or negative), for the given input."
+        },
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "classProbability",
+          "description": "The probabilities for each class label, for the given input."
+        }
+      ],
+      "input": [
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "input",
+          "description": "Features extracted from the text."
+        }
+      ],
+      "size": "268.1 KB",
+      "primary_output": "classLabel",
+      "samples": [
+        {
+          "input": {
+            "input": {
+              "content": "What a bad day.",
+              "type": "text"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "😑",
+              "type": "text"
+            },
+            "classProbability": {}
+          }
+        },
+        {
+          "input": {
+            "input": {
+              "content": "I am a boy.",
+              "type": "text"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "😔",
+              "type": "text"
+            },
+            "classProbability": {}
+          }
+        },
+        {
+          "input": {
+            "input": {
+              "content": "Nice sunny afternoon,",
+              "type": "text"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "😁",
+              "type": "text"
+            },
+            "classProbability": {}
+          }
+        }
+      ],
+      "primary_input": "input"
+    },
+    {
       "name": "MessageClassifier",
       "file": "MessageClassifier.mlmodel",
       "description": "Detect whether a message is spam.",
@@ -1871,6 +2010,74 @@
         }
       ],
       "primary_input": "accelerations"
+    },
+    {
+      "name": "GestureAI",
+      "file": "GestureAI.mlmodel",
+      "description": "GestureAI",
+      "demo_link": "https://github.com/akimach/GestureAI-iOS/tree/master/GestureAI",
+      "reference_link": "https://github.com/akimach/GestureAI-iOS/tree/master/GestureAI",
+      "type": "others",
+      "pathname": "/gestureai",
+      "license": "MIT",
+      "author": "Akimasa KIMURA",
+      "output": [
+        {
+          "type": "MultiArray (Double 5)",
+          "name": "output1"
+        },
+        {
+          "type": "MultiArray (Double 512)",
+          "name": "gru_1_h_out"
+        }
+      ],
+      "input": [
+        {
+          "type": "MultiArray (Double 120)",
+          "name": "input1"
+        },
+        {
+          "type": "MultiArray (Double 512)",
+          "name": "gru_1_h_in"
+        }
+      ],
+      "size": "3.0 MB",
+      "primary_output": "gru_1_h_out",
+      "samples": [
+        {
+          "input": {
+            "gru_1_h_in": {},
+            "input1": {
+              "content": "triangle_gesture_sample.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "output1": {},
+            "gru_1_h_out": {
+              "content": "triangle",
+              "type": "text"
+            }
+          }
+        },
+        {
+          "input": {
+            "gru_1_h_in": {},
+            "input1": {
+              "content": "rectangle_gesture_sample.png",
+              "type": "image"
+            }
+          },
+          "output": {
+            "output1": {},
+            "gru_1_h_out": {
+              "content": "rectangle",
+              "type": "text"
+            }
+          }
+        }
+      ],
+      "primary_input": "gru_1_h_in"
     }
   ]
 }

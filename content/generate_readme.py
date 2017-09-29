@@ -64,7 +64,6 @@ def render_line(line):
     return "".join(render_thumbs(line)) + "\n" + "".join(render_content(line))
 
 
-
 def render_models_grid(models):
     chunks_list = list(chunks(models, 3))
     ans = ""
