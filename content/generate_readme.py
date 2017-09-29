@@ -45,7 +45,7 @@ def render_thumbs(line):
                 link=data["site_prefix"] + model["pathname"])
     return ans
 
-content_template = Template("""<b>$name</b><br />$desc<br />[Download]($link?download) \| [Demo]($link_demo) \| [Reference]($link_reference)|""")
+content_template = Template("""<b>$name</b><br />$desc<br />[Download]($link?download) \| [Demo]($link_demo)|""")
 def render_content(line):
     ans = "|"
     for model in line:
@@ -56,14 +56,16 @@ def render_content(line):
                 desc=model["description"],
                 name=model["name"],
                 link=data["site_prefix"] + model["pathname"],
-                link_demo=model["demo_link"],
-                link_reference=model["reference_link"])
+                link_demo=model["demo_link"])
+            if "reference_link" in model:
+                ans += " \| [Reference](" + model["reference_link"] + ")|"
+            else:
+                ans += "|"
+
     return ans
 
 def render_line(line):
     return "".join(render_thumbs(line)) + "\n" + "".join(render_content(line))
-
-
 
 def render_models_grid(models):
     chunks_list = list(chunks(models, 3))
