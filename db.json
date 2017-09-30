@@ -867,7 +867,7 @@
       "reference_link": "http://visiir.lip6.fr/explore",
       "type": "image",
       "pathname": "/food101",
-      "license": "Unknown",
+      "license": "MIT",
       "author": "Philipp Gabriel",
       "output": [
         {
@@ -883,7 +883,7 @@
       ],
       "input": [
         {
-          "type": "MultiArray (Double 3 x 299 x 299)",
+          "type": "Image (Color 299 x 299)",
           "name": "image",
           "description": "Image of a food"
         }
@@ -2077,7 +2077,7 @@
           }
         }
       ],
-      "primary_input": "gru_1_h_in"
+      "primary_input": "input1"
     }
   ]
 }
