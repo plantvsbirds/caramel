@@ -1,6 +1,6 @@
 {
     "name": "Food101", 
-    "license": "Unknown", 
+    "license": "MIT", 
     "author": "Philipp Gabriel", 
     "description": "This model takes a picture of a food and predicts its name", 
     "output": [
@@ -17,7 +17,7 @@
     ], 
     "input": [
         {
-            "type": "MultiArray (Double 3 x 299 x 299)", 
+            "type": "Image (Color 299 x 299)", 
             "name": "image", 
             "description": "Image of a food"
         }
