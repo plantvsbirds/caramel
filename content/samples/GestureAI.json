@@ -38,5 +38,5 @@
             }
         }
     ], 
-    "primary_input": "gru_1_h_in"
+    "primary_input": "input1"
 }
