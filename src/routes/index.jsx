@@ -55,7 +55,7 @@ export default class HomeRoute extends Component {
     const { history } = this.props
     return (
       <div style={{
-        transform: this.isCurrentPage ? null : `translate3d(0px, -${this.state.offsetY}px, 0px)`,
+        transform: this.isCurrentPage ? null : `translate3d(0px, ${-this.state.offsetY}px, 0px)`,
         transition: 'transform 0.4s',
       }}>
         {/*
