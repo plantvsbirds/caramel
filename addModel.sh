@@ -1,9 +1,9 @@
 # This gets run after the model metadata is added to the content.json
 
+# Copy model file under content/models
 cd ConvertModel
 python ReadModelInfo.py
 python CreateSampleTemplate.py
-
 # Afterward
 # 1. fill out the sample json file
 # 2. use script to crop thumbnail

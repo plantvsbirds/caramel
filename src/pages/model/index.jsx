@@ -83,7 +83,7 @@ class ModalDetail extends Component {
       </div>
     </div>
 
-    return <div className={pageStyles.container}>
+    return <div>
       {this.state.showPrompt && (
       <div
         className={cx('prompt', { exist: this.state.showPrompt })}
