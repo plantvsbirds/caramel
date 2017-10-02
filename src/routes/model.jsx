@@ -83,9 +83,9 @@ export default class ModelRoute extends Component {
                 scrollBody={this.state.modelContainer}
                 promptType={this.state.promptType}
               />
-              <h1>Other Core ML models you may like</h1>
+              <h1>Other Core ML models you may like (<a href="/">All</a>)</h1>
               <ModelList
-                models={localData.models.sort((a, b) => Math.random() > 0.5).slice(0, 3)}
+                models={localData.models.sort((a, b) => Math.random() > 0.5).filter(m => m.pathname!== location.state.model.pathname).slice(0, 3)}
                 onModelClick={(vm, model) => (event) => {
                   ga('send', 'event', 'List', 'go_to_model', model.name);
                   ga('set', 'page', model.pathname);
