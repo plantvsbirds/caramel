@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import ModelDetail from '../pages/model'
+import ModelList from '../pages/list'
 import css from '../pages/page.styl'
 
 import classNamesBind from 'classnames/bind'
@@ -68,22 +69,36 @@ export default class ModelRoute extends Component {
             : <p className={css.returnIconBefore}>Return to list</p>
           }
         </div>
-        {!location.state ? (
-          <Redirect
-            to={navigationWithModel(location)}
-          />
-        ) : (
-          <ModelDetail
-            model={location.state.model}
-            scrollBody={this.state.modelContainer}
-            promptType={this.state.promptType}
-          />
-        )}
-        {location.state && 
+        <div className={css.container}>
+          {!location.state ? (
+            <Redirect
+              to={navigationWithModel(location)}
+            />
+          ) : (
+            <div>
+              <ModelDetail
+                model={location.state.model}
+                scrollBody={this.state.modelContainer}
+                promptType={this.state.promptType}
+              />
+              <h1>Other Core ML models you may like</h1>
+              <ModelList
+                models={localData.models.sort((a, b) => Math.random() > 0.5).slice(0, 3)}
+                onModelClick={(vm, model) => (event) => {
+                  ga('send', 'event', 'List', 'go_to_model', model.name);
+                  ga('set', 'page', model.pathname);
+                  history.push(model.pathname, { model })
+                  this.state.modelContainer.scrollTop = 0
+                }}
+              />
+            </div>
+          )}
+        </div>
+        {/*
           <Helmet>
             <title>{`CoreML.Store ${location.state.model.name}`}</title>
           </Helmet>
-        }
+        */} 
       </div>
     )
   }
