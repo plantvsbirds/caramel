@@ -54,7 +54,7 @@ export default class ModelRoute extends Component {
     const { location, history } = this.props
     return (
       <div
-        className={css.modelContainer}
+        className={cx('modelContainer', this.state.firstLanding ? 'fadeIn' : 'pushUp' )}
         ref={this.bindModelContainer}
       >
         <div
