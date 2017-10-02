@@ -89,6 +89,7 @@ export default class ModelRoute extends Component {
                 onModelClick={(vm, model) => (event) => {
                   ga('send', 'event', 'List', 'go_to_model', model.name);
                   ga('set', 'page', model.pathname);
+                  ga('send', 'event', 'Model', 'go_other_you_like', model.name);
                   history.push(model.pathname, { model })
                   this.state.modelContainer.scrollTop = 0
                 }}
