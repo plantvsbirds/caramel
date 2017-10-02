@@ -27,7 +27,7 @@ def render_model_line(model):
         link_reference=model["reference_link"]
       )
 
-image_template = Template("""[<img src="https://s3-us-west-2.amazonaws.com/coreml-assets/cover_$fname.jpg">]($link)|""")
+image_template = Template("""[<img src="samples/cover_$fname.jpg">]($link)|""")
 no_sample_image_template = Template("""[<img src="http://via.placeholder.com/552x486/fafafa/dddddd/?text=great%20model%20to%20come">]($link)|""")
 
 def render_thumbs(line):
