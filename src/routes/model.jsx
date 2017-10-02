@@ -5,6 +5,8 @@ import ModelDetail from '../pages/model'
 import ModelList from '../pages/list'
 import css from '../pages/page.styl'
 
+import SiteInfo from '~components/siteinfo'
+
 import classNamesBind from 'classnames/bind'
 const cx = classNamesBind.bind(css)
 
@@ -91,6 +93,7 @@ export default class ModelRoute extends Component {
                   this.state.modelContainer.scrollTop = 0
                 }}
               />
+              <SiteInfo />
             </div>
           )}
         </div>
@@ -98,7 +101,7 @@ export default class ModelRoute extends Component {
           <Helmet>
             <title>{`CoreML.Store ${location.state.model.name}`}</title>
           </Helmet>
-        */} 
+        */}
       </div>
     )
   }
