@@ -7,6 +7,7 @@ import { CaramelLogo } from '../const'
 import { bindScrollFunc, unbindScrollFunc, processScrollCb } from '../utils'
 
 import TopBar from '~components/topbar'
+import SiteInfo from '~components/siteinfo'
 
 export default class HomeRoute extends Component {
   constructor() {
@@ -54,7 +55,7 @@ export default class HomeRoute extends Component {
     const { history } = this.props
     return (
       <div style={{
-        transform: this.isCurrentPage ? null : `translate3d(0px, -${this.state.offsetY}px, 0px)`,
+        transform: `translate3d(0px, ${this.isCurrentPage ? 0 : -this.state.offsetY}px, 0px)`,
         transition: 'transform 0.4s',
       }}>
         {/*
@@ -80,31 +81,11 @@ export default class HomeRoute extends Component {
                 target="_blank"
               > here</a>.
             </p>
-            <p className={css.secondary}>
-              How can we serve you better with cool ML models? Please answer this 
-              <a
-                onClick={() => {
-                  ga('send', 'event', 'Index', 'click_feedback');
-                }}
-                href="https://coreml.typeform.com/to/grz0b2"
-                target="_blank"
-              > form</a>.
-            </p>
-            <p className={css.secondary}>
-              To receive weekly updates for new ML models, please
-              <a
-                onClick={() => {
-                  ga('send', 'event', 'Index', 'click_subscribe');
-                }}
-                href="http://eepurl.com/c4II-r"
-                target="_blank"
-              > subscribe</a>.
-            </p>
-            <p className={css.secondary}>Thwis Inc., 2017 <a href="mailto:hello@thywis.com">Email Us</a></p>
+            <SiteInfo />
           </div>
         </div>
         <ModelList
-          models={localData.models}
+          models={localData.models.sort((a, b) => a.pathname > b.pathname)}
           onModelClick={this.onModelClick(history)}
         />
 
