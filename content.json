@@ -169,6 +169,16 @@
       "pathname": "/rn1015k500"
     },
     {
+      "name": "NudityDetection",
+      "file": "Nudity.mlmodel",
+      "description": "This model detects nudity and it's score from an image. The original dataset is Yahoo's OpenNSFW.",
+      "demo_link": "https://coreml.store/nudity?demo",
+      "reference_link": "https://coreml.store/nudity?reference",
+      "type": "image",
+      "pathname": "/nudity",
+      "download_link": "https://coreml.store/nudity?download"
+    },
+    {
       "name": "HED",
       "file": "HED_so.mlmodel",
       "description": "Output the nested edges of a color image.",

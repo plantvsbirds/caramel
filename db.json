@@ -1148,6 +1148,71 @@
       "primary_input": "data"
     },
     {
+      "name": "Nudity",
+      "file": "Nudity.mlmodel",
+      "description": "Classifies an image either as NSFW (nude) or SFW (not nude)",
+      "demo_link": "https://github.com/ph1ps/Nudity-CoreML",
+      "reference_link": "https://github.com/yahoo/open_nsfw",
+      "type": "image",
+      "pathname": "/nudity",
+      "license": "BSD-2",
+      "author": "Philipp Gabriel",
+      "output": [
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "prob",
+          "description": "Probabilities of classes"
+        },
+        {
+          "type": "String",
+          "name": "classLabel",
+          "description": "NSFW or SFW"
+        }
+      ],
+      "input": [
+        {
+          "type": "Image (Color 224 x 224)",
+          "name": "data",
+          "description": "Image used for classification"
+        }
+      ],
+      "size": "22.8 MB",
+      "primary_output": "prob",
+      "samples": [
+        {
+          "input": {
+            "data": {
+              "content": "model_sample_for_nude.jpg",
+              "type": "image"
+            }
+          },
+          "output": {
+            "classLabel": {},
+            "prob": {
+              "content": "{\n\nSFW: 23.08%\n\tNSFW: 76.92%\n}",
+              "type": "text"
+            }
+          }
+        },
+        {
+          "input": {
+            "data": {
+              "content": "cat_sample_for_nude.jpg",
+              "type": "image"
+            }
+          },
+          "output": {
+            "classLabel": {},
+            "prob": {
+              "content": "{\n\nSFW: 100%\n\tNSFW: 0%\n}",
+              "type": "text"
+            }
+          }
+        }
+      ],
+      "primary_input": "data"
+    },
+    {
       "name": "HED_so",
       "file": "HED_so.mlmodel",
       "description": "Holistically-Nested Edge Detection. Side outputs",

@@ -4,6 +4,22 @@
         {
             "input": {
                 "data": {
+                    "content": "model_sample_for_nude.jpg", 
+                    "type": "image"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                }, 
+                "prob": {
+                    "content": "{\n\nSFW: 23.08%\n\tNSFW: 76.92%\n}", 
+                    "type": "text"
+                }
+            }
+        },
+        {
+            "input": {
+                "data": {
                     "content": "cat_sample_for_nude.jpg", 
                     "type": "image"
                 }
@@ -13,22 +29,6 @@
                 }, 
                 "prob": {
                 	"content": "{\n\nSFW: 100%\n\tNSFW: 0%\n}", 
-                    "type": "text"
-                }
-            }
-        },
-        {
-            "input": {
-                "data": {
-                    "content": "model_sample_for_nude.jpg", 
-                    "type": "image"
-                }
-            }, 
-            "output": {
-                "classLabel": {
-                }, 
-                "prob": {
-                	"content": "{\n\nSFW: 23.08%\n\tNSFW: 76.92%\n}", 
                     "type": "text"
                 }
             }
