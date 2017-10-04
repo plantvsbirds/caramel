@@ -51,6 +51,9 @@ export default class HomeRoute extends Component {
     ga('set', 'page', model.pathname);
     history.push(model.pathname, { model })
   }
+  shouldComponentUpdate() {
+    return false
+  }
   render () {
     const { history } = this.props
     return (
@@ -85,7 +88,7 @@ export default class HomeRoute extends Component {
           </div>
         </div>
         <ModelList
-          models={localData.models.sort((a, b) => a.pathname > b.pathname)}
+          models={localData.models.sort((a, b) => a.pathname.localeCompare(b.pathname))}
           onModelClick={this.onModelClick(history)}
         />
 
