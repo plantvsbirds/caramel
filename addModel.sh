@@ -9,5 +9,6 @@ python CreateSampleTemplate.py
 # 3. upload model and image file to s3
 # 4. npm run db
 # update server 45.63.5.85  W7e#AD,sqM}@G+5Q  npm run update
+# npm run generate_pic
 # 5. generate_readme.py
 # 6. update Awesome Page
