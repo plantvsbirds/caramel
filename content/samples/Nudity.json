@@ -4,7 +4,7 @@
         {
             "input": {
                 "data": {
-                    "content": "model_sample_for_nude.jpg", 
+                    "content": "model_sample_for_nude.png", 
                     "type": "image"
                 }
             }, 
@@ -20,7 +20,7 @@
         {
             "input": {
                 "data": {
-                    "content": "cat_sample_for_nude.jpg", 
+                    "content": "cat_sample_for_nude.png", 
                     "type": "image"
                 }
             }, 
