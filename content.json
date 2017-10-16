@@ -279,6 +279,16 @@
       "download_link": "https://coreml.store/messageclassifier?download"
     },
     {
+      "name": "NamesDT",
+      "file": "NamesDT.mlmodel",
+      "description": "Gender Classification using DecisionTreeClassifier",
+      "demo_link": "https://coreml.store/namesdt?demo",
+      "reference_link": "https://coreml.store/namesdt?reference",
+      "type": "text",
+      "pathname": "/namesdt",
+      "download_link": "https://coreml.store/namesdt?download"
+    },
+    {
       "name": "Exermote",
       "file": "Exermote.mlmodel",
       "description": "Predicts the type of exercise from movement data.",

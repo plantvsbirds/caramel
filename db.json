@@ -1970,6 +1970,77 @@
       "primary_input": "message"
     },
     {
+      "name": "NamesDT",
+      "file": "NamesDT.mlmodel",
+      "description": "Gender Classification using DecisionTreeClassifier",
+      "demo_link": "https://github.com/cocoa-ai/NamesCoreMLDemo",
+      "reference_link": "http://nlpforhackers.io",
+      "type": "text",
+      "pathname": "/namesdt",
+      "license": "Unknown",
+      "author": "http://nlpforhackers.io",
+      "output": [
+        {
+          "type": "String",
+          "name": "classLabel",
+          "description": "The most likely gender, for the given input. (F|M)"
+        },
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "classProbability",
+          "description": "The probabilities for each gender, for the given input."
+        }
+      ],
+      "input": [
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "input",
+          "description": "Features extracted from the first name."
+        }
+      ],
+      "size": "519.2 KB",
+      "primary_output": "classLabel",
+      "samples": [
+        {
+          "input": {
+            "input": {
+              "content": "Kedan",
+              "type": "text"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "Male",
+              "type": "text"
+            },
+            "classProbability": {
+              "content": "100%",
+              "type": "text"
+            }
+          }
+        },
+        {
+          "input": {
+            "input": {
+              "content": "Mary",
+              "type": "text"
+            }
+          },
+          "output": {
+            "classLabel": {
+              "content": "Female",
+              "type": "text"
+            },
+            "classProbability": {
+              "content": "100%",
+              "type": "text"
+            }
+          }
+        }
+      ],
+      "primary_input": "input"
+    },
+    {
       "name": "Exermote",
       "file": "Exermote.mlmodel",
       "description": "Predicts the exercise, when iPhone is worn on right upper arm.",

@@ -263,6 +263,15 @@
                "pathname": "/messageclassifier"
                },
                {
+               "name": "NamesDT",
+               "file": "NamesDT.mlmodel",
+               "description": "Gender Classification using DecisionTreeClassifier",
+               "demo_link": "https://github.com/cocoa-ai/NamesCoreMLDemo",
+               "reference_link": "http://nlpforhackers.io",
+               "type": "text",
+               "pathname": "/namesdt"
+               },
+               {
                "name": "Exermote",
                "file": "Exermote.mlmodel",
                "description": "Predicts the type of exercise from movement data.",
