@@ -1,0 +1,42 @@
+{
+    "primary_output": "classLabel", 
+    "samples": [
+        {
+            "input": {
+                "input": {
+                    "content": "Kedan", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "Male", 
+                    "type": "text"
+                }, 
+                "classProbability": {
+                    "content": "100%", 
+                    "type": "text"
+                }
+            }
+        },
+        {
+            "input": {
+                "input": {
+                    "content": "Mary", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                    "content": "Female", 
+                    "type": "text"
+                }, 
+                "classProbability": {
+                    "content": "100%", 
+                    "type": "text"
+                }
+            }
+        }
+    ], 
+    "primary_input": "input"
+}

@@ -1,0 +1,26 @@
+{
+    "name": "NamesDT", 
+    "license": "Unknown", 
+    "author": "http://nlpforhackers.io", 
+    "description": "Gender Classification using DecisionTreeClassifier", 
+    "output": [
+        {
+            "type": "String", 
+            "name": "classLabel", 
+            "description": "The most likely gender, for the given input. (F|M)"
+        }, 
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "classProbability", 
+            "description": "The probabilities for each gender, for the given input."
+        }
+    ], 
+    "input": [
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "input", 
+            "description": "Features extracted from the first name."
+        }
+    ], 
+    "size": "519.2 KB"
+}
