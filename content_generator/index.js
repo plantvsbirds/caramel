@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
     height: 800,
     deviceScaleFactor: 2,
   })
-  await page.goto('http://localhost:10001');
+  await page.goto('https://coreml.store');
   const targets = await page.evaluate(() => {
     const itemElems = Array.from(document.getElementsByClassName('_src_pages_list_index__item'))
     return itemElems
