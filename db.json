@@ -1880,6 +1880,56 @@
       "primary_input": "input"
     },
     {
+      "name": "DocumentClassification",
+      "file": "DocumentClassification.mlmodel",
+      "description": "Classify news articles into 1 of 5 categories.",
+      "demo_link": "https://github.com/toddkramer/DocumentClassifier",
+      "reference_link": "https://github.com/toddkramer/DocumentClassifier/",
+      "type": "text",
+      "pathname": "/documentclassification",
+      "license": "MIT",
+      "author": "Todd Kramer",
+      "output": [
+        {
+          "type": "String",
+          "name": "classLabel",
+          "description": "The most likely category for the input, one of Business, Entertainment, Politics, Sports, or Technology."
+        },
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "classProbability",
+          "description": "The probabilities of each class label for the input."
+        }
+      ],
+      "input": [
+        {
+          "type": "Dictionary (String -> Double)",
+          "name": "input",
+          "description": "Features extracted from the document."
+        }
+      ],
+      "size": "1.4 MB",
+      "primary_output": "classProbability",
+      "samples": [
+        {
+          "input": {
+            "input": {
+              "content": "Adding GANs to recommender systems could help online retailers figure out what customers want beyond the items that already exist. Still, researchers would need to figure out quite a few things before that could happen, including how to turn the two-dimensional computer-generated images into 3-D renderings that could be used to produce a piece of clothing.",
+              "type": "text"
+            }
+          },
+          "output": {
+            "classLabel": {},
+            "classProbability": {
+              "content": "Technology",
+              "type": "text"
+            }
+          }
+        }
+      ],
+      "primary_input": "input"
+    },
+    {
       "name": "MessageClassifier",
       "file": "MessageClassifier.mlmodel",
       "description": "Detect whether a message is spam.",

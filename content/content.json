@@ -254,6 +254,15 @@
                "pathname": "/sentimentpolarity"
                },
                {
+               "name": "DocumentClassification",
+               "file": "DocumentClassification.mlmodel",
+               "description": "Classifies documents into one of five categories (Business, Entertainment, Politics, Sports, Technology)",
+               "demo_link": "https://github.com/toddkramer/DocumentClassifier",
+               "reference_link": "https://github.com/toddkramer/DocumentClassifier/",
+               "type": "text",
+               "pathname": "/documentclassification"
+               },
+               {
                "name": "iMessage Spam Detection",
                "file": "MessageClassifier.mlmodel",
                "description": "Detect whether a message is spam.",

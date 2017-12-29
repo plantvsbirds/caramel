@@ -1,0 +1,22 @@
+{
+    "primary_output": "classProbability", 
+    "samples": [
+        {
+            "input": {
+                "input": {
+                    "content": "Adding GANs to recommender systems could help online retailers figure out what customers want beyond the items that already exist. Still, researchers would need to figure out quite a few things before that could happen, including how to turn the two-dimensional computer-generated images into 3-D renderings that could be used to produce a piece of clothing.", 
+                    "type": "text"
+                }
+            }, 
+            "output": {
+                "classLabel": {
+                }, 
+                "classProbability": {
+                    "content": "Technology", 
+                    "type": "text"
+                }
+            }
+        }
+    ], 
+    "primary_input": "input"
+}

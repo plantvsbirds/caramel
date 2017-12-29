@@ -269,6 +269,16 @@
       "download_link": "https://coreml.store/sentimentpolarity?download"
     },
     {
+      "name": "DocumentClassification",
+      "file": "DocumentClassification.mlmodel",
+      "description": "Classifies documents into one of five categories (Business, Entertainment, Politics, Sports, Technology)",
+      "demo_link": "https://coreml.store/documentclassification?demo",
+      "reference_link": "https://coreml.store/documentclassification?reference",
+      "type": "text",
+      "pathname": "/documentclassification",
+      "download_link": "https://coreml.store/documentclassification?download"
+    },
+    {
       "name": "iMessage Spam Detection",
       "file": "MessageClassifier.mlmodel",
       "description": "Detect whether a message is spam.",

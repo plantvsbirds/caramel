@@ -1,0 +1,26 @@
+{
+    "name": "DocumentClassification", 
+    "license": "MIT", 
+    "author": "Todd Kramer", 
+    "description": "Classify news articles into 1 of 5 categories.", 
+    "output": [
+        {
+            "type": "String", 
+            "name": "classLabel", 
+            "description": "The most likely category for the input, one of Business, Entertainment, Politics, Sports, or Technology."
+        }, 
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "classProbability", 
+            "description": "The probabilities of each class label for the input."
+        }
+    ], 
+    "input": [
+        {
+            "type": "Dictionary (String -> Double)", 
+            "name": "input", 
+            "description": "Features extracted from the document."
+        }
+    ], 
+    "size": "1.4 MB"
+}
