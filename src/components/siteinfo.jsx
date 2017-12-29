@@ -11,7 +11,7 @@ export default class SiteInfo extends Component {
         onClick={() => {
           ga('send', 'event', 'Index', 'click_feedback');
         }}
-        href="https://coreml.typeform.com/to/grz0b2"
+        href="https://coreml.typeform.com/to/usAxT9"
         target="_blank"
       > form</a>.
       </p>
