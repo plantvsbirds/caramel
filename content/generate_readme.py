@@ -4,12 +4,19 @@ from string import Template
 with open('../db.json', 'r') as f:
     data = json.load(f)
 
+recentModel = ["DocumentClassification"]
+
 model_metadata = {}
 for type in data["types"]:
     model_metadata[type] = []
+model_metadata["recent"] = []
+
 
 for model in data["models"]:
-    model_metadata[model["type"]].append(model)
+	if model["name"] in recentModel:
+		print(model)
+		model_metadata["recent"].append(model)
+	model_metadata[model["type"]].append(model)
 
 def chunks(l, n):
     for i in range(0, len(l), n):
@@ -112,6 +119,17 @@ If you've converted a Core ML model, feel free to submit an [issue](https://gith
 
 # Models
 
+## New Models
+*Models that are recently added.*
+
+| | | |
+|-|-|-|
+"""
+
+content += render_models_grid(model_metadata["recent"])
+
+content += """
+
 ## Image Processing
 *Models that takes image data as input and output useful information about the image.*
 
@@ -152,6 +170,10 @@ content += """
 content += render_models_grid(model_metadata["others"])
 
 content += """
+
+# Visualization Tools
+*Tools that helps visualize CoreML Models
+* [Netron](https://lutzroeder.github.io/Netron)
 
 # Supported formats
 *List of model formats that could be converted to Core ML with examples*
